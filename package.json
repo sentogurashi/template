@@ -1,0 +1,24 @@
+{
+  "name": "sentogurashi-template",
+  "version": "1.0.0",
+  "description": "銭湯ぐらしテンプレート",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sentogurashi/template.git"
+  },
+  "author": "ogawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sentogurashi/template/issues"
+  },
+  "homepage": "https://github.com/sentogurashi/template#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "require-dir": "^0.3.1"
+  }
+}
