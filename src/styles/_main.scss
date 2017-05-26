@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+  font-weight: lighter;
+  height: 100%;
+}
+
+.Main {
+  min-height: 100%;
+  width: 100%;
+
+  &__visual {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: rem(40px)
+  }
+}
