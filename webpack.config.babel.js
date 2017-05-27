@@ -1,10 +1,14 @@
 import webpack from 'webpack';
 import es3ifyPlugin from 'es3ify-webpack-plugin';
 
+import pkg from './package.json';
+const src = pkg.path.src;
+const dest = pkg.path.dest;
+
 const config = {
-  entry: ['./src/scripts/main.js'],
+  entry: [src + 'scripts/main.js'],
   output: {
-    filename: './build/scripts/bundle.js'
+    filename: dest + 'scripts/bundle.js'
   },
   resolve: {
     root: __dirname,

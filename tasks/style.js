@@ -7,6 +7,9 @@ import postCssScss from 'postcss-scss';
 import reporter from 'postcss-reporter';
 
 import pkg from './../package.json';
+
+const src = pkg.path.src;
+const dest = pkg.path.dest;
 const stylePath = pkg.path.srcStyle;
 
 const $ = gulpLoadPlugins();
@@ -37,7 +40,7 @@ gulp.task('style', () => {
       extensions: [/\/datauri\//]
     }))
 
-    .pipe(gulp.dest('./build/styles/'));
+    .pipe(gulp.dest(dest + 'styles/'));
 
   return stream;
 });

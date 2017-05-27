@@ -5,10 +5,11 @@ import es from 'event-stream';
 import pkg from './../package.json';
 
 const $ = gulpLoadPlugins();
-const srcPath = pkg.path.src;
+const src = pkg.path.src;
+const dest = pkg.path.dest;
 
 gulp.task('font', () => {
-  const stream = gulp.src(srcPath + 'fonts/*.ttf');
+  const stream = gulp.src(src + 'fonts/*.ttf');
 
   const eotStream = stream
   .pipe($.clone())
@@ -26,5 +27,5 @@ gulp.task('font', () => {
   */
 
   return es.merge(stream, eotStream, woffStream/*, woff2Stream*/)
-  .pipe(gulp.dest('./build/fonts/'));
+  .pipe(gulp.dest(dest + 'fonts/'));
 })

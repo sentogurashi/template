@@ -3,7 +3,7 @@ override default mixins
 http://blog.e-riverstyle.com/2014/02/gulpspritesmithcss-spritegulp.html
 */
 
-@import "sprite_raw";
+//@import "sprite_raw";
 
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5) / 2;

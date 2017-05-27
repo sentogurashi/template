@@ -1,8 +1,12 @@
 import gulp from 'gulp';
+import pkg from './../package.json';
 import spritesmith from 'gulp.spritesmith';
 
+const src = pkg.path.src;
+const dest = pkg.path.dest;
+
 gulp.task('sprite', () => {
-  const spriteData = gulp.src('./src/images/sprites/*.png')
+  const spriteData = gulp.src(src + 'images/sprites/*.png')
   .pipe(spritesmith({
     imgName: 'sprite.png',
     imgPath: '../images/sprite.png',
@@ -13,6 +17,6 @@ gulp.task('sprite', () => {
     padding: 4
 //    algorithm: 'top-down'
   }));
-  spriteData.css.pipe(gulp.dest('./src/styles/sprite/'));
-  spriteData.img.pipe(gulp.dest('./build/images/'));
+  spriteData.css.pipe(gulp.dest(src + 'styles/sprite/'));
+  spriteData.img.pipe(gulp.dest(dest + 'images/'));
 });

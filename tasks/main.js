@@ -1,3 +1,11 @@
 import gulp from 'gulp';
+import runSequence from 'run-sequence';
 
-gulp.task('default', ['style', 'script', 'ejs', 'watch']);
+gulp.task('default', (callback) => {
+  return runSequence(
+    'clean',
+    ['style', 'script', 'template'],
+    'watch',
+    callback
+  );
+});
