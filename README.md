@@ -2,15 +2,18 @@
 銭湯ぐらしテンプレート
 
 # How To USE
+gulpを使用しています
+## clone
 ```
-# clone
 $ git clone git@github.com:sentogurashi/template.git
 $ cd template
-
-# install
+```
+## install
+```
 $ npm install
+```
 
-# watch & browsersync
+## watch & browsersync
+```
 $ npm run watch
-
 ```
