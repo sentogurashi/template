@@ -1,0 +1,52 @@
+.FlexBox {
+  display: flex;
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--left {
+    justify-content: flex-start;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &--justify {
+    justify-content: space-between;
+  }
+
+  &--top {
+    align-items: flex-start;
+  }
+
+  &--middle {
+    align-items: center;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--equal > &__item {
+    flex: 1;
+  }
+
+  &__item {
+    display: block;
+    min-width: 1%;
+
+    &.FlexBox {
+      display: flex;
+    }
+
+    &--fill {
+      flex: 1;
+    }
+  }
+}

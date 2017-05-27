@@ -1,0 +1,13 @@
+/*
+ * Kokoro (Japanese) https://fonts.google.com/earlyaccess
+ */
+@font-face {
+  font-family: 'Kokoro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/KokoroMinchoutai.eot);
+  src: url(../fonts/KokoroMinchoutai.eot?#iefix) format('embedded-opentype'),
+       //url(../fonts/KokoroMinchoutai.woff2) format('woff2'),
+       url(../fonts/KokoroMinchoutai.woff) format('woff'),
+       url(../fonts/KokoroMinchoutai.ttf) format('truetype');
+}
