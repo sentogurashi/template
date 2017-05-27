@@ -7,11 +7,25 @@
 @import "layout/navigation";
 
 // TODO: ここに直接は書かない
-html {
+html, body {
   height: 100%;
 }
 
 body {
-  font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
   height: 100%;
+}
+
+.Module {
+  &__heading {
+    font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+    color: #4A4A4A;
+    text-align: center;
+    font-size: rem(50px);
+  }
+
+  &__text {
+    font-family: serif;
+    color: #45494B;
+    font-size: rem(16px);
+  }
 }

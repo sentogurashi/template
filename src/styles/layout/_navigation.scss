@@ -1,6 +1,9 @@
 .Navigation {
-  width: 200px;
+  position: absolute;
+  width: 100px;
   border-right: 1px solid black;
+  background-color: $base-color-white;
+  height: 100%;
 
   &__siteLogo {
     width: 100px;
