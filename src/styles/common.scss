@@ -1,0 +1,17 @@
+@import "util";
+@import "foundation/box-sizing";
+@import "foundation/page";
+@import "foundation/reset";
+@import "font/font";
+
+@import "layout/navigation";
+
+// TODO: ここに直接は書かない
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+  height: 100%;
+}

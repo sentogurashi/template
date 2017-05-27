@@ -14,6 +14,6 @@ gulp.task('watch', ['bs'], () => {
     runSequence('script', 'bs-reload');
   });
   gulp.watch([templatePath + '*.ejs', templatePath + '*/*.ejs'], (cb) => {
-    runSequence('ejs', 'bs-reload');
+    runSequence('template', 'bs-reload');
   });
 });

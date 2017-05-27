@@ -3,24 +3,25 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import pkg from './../package.json';
 
 const $ = gulpLoadPlugins();
+const dest = pkg.path.dest;
 
 let escapeFileList = [
   'jquery.min.js'
 ]
 
-escapeFileList = escapeFileList.map((str) => {
-  return '!./build/**/' + str;
+escapeFileList = escapeFileList.map((fileName) => {
+  return '!' + dest + '**/' + fileName;
 })
 
 gulp.task('deploy', () => {
   const stream = gulp.src([
-    './build/**/*',
-    '!./build/**/*.map',
-    '!./build/html/*.html',
+    dest + '**/*',
+    '!' + dest + '**/*.map',
+//    '!' + dest + 'html/*.html',
     ...escapeFileList
   ])
     .pipe($.rsync({
-      root: './build/',
+      root: dest,
       hostname: 'TODO',
       destination: 'TODO',
     }));

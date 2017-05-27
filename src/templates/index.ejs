@@ -1,30 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title></title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-
-<meta property="fb:app_id" content="" />
-<meta property="og:title" content="" />
-<meta property="og:url" content="" />
-<meta property="og:description" content="" />
-<meta property="og:image" content="" />
-
-<meta name="twitter:card" content="">
-<meta name="twitter:site" content="">
-<meta name="twitter:title" content="">
-<meta name="twitter:description" content="">
-<meta name="twitter:image:src" content="">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<link rel="stylesheet" href="../styles/common.css">
-<link rel="stylesheet" href="../styles/top.css">
-</head>
+<%- include('./_layout/_head.ejs', {csspath: '../styles/top.css'}) -%>
 <body>
 
-<!-- header -->
+<%- include('./_layout/_header.ejs')-%>
 <div class="Contents">
   <div class="FlexBox">
     <div class="Navigation">
