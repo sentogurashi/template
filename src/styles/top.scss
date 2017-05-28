@@ -1,34 +1,75 @@
 @import "util";
+@import "foundation/base-style";
 
-.Content {
-  height: 100%;
+.MainVisual {
+
+  & > img{
+    height: auto;
+    width: 100%;
+  }
 }
 
-.Main {
-  //min-height: 100%;
-  width: 100%;
+.Module {
 
-  &__visual {
-    overflow: hidden;
-    max-height: 500px;
+  &__heading {
+    @include baseHeadingLv1;
+  }
 
-    img {
+  &__text {
+    @include baseText;
+    width: 600px; // TODO respinsive
+    margin: 0 auto;
+  }
+
+  &__image { //TODO
+    margin: 40px;
+    & > img {
       height: auto;
       width: 100%;
     }
   }
+
+  &__link {
+    display: block;
+    width: 240px;
+    margin: 40px auto;
+    background-color: $base-color-white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 20px 0;
+    color: $system-color-text;
+    font-family: serif;
+    font-weight: bold;
+  }
 }
 
-.Module--about {
-  .Module__heading {
-    padding-top: 90px;
-    padding-bottom: 50px;
+.MainMenu {
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
   }
 
-  .Module__text {
-    width: 600px; // TODO respinsive
-    margin: 0 auto;
-    line-height: 1.875; // 30/16
-    letter-spacing: .1em;
+  &__cell {
+    display: block;
+    margin-right: 80px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__illust {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+    font-size: rem(24px);
+    color: $system-color-text;
+    text-align: center;
   }
 }

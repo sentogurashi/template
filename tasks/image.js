@@ -10,7 +10,7 @@ const dest = pkg.path.dest;
 
 gulp.task('image', () => {
   const stream = gulp.src([
-    src + 'images/standalone/*/*.*',
+    src + 'images/standalone/**/*.*'
   ])
   .pipe($.imagemin({
     quality: 1,

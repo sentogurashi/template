@@ -1,0 +1,15 @@
+@mixin baseText {
+  font-family: serif;
+  color: $system-color-text;
+  font-size: rem(16px);
+  line-height: 1.875; // 30/16
+  letter-spacing: .1em;
+}
+
+@mixin baseHeadingLv1 {
+  font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+  color: $system-color-text;
+  text-align: center;
+  font-size: rem(50px);
+  padding: 50px 0;
+}
