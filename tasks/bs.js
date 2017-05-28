@@ -6,7 +6,8 @@ gulp.task('bs', () => {
   bs({
     server: true,
     open: false,
-    ghostMode: false
+    ghostMode: false,
+//    tunnel: true
   })
 });
 

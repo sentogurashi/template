@@ -5,27 +5,34 @@
 @import "font/font";
 
 @import "layout/navigation";
+@import "layout/footer";
 
 // TODO: ここに直接は書かない
+@mixin baseText {
+  font-family: serif;
+  color: $system-color-text;
+  font-size: rem(16px);
+  line-height: 1.875; // 30/16
+  letter-spacing: .1em;
+}
+
+@mixin baseHeadingLv1 {
+  font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+  color: $system-color-text;
+  text-align: center;
+  font-size: rem(50px);
+  padding: 50px 0;
+}
+
 html, body {
   height: 100%;
 }
 
-body {
-  height: 100%;
+.Column {
+  display: flex;
 }
 
-.Module {
-  &__heading {
-    font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
-    color: #4A4A4A;
-    text-align: center;
-    font-size: rem(50px);
-  }
-
-  &__text {
-    font-family: serif;
-    color: #45494B;
-    font-size: rem(16px);
-  }
+.Main {
+  width: 100%;
+  flex: 1;
 }

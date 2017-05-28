@@ -1,10 +1,44 @@
 {
   "siteTitle": "銭湯ぐらし",
   "pages": {
+    "top": {
+    },
     "feature": [
       {
         "id": "utau",
         "title": "唄う銭湯"
+      },
+      {
+        "id": "kizuku",
+        "title": "築く銭湯"
+      },
+      {
+        "id": "amu",
+        "title": "編む銭湯"
+      },
+      {
+        "id": "egaku",
+        "title": "描く銭湯"
+      },
+      {
+        "id": "tsutaeru",
+        "title": "伝える銭湯"
+      },
+      {
+        "id": "toru",
+        "title": "撮る銭湯"
+      },
+      {
+        "id": "tsukuru",
+        "title": "創る銭湯"
+      },
+      {
+        "id": "tomaru",
+        "title": "泊まる銭湯"
+      },
+      {
+        "id": "okosu",
+        "title": "興す銭湯"
       }
     ]
   }
