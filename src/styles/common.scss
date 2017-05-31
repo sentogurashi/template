@@ -8,31 +8,28 @@
 @import "layout/footer";
 
 // TODO: ここに直接は書かない
-@mixin baseText {
-  font-family: serif;
-  color: $system-color-text;
-  font-size: rem(16px);
-  line-height: 1.875; // 30/16
-  letter-spacing: .1em;
-}
-
-@mixin baseHeadingLv1 {
-  font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
-  color: $system-color-text;
-  text-align: center;
-  font-size: rem(50px);
-  padding: 50px 0;
-}
-
 html, body {
   height: 100%;
 }
 
 .Column {
-  display: flex;
+  overflow: hidden;
+  @include clearfix;
+}
+
+.Navigation {
+  float: left;
+  height: 100%;
 }
 
 .Main {
-  width: 100%;
-  flex: 1;
+  width: calc(100% - 120px);
+  float: right;
 }
+
+@include mq('sm') {
+  .Main {
+    width: 100%;
+    float: none;
+  }
+};

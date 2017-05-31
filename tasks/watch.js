@@ -13,7 +13,7 @@ gulp.task('watch', ['bs'], () => {
   gulp.watch([scriptPath + '*.js', scriptPath + '*/*.js'], (cb) => {
     runSequence('script', 'bs-reload');
   });
-  gulp.watch([templatePath + '*.ejs', templatePath + '*/*.ejs'], (cb) => {
+  gulp.watch([templatePath + '*.ejs', templatePath + '*/*.ejs', './site_content.json'], (cb) => {
     runSequence('template', 'bs-reload');
   });
 });

@@ -6,39 +6,484 @@
     "feature": [
       {
         "id": "utau",
-        "title": "唄う銭湯"
+        "title": "唄う銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですふがふが"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ、ここで改行します\nふがふがふがふが"
+              }
+            ]
+          }
+        ],
+        "profile": {
+          "copy": "これはコピーです",
+          "nameJp": "名前 太郎",
+          "nameEn": "TARO NAMAE",
+          "text": "プロフィールだよ。ここで改行します\nほげほげほげほげ"
+        }
       },
       {
         "id": "kizuku",
-        "title": "築く銭湯"
+        "title": "築く銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "編む銭湯とは？"
+              },
+              {
+                "type": "text",
+                "content": "プロジェクトの全体統括と、空間デザインを一貫して行うことで「銭湯つきアパート」のモデルをつくります。戦後復興を支えてきた、銭湯＋風呂なしアパートですが、これからは別の役割があるはずです。"
+              },
+              {
+                "type": "text",
+                "content": "銭湯のとなりで企画する生活実験（＝クリエイターの同居、二拠点居住・時間シェア）と、空間づくり（＝銭湯民泊、まちの縁側・集会室DIY）などを通して、現代の銭湯×暮らしの関係性を考えます。"
+              },
+              {
+                "type": "heading",
+                "content": "なぜやるのか？"
+              },
+              {
+                "type": "text",
+                "content": "全国の空き家や、衰退した街の再生に携わるなかで、建築をつくることは、ヒト・モノ・コト・ジカンなど、様々な「関係性」を再考しカタチにすることだと感じます。"
+              },
+              {
+                "type": "text",
+                "content": "お世話になっていた小杉湯のとなりに空きアパートがあること、常連に多彩な人々がいることを聞き、すぐこの企画が浮かびました。"
+              },
+              {
+                "type": "text",
+                "content": "新しい関係性は、新しい景色を生みます。「所有」より「所属」が重視されつつある時代における、新しい空間像を模索したいと思います。"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          }
+        ],
+        "profile": {
+          "copy": "誰がやるのか",
+          "nameJp": "加藤 優一",
+          "nameEn": "YUICHI KATO／建築家・パブリックプランナー",
+          "text": "山形生まれ銭湯育ち。東北大学博士課程単位取得退学。2011年より復興まちづくりに従事しながら、自治体組織と計画プロセスの研究を行う。2015年に公共R不動産に参画。建築の企画設計、まちづくり、公共空間の活用、本の執筆編集等に携わる"
+        }
       },
       {
         "id": "amu",
-        "title": "編む銭湯"
+        "title": "編む銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "編む銭湯とは？"
+              },
+              {
+                "type": "text",
+                "content": "銭湯にまつわる色々なことを、ミニ雑誌や本のかたちにまとめて読者に届ける。銭湯好きな人へのインタビューや、エッセイ、漫画、対談、写真を盛り込んだゆかいな読みものを作れたらな、と作戦を立てています。"
+              },
+              {
+                "type": "heading",
+                "content": "なぜやるのか？"
+              },
+              {
+                "type": "text",
+                "content": "帰る場所がある人は強い。これは東京に出てきてから心底感じていることです。銭湯は、誰かにとっての「帰る場所」になりうる装置。自分自身、傷ついたときや考え事をしたいときはまず銭湯に行き、番台のおばちゃんと会話して、湯に浸かってぼ〜っとします。そういう実家のような空間が、何十年後もやさしく街に佇んでいられるような雰囲気を、本によって広げていきたいというのが願いです。"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          }
+        ],
+        "profile": {
+          "copy": "誰がやるのか",
+          "nameJp": "細口 瀬音",
+          "nameEn": "SEOTO HOSOGUCHI／編集者",
+          "text": "早稲田大学卒業後、印刷会社営業を経て出版の道へ。出張先の京都で銭湯愛にめざめ、それ以来いつでもどこでも銭湯に入れるようにタオルとシャンプーを持ち歩くようになる。いつか寅さんのロケ地巡りをしたいと思っている。"
+        }
       },
       {
         "id": "egaku",
-        "title": "描く銭湯"
+        "title": "描く銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですふがふが"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ、ここで改行します\nふがふがふがふが"
+              }
+            ]
+          }
+        ],
+        "profile": {
+          "copy": "これはコピーです",
+          "nameJp": "名前 太郎",
+          "nameEn": "TARO NAMAE",
+          "text": "プロフィールだよ。ここで改行します\nほげほげほげほげ"
+        }
       },
       {
         "id": "tsutaeru",
-        "title": "伝える銭湯"
+        "title": "伝える銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですふがふが"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ、ここで改行します\nふがふがふがふが"
+              }
+            ]
+          }
+        ],
+        "profile": {
+          "copy": "これはコピーです",
+          "nameJp": "名前 太郎",
+          "nameEn": "TARO NAMAE",
+          "text": "プロフィールだよ。ここで改行します\nほげほげほげほげ"
+        }
       },
       {
         "id": "toru",
-        "title": "撮る銭湯"
+        "title": "撮る銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですふがふが"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ、ここで改行します\nふがふがふがふが"
+              }
+            ]
+          }
+        ],
+        "profile": {
+          "copy": "これはコピーです",
+          "nameJp": "名前 太郎",
+          "nameEn": "TARO NAMAE",
+          "text": "プロフィールだよ。ここで改行します\nほげほげほげほげ"
+        }
       },
       {
         "id": "tsukuru",
-        "title": "創る銭湯"
+        "title": "創る銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですふがふが"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ、ここで改行します\nふがふがふがふが"
+              }
+            ]
+          }
+        ],
+        "profile": {
+          "copy": "これはコピーです",
+          "nameJp": "名前 太郎",
+          "nameEn": "TARO NAMAE",
+          "text": "プロフィールだよ。ここで改行します\nほげほげほげほげ"
+        }
       },
       {
         "id": "tomaru",
-        "title": "泊まる銭湯"
+        "title": "泊まる銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですふがふが"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ、ここで改行します\nふがふがふがふが"
+              }
+            ]
+          }
+        ],
+        "profile": {
+          "copy": "これはコピーです",
+          "nameJp": "名前 太郎",
+          "nameEn": "TARO NAMAE",
+          "text": "プロフィールだよ。ここで改行します\nほげほげほげほげ"
+        }
       },
       {
         "id": "okosu",
-        "title": "興す銭湯"
+        "title": "興す銭湯",
+        "content": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "pageTitle"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ"
+              },
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですふがふが"
+              }
+            ]
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "text",
+            "content": [
+              {
+                "type": "heading",
+                "content": "これはh2です"
+              },
+              {
+                "type": "text",
+                "content": "本文です本文ですほげほげ、ここで改行します\nふがふがふがふが"
+              }
+            ]
+          }
+        ],
+        "profile": {
+          "copy": "これはコピーです",
+          "nameJp": "名前 太郎",
+          "nameEn": "TARO NAMAE",
+          "text": "プロフィールだよ。ここで改行します\nほげほげほげほげ"
+        }
       }
     ]
   }

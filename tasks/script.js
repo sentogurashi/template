@@ -9,7 +9,7 @@ const src = pkg.path.src;
 const dest = pkg.path.dest;
 
 gulp.task('script', (cb) => {
-  webpack(webpackConfig, (err, stats) => {
+  return webpack(webpackConfig, (err, stats) => {
     if (err) throw new gulpUtil.pluginError('webpack', err);
     gulpUtil.log('[webpack]', stats.toString(webpackConfig.stats));
     cb();

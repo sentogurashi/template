@@ -9,35 +9,51 @@
 
     <div class="Main">
       <div class="Article">
-        <div class="Article__photoMain">
-          <img src="../../images/standalone/feature/tsutaeru/photo_main.jpg" alt="">
-        </div>
-        <div class="Article__inner">
-          <div class="Article__headingWrapper">
-            <p class="Article__illust"><img src="../../images/standalone/feature/tsutaeru/illust.png" alt=""></p>
-            <h1 class="Article__headingLv1">伝える銭湯</h1>
+
+        <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
+        <% const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) } %>
+        <% const generateText = (textContentArray) => { %>
+          <% textContentArray.forEach((elm) => { %>
+            <% if(elm.type === 'pageTitle') { %>
+              <div class="Article__headingWrapper">
+                <!--<p class="Article__illust" style="background-image:url('../../images/standalone/feature/<%= page.id %>/illust.png')"></p> TODO:パス整理-->
+                <p class="Article__illust" style="background-image:url('../../images/standalone/top/menu_<%= page.id %>.png')"></p>
+                <h1 class="Article__headingLv1"><%= page.title %></h1>
+              </div>
+            <% } else if (elm.type === 'heading') { %>
+              <h2 class="Article__headingLv2"><%- elm.content %></h2>
+            <% } else if(elm.type === 'text') { %>
+              <p class="Article__text"><%- replaceToBr(elm.content) %></p>
+            <% } %>
+          <% }); %>
+        <% }; %>
+
+        <% if(page.content) { %>
+          <% page.content.forEach((elm, idx) => { %>
+            <% if(elm.type === 'image') { %>
+              <% const imageType = (idx === 0) ? 'main' : 'sub'; %>
+              <div class="Article__photo<%= initialToUpperCase(imageType) %>">
+                <img src="../../images/standalone/feature/<%= page.id %>/photo_<%= imageType  %>.jpg">
+              </div>
+            <% } else if (elm.type === 'text') { %>
+              <div class="Article__inner">
+                <%- generateText(elm.content); %>
+              </div>
+            <% } %>
+          <% }); %>
+        <% } %>
+
+        <% if(page.profile) { %>
+          <div class="Article__inner">
+            <h2 class="Article__headingLv2"><%= page.profile.copy %></h2>
+            <div class="Profile">
+              <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
+              <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
+              <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
+            </div>
           </div>
-          <p class="Article__text">
-            “銭湯ぐらし”は銭湯とその街で、ヒトとヒトとを繋ぐためのプロジェクトです。高円寺の老舗銭湯「小杉湯」とその隣の風呂なしアパートでアートや音楽など様々なジャンルのクリエイターがあつまり、普段の生活にはない”ちょっとあったかい”コミュニティを築いています。“銭湯ぐらし”は銭湯とその街で、ヒトとヒトとを繋ぐためのプロジェクトです。高円寺の老舗銭湯「小杉湯」とその隣の風呂なしアパートでアートや音楽など様々なジャンルのクリエイターがあつまり、普段の生活にはない”ちょっとあったかい”コミュニティを築いています。
-          </p>
-          <h2 class="Article__headingLv2">銭湯を「伝える」ワケ</h2>
-          <p class="Article__text">
-            “銭湯ぐらし”は銭湯とその街で、ヒトとヒトとを繋ぐためのプロジェクトです。高円寺の老舗銭湯「小杉湯」とその隣の風呂なしアパートでアートや音楽など様々なジャンルのクリエイターがあつまり、普段の生活にはない”ちょっとあったかい”コミュニティを築いています。“銭湯ぐらし”は銭湯とその街で、ヒトとヒトとを繋ぐためのプロジェクトです。高円寺の老舗銭湯「小杉湯」とその隣の風呂なしアパートでアートや音楽など様々なジャンルのクリエイターがあつまり、普段の生活にはない”ちょっとあったかい”コミュニティを築いています。
-          </p>
-        </div>
-        <div class="Article__photoSub">
-          <img src="../../images/standalone/feature/tsutaeru/photo_sub.jpg" alt="">
-        </div>
-        <div class="Article__inner">
-          <h2 class="Article__headingLv2">銭湯を「伝える」ヒト</h2>
-          <div class="Profile">
-            <div class="Profile__nameJp">宮 早紀江</div>
-            <div class="Profile__nameEn">SAKIE MIYA</div>
-            <p class="Profile__text">
-              “銭湯ぐらし”は銭湯とその街で、ヒトとヒトとを繋ぐためのプロジェクトです。高円寺の老舗銭湯「小杉湯」とその隣の風呂なしアパートでアートや音楽など様々なジャンルのクリエイターがあつまり、普段の生活にはない”ちょっとあったかい”コミュニティを築いています。“銭湯ぐらし”は銭湯とその街で、ヒトとヒトとを繋ぐためのプロジェクトです。高円寺の老舗銭湯「小杉湯」とその隣の風呂なしアパートでアートや音楽など様々なジャンルのクリエイターがあつまり、普段の生活にはない”ちょっとあったかい”コミュニティを築いています。
-            </p>
-          </div>
-        </div>
+        <% } %>
+
       </div>
 
       <%- include('../_layout/_footer.ejs')-%>
