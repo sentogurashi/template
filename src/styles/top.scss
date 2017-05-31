@@ -17,8 +17,15 @@
 
   &__text {
     @include baseText;
-    width: 600px; // TODO respinsive
+    width: 600px;
     margin: 0 auto;
+
+    @include mq('sm') {
+      & {
+        width: auto;
+        margin: 0 20px;
+      }
+    };
   }
 
   &__image { //TODO
@@ -47,13 +54,24 @@
 
   &__row {
     display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
+    justify-content: space-between;
+    margin: 0 100px 80px;
+
+    @include mq('sm'){
+      flex-flow: column nowrap;
+      align-items: center;
+      margin-bottom: 0;
+
+      .MainMenu__cell {
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+    };
   }
 
   &__cell {
     display: block;
-    margin-right: 80px;
+//    margin-right: 80px;
     &:last-child {
       margin-right: 0;
     }
@@ -64,6 +82,11 @@
     height: 200px;
     margin-bottom: 20px;
     background-repeat: no-repeat;
+    background-size: contain;
+    @include mq('md') {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__text {

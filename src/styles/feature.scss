@@ -6,16 +6,32 @@
   &__inner {
     width: 800px;
     margin: 0 auto;
+    @include mq('md') {
+      width: auto;
+      margin: 0 20px;
+    };
+    /*
+    @include mq('sm') {
+      width: auto;
+      margin: 0 20px;
+    };
+    */
   }
 
   &__headingWrapper {
-    margin-top: 20px;
+    margin: 40px 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__headingLv1 {
     @include baseHeadingLv1;
     font-size: rem(60px); // TODO アドホック
+
+    @include mq('sm') {
+      padding: 20px 0;
+    };
   }
 
   &__headingLv2 {
@@ -28,6 +44,14 @@
   &__text {
     @include baseText;
     margin: 60px 0 90px;
+
+    @include mq('sm') {
+      margin: 20px 0;
+    };
+
+    & + & {
+      margin-top: -70px; // TODO: ここびみょう
+    }
   }
 
   &__photoMain {
@@ -51,7 +75,16 @@
   }
 
   &__illust {
-    margin-right: 90px;
+    margin-right: 30px;
+    width: 180px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include mq('sm') {
+      margin-right: 10px;
+      width: 100px;
+      height: 100px;
+    };
   }
 }
 
