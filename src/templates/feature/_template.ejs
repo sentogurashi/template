@@ -12,9 +12,9 @@
 
         <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
         <% const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) } %>
-        <% const generateText = (textContentArray) => { %>
-          <% textContentArray.forEach((elm) => { %>
-            <% if(elm.type === 'pageTitle') { %>
+        <% const generateText = (textContentArray) => {
+          textContentArray.forEach((elm) => {
+            if(elm.type === 'pageTitle') { %>
               <div class="Article__headingWrapper">
                 <!--<p class="Article__illust" style="background-image:url('../../images/standalone/feature/<%= page.id %>/illust.png')"></p> TODO:パス整理-->
                 <p class="Article__illust" style="background-image:url('../../images/standalone/top/menu_<%= page.id %>.png')"></p>
@@ -24,14 +24,14 @@
               <h2 class="Article__headingLv2"><%- elm.content %></h2>
             <% } else if(elm.type === 'text') { %>
               <p class="Article__text"><%- replaceToBr(elm.content) %></p>
-            <% } %>
-          <% }); %>
-        <% }; %>
+            <% }
+          });
+        }; %>
 
-        <% if(page.content) { %>
-          <% page.content.forEach((elm, idx) => { %>
-            <% if(elm.type === 'image') { %>
-              <% const imageType = (idx === 0) ? 'main' : 'sub'; %>
+        <% if(page.content) {
+          page.content.forEach((elm, idx) => {
+            if(elm.type === 'image') {
+              const imageType = (idx === 0) ? 'main' : 'sub'; %>
               <div class="Article__photo<%= initialToUpperCase(imageType) %>">
                 <img src="../../images/standalone/feature/<%= page.id %>/photo_<%= imageType  %>.jpg">
               </div>
@@ -39,9 +39,9 @@
               <div class="Article__inner">
                 <%- generateText(elm.content); %>
               </div>
-            <% } %>
-          <% }); %>
-        <% } %>
+            <% }
+          });
+        } %>
 
         <% if(page.profile) { %>
           <div class="Article__inner">

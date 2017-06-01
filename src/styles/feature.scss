@@ -51,6 +51,10 @@
 
     & + & {
       margin-top: -70px; // TODO: ここびみょう
+
+      @include mq('sm') {
+        margin-top: 0;
+      };
     }
   }
 

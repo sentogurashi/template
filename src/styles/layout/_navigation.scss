@@ -31,7 +31,7 @@
       letter-spacing: .2em;
       margin: 10px auto;
       & > a {
-        color: $system-color-text;
+        @include baseLink;
       }
     }
   }
@@ -51,7 +51,7 @@
       }
 
       & > a {
-        color: $system-color-text;
+        @include baseLink;
       }
     }
   }
