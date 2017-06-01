@@ -2,17 +2,14 @@
 <html lang="ja">
 <%- include('../_layout/_head.ejs', {isChildDirectory: true, csspath: '../../styles/feature.css'}) -%>
 <body>
-
 <div class="Content">
   <div class="Column">
     <%- include('../_layout/_navigation.ejs')-%>
-
     <div class="Main">
       <div class="Article">
-
-        <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
-        <% const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) } %>
-        <% const generateText = (textContentArray) => {
+        <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')};
+        const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
+        const generateText = (textContentArray) => {
           textContentArray.forEach((elm) => {
             if(elm.type === 'pageTitle') { %>
               <div class="Article__headingWrapper">
@@ -53,7 +50,6 @@
             </div>
           </div>
         <% } %>
-
       </div>
 
       <%- include('../_layout/_footer.ejs')-%>
