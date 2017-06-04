@@ -29,8 +29,7 @@
           page.content.forEach((elm, idx) => {
             if(elm.type === 'image') {
               const imageType = (idx === 0) ? 'main' : 'sub'; %>
-              <div class="Article__photo<%= initialToUpperCase(imageType) %>">
-                <img src="../../images/standalone/feature/<%= page.id %>/photo_<%= imageType  %>.jpg">
+              <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url(../../images/standalone/feature/<%= page.id %>/photo_<%= imageType  %>.jpg)">
               </div>
             <% } else if (elm.type === 'text') { %>
               <div class="Article__inner">
@@ -56,5 +55,6 @@
     </div>
   </div>
 </div><!-- /.Content -->
+<script type="text/javascript" src="../../scripts/bundle.js"></script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+.NavigationPc {
+
+  position: fixed;
+  width: 120px;
+  background-color: $base-color-white;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+
+  &__sitelogo {
+    @include hide-text;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 75px;
+    background-image: url('../images/standalone/common/sitelogo.svg');
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+  }
+
+  &__main {
+    & > li {
+      font-family: serif;
+      font-weight: bold;
+      writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+      letter-spacing: .2em;
+      margin: 10px auto;
+      & > a {
+        @include baseLink;
+      }
+    }
+  }
+
+  &__sub {
+    padding: 0 15px;
+
+    & > li {
+      padding: 10px 0;
+      font-size: rem(14px);
+      font-family: serif;
+      text-align: center;
+      border-top: solid 1px #E8E8E8;
+
+      &:last-of-type {
+        border-bottom: solid 1px #E8E8E8;
+      }
+
+      & > a {
+        @include baseLink;
+      }
+    }
+  }
+
+  &__sns {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    & a {
+      @include hide-text;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+    }
+
+    &Facebook {
+      background-image: url('../images/standalone/common/ico_facebook.svg')
+    }
+    &Twitter {
+      background-image: url('../images/standalone/common/ico_twitter.svg')
+    }
+    &Instagram {
+      background-image: url('../images/standalone/common/ico_instagram.svg')
+    }
+  }
+}
+
+@include mq('sm') {
+  .NavigationPc {
+    display: none;
+  }
+};
