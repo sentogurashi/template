@@ -1,6 +1,11 @@
 @import "util";
 @import "foundation/base-style";
 
+$photoMainWidthBase: 1280px;
+$photoMainHeightBase: 650px;
+$photoSubWidthBase: 1280px;
+$photoSubHeightBase: 500px;
+
 .Article {
 
   &__inner {
@@ -10,12 +15,6 @@
       width: auto;
       margin: 0 20px;
     };
-    /*
-    @include mq('sm') {
-      width: auto;
-      margin: 0 20px;
-    };
-    */
   }
 
   &__headingWrapper {
@@ -51,27 +50,33 @@
 
     & + & {
       margin-top: -70px; // TODO: ここびみょう
+
+      @include mq('sm') {
+        margin-top: 0;
+      };
     }
+  }
+
+  &__photoMain,
+  &__photoSub {
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
   }
 
   &__photoMain {
-    overflow: hidden;
-    max-height: 700px;
-
-    & > img{
-      height: auto;
-      width: 100%;
-    }
+    padding-bottom: percentage($photoMainHeightBase / $photoMainWidthBase);
+    @include mq('sm') {
+      padding-bottom: 100%;
+    };
   }
 
   &__photoSub {
-    overflow: hidden;
-    max-height: 500px;
-
-    & > img{
-      height: auto;
-      width: 100%;
-    }
+    padding-bottom: percentage($photoSubHeightBase / $photoSubWidthBase);
+    @include mq('sm') {
+      padding-bottom: 100%;
+    };
   }
 
   &__illust {

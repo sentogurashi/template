@@ -2,9 +2,11 @@
 @import "foundation/box-sizing";
 @import "foundation/page";
 @import "foundation/reset";
+@import "foundation/base-style";
 @import "font/font";
 
-@import "layout/navigation";
+@import "layout/navigation-pc";
+@import "layout/navigation-sp";
 @import "layout/footer";
 
 // TODO: ここに直接は書かない
@@ -17,7 +19,7 @@ html, body {
   @include clearfix;
 }
 
-.Navigation {
+.NavigationPc {
   float: left;
   height: 100%;
 }

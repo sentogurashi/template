@@ -17,3 +17,12 @@
     font-size: rem(40px);
   };
 }
+
+@mixin baseLink {
+  color: $system-color-text;
+  transition: ease .3s;
+
+  &:hover {
+    color: $system-color-link-hover;
+  }
+}

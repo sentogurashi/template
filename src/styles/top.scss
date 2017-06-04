@@ -29,7 +29,8 @@
   }
 
   &__image { //TODO
-    margin: 40px;
+    margin: 40px auto;
+    max-width: 800px;
     & > img {
       height: auto;
       width: 100%;
@@ -47,6 +48,12 @@
     color: $system-color-text;
     font-family: serif;
     font-weight: bold;
+    transition: ease .3s;
+
+    &:hover {
+      color: $system-color-link-hover;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
@@ -55,7 +62,8 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    margin: 0 100px 80px;
+    margin: 0 auto 80px;
+    max-width: 800px;
 
     @include mq('sm'){
       flex-flow: column nowrap;
@@ -84,15 +92,15 @@
     background-repeat: no-repeat;
     background-size: contain;
     @include mq('md') {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
     }
   }
 
   &__text {
+    @include baseLink;
     font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
     font-size: rem(24px);
-    color: $system-color-text;
     text-align: center;
   }
 }
