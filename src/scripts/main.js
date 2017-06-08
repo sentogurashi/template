@@ -1,8 +1,14 @@
 // TODO: 仮
 import $ from 'jquery';
 
-const start = () => {
+const $window = $(window);
 
+// 雑なのであとでチューニング
+const display = () => {
+  $('.js-Content').addClass('is-show');
+};
+
+const start = () => {
 
   const $trigger = $('.js-NavigationSpTrigger');
   const $main = $('.js-NavigationSp');
@@ -20,3 +26,4 @@ const start = () => {
 };
 
 $(start);
+$window.on('load', display);

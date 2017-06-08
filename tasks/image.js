@@ -37,7 +37,7 @@ gulp.task('image', () => {
     use: [
       pngquant(),
       jpegoptim({
-        max: 10
+        max: 60
       })
      ]
   }))

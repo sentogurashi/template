@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
-<%- include('./_layout/_head.ejs', {csspath: '../styles/top.css'}) -%>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<meta property="fb:app_id" content="" />
+<meta property="og:title" content="" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+
+<meta name="twitter:card" content="">
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<% resource.css.forEach((path) => { %>
+<link rel="stylesheet" href="<%= path %>">
+<% }); %>
+</head>
 <body>
-
-<div class="Content">
+<div class="Content js-Content">
   <div class="Column">
-    <%- include('./_layout/_navigation.ejs')-%>
-
+    <%- include ./_navigation %>
     <div class="Main">
       <!-- コンテンツ -->
-      <%- include('./_layout/_footer.ejs')-%>
+      <%- extend(__output) %>
+      <p class="Footer">© 2017 Sentogurashi</p>
     </div>
   </div>
 </div><!-- /.Content -->
-<script type="text/javascript" src="../scripts/bundle.js"></script>
+<% resource.js.forEach((path) => { %>
+<script type="text/javascript" src="<%= path %>"></script>
+<% }); %>
 </body>
 </html>

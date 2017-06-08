@@ -2,6 +2,12 @@
   "siteTitle": "銭湯ぐらし",
   "pages": {
     "top": {
+      "id": "top",
+      "title": "銭湯ぐらし",
+      "meta": {
+        "description": "",
+        "keyword": ""
+      }
     },
     "feature": [
       {
