@@ -5,14 +5,48 @@
       "id": "top",
       "title": "銭湯ぐらし",
       "meta": {
-        "description": "",
-        "keyword": ""
+        "description": "TODO",
+        "url": "TODO",
+        "image": "TODO"
+      },
+      "content": {
+        "heading": {
+          "top": "銭湯ぐらし",
+          "activity": "銭湯ぐらしの活動"
+        },
+        "text": {
+          "lead": "杉並区高円寺の銭湯「小杉湯」のとなりには、2018年2月に解体が決まっている1軒の風呂なしアパートが建っています。解体までの期間限定で、このアパートを「湯パート」と名づけ、多彩な仲間たちがひとつ屋根の下で暮らしはじめました。"
+        },
+        "link": {
+          "about": "銭湯暮らしとは"
+        }
+      }
+    },
+    "about": {
+      "project": {
+        "id": "project",
+        "title": "銭湯ぐらしとは",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
+        "content": {
+          "text": {
+            "lead": "TODO"
+          }
+        }
       }
     },
     "feature": [
       {
         "id": "utau",
         "title": "唄う銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -55,6 +89,11 @@
       {
         "id": "kizuku",
         "title": "築く銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -97,6 +136,11 @@
       {
         "id": "amu",
         "title": "編む銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -139,6 +183,11 @@
       {
         "id": "egaku",
         "title": "描く銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -181,6 +230,11 @@
       {
         "id": "tsutaeru",
         "title": "伝える銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -236,6 +290,11 @@
       {
         "id": "toru",
         "title": "撮る銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -278,6 +337,11 @@
       {
         "id": "tsukuru",
         "title": "創る銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -333,6 +397,11 @@
       {
         "id": "tomaru",
         "title": "泊まる銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"
@@ -375,6 +444,11 @@
       {
         "id": "okosu",
         "title": "興す銭湯",
+        "meta": {
+          "description": "TODO",
+          "url": "TODO",
+          "image": "TODO"
+        },
         "content": [
           {
             "type": "image"

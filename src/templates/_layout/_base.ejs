@@ -2,22 +2,22 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title></title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+<title><%= resource.page.title %></title>
+<meta name="description" content="<%= resource.page.meta.description %>">
 
-<meta property="fb:app_id" content="" />
-<meta property="og:title" content="" />
-<meta property="og:url" content="" />
-<meta property="og:description" content="" />
-<meta property="og:image" content="" />
+<meta property="fb:app_id" content="TODO" />
+<meta property="og:title" content="<%= resource.page.title %>" />
+<meta property="og:url" content="<%= resource.page.meta.url %>" />
+<meta property="og:description" content="<%= resource.page.meta.description %>" />
+<meta property="og:image" content="<%= resource.page.meta.image %>" />
 
-<meta name="twitter:card" content="">
-<meta name="twitter:site" content="">
-<meta name="twitter:title" content="">
-<meta name="twitter:description" content="">
-<meta name="twitter:image:src" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@sentogurashi">
+<meta name="twitter:title" content="<%= resource.page.title %>">
+<meta name="twitter:description" content="<%= resource.page.meta.description %>">
+<meta name="twitter:image:src" content="<%= resource.page.meta.image %>">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <% resource.css.forEach((path) => { %>
 <link rel="stylesheet" href="<%= path %>">
 <% }); %>
