@@ -10,7 +10,7 @@ function extend(buf) { %>
   <div class="Module__image">
       <img src="../images/standalone/top/main_illust.png" alt="">
   </div>
-  <a href="./about.html" class="Module__link"><%= content.link.about %></a>
+  <a href="./about/project.html" class="Module__link"><%= content.link.about %></a>
 </div>
 <div class="Module">
   <h1 class="Module__heading"><%= content.heading.activity %></h1>
@@ -22,7 +22,7 @@ function extend(buf) { %>
       <% for (var j = 0; j < 3; j++) { %>
         <% var menuContent = menuContents[cnt] %>
         <a href="./feature/<%= menuContent.id %>.html" class="MainMenu__cell">
-          <p class="MainMenu__illust" style="background-image: url('../images/standalone/top/menu_<%= menuContent.id %>.png')"></p>
+          <p class="MainMenu__illust" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_line.png')"></p>
           <p class="MainMenu__text"><%= menuContent.title %></p>
         </a>
         <% cnt++;%>

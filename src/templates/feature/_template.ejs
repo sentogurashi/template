@@ -6,7 +6,7 @@
     textContentArray.forEach((elm) => {
       if(elm.type === 'pageTitle') { %>
         <div class="Article__headingWrapper">
-          <p class="Article__illust" style="background-image:url('../../images/standalone/top/menu_<%= page.id %>.png')"></p>
+          <p class="Article__illust" style="background-image:url('../../images/standalone/feature/<%= page.id %>/illust_line.png')"></p>
           <h1 class="Article__headingLv1"><%= page.title %></h1>
         </div>
       <% } else if (elm.type === 'heading') { %>
