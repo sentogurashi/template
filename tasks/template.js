@@ -27,6 +27,7 @@ gulp.task('template:static', () => {
   }, {}, {
     ext: '.html'
   }))
+  .pipe($.replace('\n\n', '\n'))
   .pipe(gulp.dest(dest + 'html/'));
 
   return stream;
@@ -49,6 +50,7 @@ gulp.task('template:generate', () => {
     }, {}, {
       ext: '.html'
     }))
+    .pipe($.replace('\n\n', '\n'))
     .pipe(gulp.dest(dest + 'html/feature'));
 
     return stream;
