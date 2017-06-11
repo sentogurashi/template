@@ -30,3 +30,22 @@
     opacity: 1;
   }
 }
+
+@keyframes mainvisual-animation {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.16); // 1.2 - (0.2 / 5)
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.04); // 1 + (0.2 / 5)
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

@@ -27,9 +27,10 @@
   <div class="Column">
     <%- include ./_navigation %>
     <div class="Main">
-      <!-- コンテンツ -->
       <%- extend(__output) %>
-      <p class="Footer">© 2017 Sentogurashi</p>
+      <div class="Footer">
+        <p><%= sitedata.common.layout.footer.text %></p>
+      </div>
     </div>
   </div>
 </div><!-- /.Content -->

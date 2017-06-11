@@ -4,23 +4,25 @@ import $ from 'jquery';
 const $window = $(window);
 
 // 雑なのであとでチューニング
-const display = () => {
+function display () {
   $('.js-Content').addClass('is-show');
 };
 
-const start = () => {
+function asyncExec (cb, time = 0) {
+  setTimeout(cb, time);
+}
+
+function start () {
 
   const $trigger = $('.js-NavigationSpTrigger');
-  const $main = $('.js-NavigationSp');
-
-  $main.hide();
+  const $main = $('.js-Navigation--sp');
 
   $trigger.on('click', (e) => {
     e.preventDefault();
     $trigger.toggleClass('is-active');
-    $main.toggle(0, () => {
-      $main.toggleClass('is-show');
-    })
+    $main.toggleClass('is-show')
+
+
   });
 
 };

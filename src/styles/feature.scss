@@ -57,6 +57,14 @@ $photoSubHeightBase: 500px;
     }
   }
 
+  &__innerImage {
+    margin-bottom: 90px;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
   &__photoMain,
   &__photoSub {
     overflow: hidden;
@@ -94,6 +102,8 @@ $photoSubHeightBase: 500px;
 }
 
 .Profile {
+  margin: 60px 0;
+
   &__nameJp {
     margin: 15px 0;
     font-size: rem(24px);

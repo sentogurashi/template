@@ -31,7 +31,7 @@ gulp.task('image', () => {
   .pipe($.imagemin([
     pngquant(),
     jpegoptim({
-      max: 60
+      max: 80
     })
   ],{
     verbose: true

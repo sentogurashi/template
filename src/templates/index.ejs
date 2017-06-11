@@ -1,8 +1,8 @@
 <%
-var content = pages.top.content;
+var content = sitedata.pages.top.content;
 function extend(buf) { %>
-<div class="MainVisual">
-  <img src="../images/standalone/top/mainvisual.jpg" alt="">
+<div class="MainVisual js-MainVisual">
+  <div class="MainVisual__image js-MainVisual__image" style="background-image: url('../images/standalone/top/mainvisual_1.jpg')"></div>
 </div>
 <div class="Module">
   <h1 class="Module__heading"><%= content.heading.top %></h1>
@@ -16,13 +16,15 @@ function extend(buf) { %>
   <h1 class="Module__heading"><%= content.heading.activity %></h1>
 
   <div class="MainMenu">
-    <% var menuContents = pages.feature, cnt = 0; %>
+    <% var menuContents = sitedata.pages.feature, cnt = 0; %>
     <% for (var i = 0; i < 3; i++) { %>
     <div class="MainMenu__row">
       <% for (var j = 0; j < 3; j++) { %>
         <% var menuContent = menuContents[cnt] %>
         <a href="./feature/<%= menuContent.id %>.html" class="MainMenu__cell">
-          <p class="MainMenu__illust" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_line.png')"></p>
+          <div class="MainMenu__illust" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_line.png')">
+            <div class="MainMenu__illustOnCursor" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_color.png')"></div>
+          </div>
           <p class="MainMenu__text"><%= menuContent.title %></p>
         </a>
         <% cnt++;%>
@@ -33,13 +35,14 @@ function extend(buf) { %>
 </div>
 <% }
 var resource = {
-  page: pages.top,
+  page: sitedata.pages.top,
   css: [
     '../styles/common.css',
     '../styles/top.css'
   ],
   js: [
-    '../scripts/bundle.js'
+    '../scripts/common.bundle.js',
+    '../scripts/top.bundle.js'
   ]};
 %>
 <% include ./_layout/_base %>

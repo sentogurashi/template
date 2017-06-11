@@ -28,23 +28,26 @@
 <body>
 <div class="Content js-Content">
   <div class="Column">
-    <div class="NavigationPc">
+    
+
+<div class="Navigation Navigation--pc">
   <a href="./">
-    <div class="NavigationPc__sitelogo">銭湯ぐらし</div>
+    <div class="Navigation__sitelogo">銭湯ぐらし</div>
   </a>
-  <div class="NavigationPc__bottom">
-    <ul class="NavigationPc__main">
-      <li><a href="./about.html">銭湯ぐらしとは</a></li>
-    </ul>
-    <ul class="NavigationPc__sub">
-      <li><a href="http://www13.plala.or.jp/Kosugiyu/" target="_blank">小杉湯</a></li>
-      <li><a href="TODO" target="_blank">お問い合わせ</a></li>
-    </ul>
-    <ul class="NavigationPc__sns">
-      <li><a class="NavigationPc__snsTwitter" href="TODO">twitter</a></li>
-      <li><a class="NavigationPc__snsInstagram" href="TODO">instagram</a></li>
-      <li><a class="NavigationPc__snsFacebook" href="TODO">facebook</a></li>
-    </ul>
+  <div class="Navigation__bottom">
+    
+<ul class="Navigation__main">
+  <li><a href="./about/project.html">銭湯ぐらしとは</a></li>
+</ul>
+<ul class="Navigation__sub">
+  <li><a href="./about/kosugiyu.html">小杉湯</a></li>
+  <li><a href="TODO">お問い合わせ</a></li>
+</ul>
+<ul class="Navigation__sns">
+  <li><a class="Navigation__snsTwitter" href="https://twitter.com/sentogurashi" target="_blank">twitter</a></li>
+  <li><a class="Navigation__snsFacebook" href="https://www.facebook.com/sentogurashi" target="_blank">facebook</a></li>
+</ul>
+
   </div>
 </div>
 
@@ -53,34 +56,32 @@
   <span class="NavigationSpTrigger__border"></span>
   <span class="NavigationSpTrigger__border"></span>
 </a>
-<div class="NavigationSp js-NavigationSp">
-  <div class="NavigationSp__overlay">
-    <a href="./">
-      <div class="NavigationSp__sitelogo">銭湯ぐらし</div>
-    </a>
-    <ul class="NavigationSp__main">
-      <li><a href="./about.html">銭湯ぐらしとは</a></li>
-    </ul>
-    <ul class="NavigationSp__sub">
-      <li><a href="http://www13.plala.or.jp/Kosugiyu/" target="_blank">小杉湯</a></li>
-      <li><a href="TODO" target="_blank">お問い合わせ</a></li>
-    </ul>
-    <ul class="NavigationSp__sns">
-      <li><a class="NavigationSp__snsTwitter" href="TODO">twitter</a></li>
-      <li><a class="NavigationSp__snsInstagram" href="TODO">instagram</a></li>
-      <li><a class="NavigationSp__snsFacebook" href="TODO">facebook</a></li>
-    </ul>
-  </div>
+<div class="Navigation Navigation--sp js-Navigation--sp">
+  <a href="./">
+    <div class="Navigation__sitelogo">銭湯ぐらし</div>
+  </a>
+  
+<ul class="Navigation__main">
+  <li><a href="./about/project.html">銭湯ぐらしとは</a></li>
+</ul>
+<ul class="Navigation__sub">
+  <li><a href="./about/kosugiyu.html">小杉湯</a></li>
+  <li><a href="TODO">お問い合わせ</a></li>
+</ul>
+<ul class="Navigation__sns">
+  <li><a class="Navigation__snsTwitter" href="https://twitter.com/sentogurashi" target="_blank">twitter</a></li>
+  <li><a class="Navigation__snsFacebook" href="https://www.facebook.com/sentogurashi" target="_blank">facebook</a></li>
+</ul>
+
 </div>
 
     <div class="Main">
-      <!-- コンテンツ -->
       
 <div class="Article">
   
 
   
-        <div class="Article__photoMain" style="background-image:url(../../images/standalone/feature/toru/photo_main.jpg)">
+        <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/toru/photo_main.jpg')">
         </div>
       
         <div class="Article__inner">
@@ -90,7 +91,7 @@
           <h1 class="Article__headingLv1">撮る銭湯</h1>
         </div>
       
-        <h2 class="Article__headingLv2">何をやるのか</h2>
+        <h2 class="Article__headingLv2">撮る銭湯とは</h2>
       
         <p class="Article__text">高円寺の老舗銭湯「小杉湯」とその隣のアパートに住む人びとの“銭湯がある暮らし”を写真に収めていく創作活動です。ただ綺麗に銭湯を撮るだけではなく、天井が高く、光が美しく差しこむ構造の銭湯をスタジオとして使ったポートレート作品を撮っていきます。</p>
       
@@ -100,13 +101,12 @@
       
         </div>
       
-        <div class="Article__photoSub" style="background-image:url(../../images/standalone/feature/toru/photo_sub.jpg)">
+        <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/toru/photo_sub.jpg')">
         </div>
       
 
   
     <div class="Article__inner">
-      <h2 class="Article__headingLv2">誰がやるのか</h2>
       <div class="Profile">
         <div class="Profile__nameJp">菅谷 真央</div>
         <div class="Profile__nameEn">MAO SUGAYA／デザイナー</div>
@@ -116,12 +116,16 @@
   
 </div>
 
-      <p class="Footer">© 2017 Sentogurashi</p>
+      <div class="Footer">
+        <p>© 2017 Sentogurashi</p>
+      </div>
     </div>
   </div>
 </div><!-- /.Content -->
 
-<script type="text/javascript" src="../../scripts/bundle.js"></script>
+<script type="text/javascript" src="../../scripts/common.bundle.js"></script>
+
+<script type="text/javascript" src="../../scripts/feature.bundle.js"></script>
 
 </body>
 </html>

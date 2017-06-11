@@ -14,11 +14,6 @@ gulp.task('script', (cb) => {
     gulpUtil.log('[webpack]', stats.toString(webpackConfig.stats));
     cb();
   });
-  /*
-  return gulp.src('./src/scripts/*.js')
-    .pipe(babel())
-    .pipe(gulp.dest('./build/scripts/'));
-  */
 });
 
 gulp.task('script:lib', () => {

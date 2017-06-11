@@ -1,11 +1,10 @@
-.NavigationPc {
-
+.Navigation--pc {
   position: fixed;
   width: 120px;
   background-color: $base-color-white;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
 
-  &__sitelogo {
+  .Navigation__sitelogo {
     @include hide-text;
     position: absolute;
     top: 20px;
@@ -15,14 +14,14 @@
     background-image: url('../images/standalone/common/sitelogo.svg');
   }
 
-  &__bottom {
+  .Navigation__bottom {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 120px;
   }
 
-  &__main {
+  .Navigation__main {
     & > li {
       font-family: serif;
       font-weight: bold;
@@ -36,7 +35,7 @@
     }
   }
 
-  &__sub {
+  .Navigation__sub {
     padding: 0 15px;
 
     & > li {
@@ -56,9 +55,9 @@
     }
   }
 
-  &__sns {
+  .Navigation__sns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
 
     & a {
@@ -82,7 +81,7 @@
 }
 
 @include mq('sm') {
-  .NavigationPc {
+  .Navigation--pc {
     display: none;
   }
 };

@@ -28,23 +28,26 @@
 <body>
 <div class="Content js-Content">
   <div class="Column">
-    <div class="NavigationPc">
+    
+
+<div class="Navigation Navigation--pc">
   <a href="./">
-    <div class="NavigationPc__sitelogo">銭湯ぐらし</div>
+    <div class="Navigation__sitelogo">銭湯ぐらし</div>
   </a>
-  <div class="NavigationPc__bottom">
-    <ul class="NavigationPc__main">
-      <li><a href="./about.html">銭湯ぐらしとは</a></li>
-    </ul>
-    <ul class="NavigationPc__sub">
-      <li><a href="http://www13.plala.or.jp/Kosugiyu/" target="_blank">小杉湯</a></li>
-      <li><a href="TODO" target="_blank">お問い合わせ</a></li>
-    </ul>
-    <ul class="NavigationPc__sns">
-      <li><a class="NavigationPc__snsTwitter" href="TODO">twitter</a></li>
-      <li><a class="NavigationPc__snsInstagram" href="TODO">instagram</a></li>
-      <li><a class="NavigationPc__snsFacebook" href="TODO">facebook</a></li>
-    </ul>
+  <div class="Navigation__bottom">
+    
+<ul class="Navigation__main">
+  <li><a href="./about/project.html">銭湯ぐらしとは</a></li>
+</ul>
+<ul class="Navigation__sub">
+  <li><a href="./about/kosugiyu.html">小杉湯</a></li>
+  <li><a href="TODO">お問い合わせ</a></li>
+</ul>
+<ul class="Navigation__sns">
+  <li><a class="Navigation__snsTwitter" href="https://twitter.com/sentogurashi" target="_blank">twitter</a></li>
+  <li><a class="Navigation__snsFacebook" href="https://www.facebook.com/sentogurashi" target="_blank">facebook</a></li>
+</ul>
+
   </div>
 </div>
 
@@ -53,34 +56,32 @@
   <span class="NavigationSpTrigger__border"></span>
   <span class="NavigationSpTrigger__border"></span>
 </a>
-<div class="NavigationSp js-NavigationSp">
-  <div class="NavigationSp__overlay">
-    <a href="./">
-      <div class="NavigationSp__sitelogo">銭湯ぐらし</div>
-    </a>
-    <ul class="NavigationSp__main">
-      <li><a href="./about.html">銭湯ぐらしとは</a></li>
-    </ul>
-    <ul class="NavigationSp__sub">
-      <li><a href="http://www13.plala.or.jp/Kosugiyu/" target="_blank">小杉湯</a></li>
-      <li><a href="TODO" target="_blank">お問い合わせ</a></li>
-    </ul>
-    <ul class="NavigationSp__sns">
-      <li><a class="NavigationSp__snsTwitter" href="TODO">twitter</a></li>
-      <li><a class="NavigationSp__snsInstagram" href="TODO">instagram</a></li>
-      <li><a class="NavigationSp__snsFacebook" href="TODO">facebook</a></li>
-    </ul>
-  </div>
+<div class="Navigation Navigation--sp js-Navigation--sp">
+  <a href="./">
+    <div class="Navigation__sitelogo">銭湯ぐらし</div>
+  </a>
+  
+<ul class="Navigation__main">
+  <li><a href="./about/project.html">銭湯ぐらしとは</a></li>
+</ul>
+<ul class="Navigation__sub">
+  <li><a href="./about/kosugiyu.html">小杉湯</a></li>
+  <li><a href="TODO">お問い合わせ</a></li>
+</ul>
+<ul class="Navigation__sns">
+  <li><a class="Navigation__snsTwitter" href="https://twitter.com/sentogurashi" target="_blank">twitter</a></li>
+  <li><a class="Navigation__snsFacebook" href="https://www.facebook.com/sentogurashi" target="_blank">facebook</a></li>
+</ul>
+
 </div>
 
     <div class="Main">
-      <!-- コンテンツ -->
       
 <div class="Article">
   
 
   
-        <div class="Article__photoMain" style="background-image:url(../../images/standalone/feature/kizuku/photo_main.jpg)">
+        <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/kizuku/photo_main.jpg')">
         </div>
       
         <div class="Article__inner">
@@ -90,9 +91,13 @@
           <h1 class="Article__headingLv1">築く銭湯</h1>
         </div>
       
-        <h2 class="Article__headingLv2">何をやるのか？</h2>
+        <h2 class="Article__headingLv2">築く銭湯とは</h2>
       
         <p class="Article__text">プロジェクト全体の企画運営と、空間のデザインを通して「銭湯つきアパート」のモデルを構築します。戦後復興を支えてきた、銭湯＋風呂なしアパートですが、現代においては別の役割があるはずです。銭湯の隣で行う、新しい生活実験（多様な専門性の同居・二拠点居住・民泊等）や、街に開かれた集会室づくりなどを行い、銭湯と暮らしの関係性を探ります。</p>
+      
+        <div class="Article__innerImage">
+          <img src="../../images/standalone/feature/kizuku/photo_sub_sketch.jpg" alt="">
+        </div>
       
         <h2 class="Article__headingLv2">なぜやるのか？</h2>
       
@@ -100,13 +105,12 @@
       
         </div>
       
-        <div class="Article__photoSub" style="background-image:url(../../images/standalone/feature/kizuku/photo_sub.jpg)">
+        <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/kizuku/photo_sub.jpg')">
         </div>
       
 
   
     <div class="Article__inner">
-      <h2 class="Article__headingLv2">誰がやるのか</h2>
       <div class="Profile">
         <div class="Profile__nameJp">加藤 優一</div>
         <div class="Profile__nameEn">YUICHI KATO／建築家・パブリックプランナー／公共R不動産。</div>
@@ -116,12 +120,16 @@
   
 </div>
 
-      <p class="Footer">© 2017 Sentogurashi</p>
+      <div class="Footer">
+        <p>© 2017 Sentogurashi</p>
+      </div>
     </div>
   </div>
 </div><!-- /.Content -->
 
-<script type="text/javascript" src="../../scripts/bundle.js"></script>
+<script type="text/javascript" src="../../scripts/common.bundle.js"></script>
+
+<script type="text/javascript" src="../../scripts/feature.bundle.js"></script>
 
 </body>
 </html>

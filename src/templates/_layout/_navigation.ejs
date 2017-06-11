@@ -1,20 +1,23 @@
-<div class="NavigationPc">
+<% function navigationContent () { %>
+<ul class="Navigation__main">
+  <li><a href="./about/project.html"><%= sitedata.common.layout.navigation.about %></a></li>
+</ul>
+<ul class="Navigation__sub">
+  <li><a href="./about/kosugiyu.html"><%= sitedata.common.layout.navigation.kosugiyu %></a></li>
+  <li><a href="TODO"><%= sitedata.common.layout.navigation.contact %></a></li>
+</ul>
+<ul class="Navigation__sns">
+  <li><a class="Navigation__snsTwitter" href="<%= sitedata.common.info.sns.twitter.url %>" target="_blank"><%= sitedata.common.info.sns.twitter.name %></a></li>
+  <li><a class="Navigation__snsFacebook" href="<%= sitedata.common.info.sns.facebook.url %>" target="_blank"><%= sitedata.common.info.sns.facebook.name %></a></li>
+</ul>
+<% } %>
+
+<div class="Navigation Navigation--pc">
   <a href="./">
-    <div class="NavigationPc__sitelogo">銭湯ぐらし</div>
+    <div class="Navigation__sitelogo"><%= sitedata.siteTitle %></div>
   </a>
-  <div class="NavigationPc__bottom">
-    <ul class="NavigationPc__main">
-      <li><a href="./about.html">銭湯ぐらしとは</a></li>
-    </ul>
-    <ul class="NavigationPc__sub">
-      <li><a href="http://www13.plala.or.jp/Kosugiyu/" target="_blank">小杉湯</a></li>
-      <li><a href="TODO" target="_blank">お問い合わせ</a></li>
-    </ul>
-    <ul class="NavigationPc__sns">
-      <li><a class="NavigationPc__snsTwitter" href="TODO">twitter</a></li>
-      <li><a class="NavigationPc__snsInstagram" href="TODO">instagram</a></li>
-      <li><a class="NavigationPc__snsFacebook" href="TODO">facebook</a></li>
-    </ul>
+  <div class="Navigation__bottom">
+    <%- navigationContent() %>
   </div>
 </div>
 
@@ -23,22 +26,9 @@
   <span class="NavigationSpTrigger__border"></span>
   <span class="NavigationSpTrigger__border"></span>
 </a>
-<div class="NavigationSp js-NavigationSp">
-  <div class="NavigationSp__overlay">
-    <a href="./">
-      <div class="NavigationSp__sitelogo">銭湯ぐらし</div>
-    </a>
-    <ul class="NavigationSp__main">
-      <li><a href="./about.html">銭湯ぐらしとは</a></li>
-    </ul>
-    <ul class="NavigationSp__sub">
-      <li><a href="http://www13.plala.or.jp/Kosugiyu/" target="_blank">小杉湯</a></li>
-      <li><a href="TODO" target="_blank">お問い合わせ</a></li>
-    </ul>
-    <ul class="NavigationSp__sns">
-      <li><a class="NavigationSp__snsTwitter" href="TODO">twitter</a></li>
-      <li><a class="NavigationSp__snsInstagram" href="TODO">instagram</a></li>
-      <li><a class="NavigationSp__snsFacebook" href="TODO">facebook</a></li>
-    </ul>
-  </div>
+<div class="Navigation Navigation--sp js-Navigation--sp">
+  <a href="./">
+    <div class="Navigation__sitelogo"><%= sitedata.siteTitle %></div>
+  </a>
+  <%- navigationContent() %>
 </div>
