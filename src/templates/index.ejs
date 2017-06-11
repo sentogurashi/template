@@ -16,23 +16,26 @@ function extend(buf) { %>
   <h1 class="Module__heading"><%= content.heading.activity %></h1>
 
   <div class="MainMenu">
-    <% var menuContents = sitedata.pages.feature, cnt = 0; %>
-    <% for (var i = 0; i < 3; i++) { %>
+<% var menuContents = sitedata.pages.feature, cnt = 0;
+for (var i = 0; i < 3; i++) { %>
     <div class="MainMenu__row">
-      <% for (var j = 0; j < 3; j++) { %>
-        <% var menuContent = menuContents[cnt] %>
-        <a href="./feature/<%= menuContent.id %>.html" class="MainMenu__cell">
-          <div class="MainMenu__illust" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_line.png')">
-            <div class="MainMenu__illustOnCursor" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_color.png')"></div>
-          </div>
-          <p class="MainMenu__text"><%= menuContent.title %></p>
-        </a>
-        <% cnt++;%>
-      <% } %>
+<% for (var j = 0; j < 3; j++) {
+var menuContent = menuContents[cnt] %>
+      <a href="./feature/<%= menuContent.id %>.html" class="MainMenu__cell">
+        <div class="MainMenu__illust" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_line.png')">
+          <div class="MainMenu__illustOnCursor" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_color.png')"></div>
+        </div>
+        <p class="MainMenu__text"><%= menuContent.title %></p>
+      </a>
+<% cnt++;
+ } %>
     </div>
-    <% } %>
+<% } %>
   </div>
 </div>
+<% }
+function insertMetaTag(buf) { %>
+<meta name="google-site-verification" content="oIhGG07K5eP0_scMyqal6daNoObMOdQOYAVcmCK0ays" />
 <% }
 var resource = {
   page: sitedata.pages.top,
@@ -43,6 +46,8 @@ var resource = {
   js: [
     '../scripts/common.bundle.js',
     '../scripts/top.bundle.js'
-  ]};
+  ],
+  insertMetaTagFlag: true
+};
 %>
 <% include ./_layout/_base %>

@@ -23,7 +23,7 @@
 <body>
 <div class="Content js-Content">
   <div class="Column">
-    
+
 <div class="Navigation Navigation--pc">
   <a href="./">
     <div class="Navigation__sitelogo">銭湯ぐらし</div>
@@ -66,15 +66,13 @@
 </ul>
 </div>
     <div class="Main">
-      
 <div class="Article">
-  
-  
-        <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/egaku/photo_main.jpg')">
-        </div>
-      
-        <div class="Article__inner">
-          
+
+  <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/egaku/photo_main.jpg')">
+  </div>
+    
+  <div class="Article__inner">
+        
         <div class="Article__headingWrapper">
           <p class="Article__illust" style="background-image:url('../../images/standalone/feature/egaku/illust_line.png')"></p>
           <h1 class="Article__headingLv1">描く銭湯</h1>
@@ -88,20 +86,19 @@
       
         <p class="Article__text">建築設計事務所時代に、過労で体を壊し途方に暮れていたとき、喋らずとも人の温かみを感じられる銭湯という場所が、いつしか私の支えになっていました。銭湯に助けられたからこそ、建築で培ってきた温かな絵の表現で銭湯に恩返しがしたいと思っています。</p>
       
-        </div>
-      
-        <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/egaku/photo_sub.jpg')">
-        </div>
-      
-  
-    <div class="Article__inner">
-      <div class="Profile">
-        <div class="Profile__nameJp">塩谷 歩波</div>
-        <div class="Profile__nameEn">HONAMI ENYA／イラストレーター・銭湯ディレクター</div>
-        <p class="Profile__text">1990年生まれ。東京都出身。小杉湯所属。<br>早稲田大学建築学科卒業後、2015年に手塚建築研究所に就職するも、過労により身体を壊す。休職中、医師の勧めで始めた湯治から銭湯の魅力にとりつかれ、そのあふれる銭湯愛から描き出した「銭湯図解」がネットで話題となる。2017年小杉湯に転職。ポスターや店内のデザインを担当しつつ、日本初の銭湯ディレクターとして日々邁進中。好きな水風呂の温度は15度。</p>
-      </div>
+  </div>
+    
+  <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/egaku/photo_sub.jpg')">
+  </div>
+    
+
+  <div class="Article__inner">
+    <div class="Profile">
+      <div class="Profile__nameJp">塩谷 歩波</div>
+      <div class="Profile__nameEn">HONAMI ENYA／イラストレーター・銭湯ディレクター</div>
+      <p class="Profile__text">1990年生まれ。東京都出身。小杉湯所属。<br>早稲田大学建築学科卒業後、2015年に手塚建築研究所に就職するも、過労により身体を壊す。休職中、医師の勧めで始めた湯治から銭湯の魅力にとりつかれ、そのあふれる銭湯愛から描き出した「銭湯図解」がネットで話題となる。2017年小杉湯に転職。ポスターや店内のデザインを担当しつつ、日本初の銭湯ディレクターとして日々邁進中。好きな水風呂の温度は15度。</p>
     </div>
-  
+  </div>
 </div>
       <div class="Footer">
         <p>© 2017 Sentogurashi</p>
@@ -111,5 +108,32 @@
 </div><!-- /.Content -->
 <script type="text/javascript" src="../../scripts/common.bundle.js"></script>
 <script type="text/javascript" src="../../scripts/feature.bundle.js"></script>
+<!-- GA -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-100837084-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- fb SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '306929856428469',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>

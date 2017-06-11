@@ -17,7 +17,9 @@
 <meta name="twitter:description" content="<%= resource.page.meta.description %>">
 <meta name="twitter:image:src" content="<%= resource.page.meta.image %>">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+<% if(resource.insertMetaTagFlag) { %>
+<%- insertMetaTag(__output) %>
+<% } %>
 <% resource.css.forEach((path) => { %>
 <link rel="stylesheet" href="<%= path %>">
 <% }); %>
@@ -25,9 +27,9 @@
 <body>
 <div class="Content js-Content">
   <div class="Column">
-    <%- include ./_navigation %>
+<%- include ./_navigation %>
     <div class="Main">
-      <%- extend(__output) %>
+<%- extend(__output) %>
       <div class="Footer">
         <p><%= sitedata.common.layout.footer.text %></p>
       </div>
@@ -37,5 +39,6 @@
 <% resource.js.forEach((path) => { %>
 <script type="text/javascript" src="<%= path %>"></script>
 <% }); %>
+<%- include ./_sdk %>
 </body>
 </html>

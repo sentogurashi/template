@@ -1,6 +1,6 @@
 <% function extend(buf) { %>
 <div class="Article">
-  <%
+<%
   const imagePath = '../../images/standalone/feature/' + page.id;
   const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')};
   const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
@@ -23,30 +23,30 @@
     });
   }; %>
 
-  <% if(page.content) {
-    page.content.forEach((elm, idx) => {
-      if(elm.type === 'image') {
-        const imageType = (idx === 0) ? 'main' : 'sub';
-        const imageName = elm.name ? elm.name : 'photo_' + imageType +'.jpg'; %>
-        <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url('<%= imagePath + '/' + imageName %>')">
-        </div>
-      <% } else if (elm.type === 'text') { %>
-        <div class="Article__inner">
-          <%- generateText(elm.content); %>
-        </div>
-      <% }
-    });
-  } %>
+<% if(page.content) {
+  page.content.forEach((elm, idx) => {
+    if(elm.type === 'image') {
+      const imageType = (idx === 0) ? 'main' : 'sub';
+      const imageName = elm.name ? elm.name : 'photo_' + imageType +'.jpg'; %>
+  <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url('<%= imagePath + '/' + imageName %>')">
+  </div>
+    <% } else if (elm.type === 'text') { %>
+  <div class="Article__inner">
+        <%- generateText(elm.content); %>
+  </div>
+    <% }
+  });
+} %>
 
-  <% if(page.profile) { %>
-    <div class="Article__inner">
-      <div class="Profile">
-        <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
-        <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
-        <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
-      </div>
+<% if(page.profile) { %>
+  <div class="Article__inner">
+    <div class="Profile">
+      <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
+      <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
+      <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
     </div>
-  <% } %>
+  </div>
+<% } %>
 </div>
 <% }
 var resource = {

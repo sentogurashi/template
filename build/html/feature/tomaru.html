@@ -23,7 +23,7 @@
 <body>
 <div class="Content js-Content">
   <div class="Column">
-    
+
 <div class="Navigation Navigation--pc">
   <a href="./">
     <div class="Navigation__sitelogo">銭湯ぐらし</div>
@@ -66,15 +66,13 @@
 </ul>
 </div>
     <div class="Main">
-      
 <div class="Article">
-  
-  
-        <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/tomaru/photo_main.jpg')">
-        </div>
-      
-        <div class="Article__inner">
-          
+
+  <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/tomaru/photo_main.jpg')">
+  </div>
+    
+  <div class="Article__inner">
+        
         <div class="Article__headingWrapper">
           <p class="Article__illust" style="background-image:url('../../images/standalone/feature/tomaru/illust_line.png')"></p>
           <h1 class="Article__headingLv1">泊まる銭湯</h1>
@@ -88,20 +86,19 @@
       
         <p class="Article__text">外国人観光客に、銭湯の面白さを伝えたい！<br>ただ、言葉が通じない。<br>地域住民の方も、言葉の壁を越えさえすれば外国人の人たちとコミュケーションしたいと密かに思っています。<br>なにより、私がはじめて銭湯に入った日のこと、銭湯で友達が出来たこと、銭湯ってお湯に入るだけじゃなくてしあわせな時間を共有できる場所だということをわかちあいたい！<br>いろんな人に「人っていいな！　銭湯って楽しいな」と感じてもらうために、私がみなさんを素敵な銭湯日和にご案内します。</p>
       
-        </div>
-      
-        <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/tomaru/photo_sub.jpg')">
-        </div>
-      
-  
-    <div class="Article__inner">
-      <div class="Profile">
-        <div class="Profile__nameJp">大月美帆</div>
-        <div class="Profile__nameEn">MIHO OTSUKI</div>
-        <p class="Profile__text">1986年生まれ。宮崎県出身。<br>高円寺歴13年目突入！　小杉湯の常連客として通う近所の主婦。語学を生かし地域の人と外国人との間に入りおしゃべりコミュニケーターになるべく奮闘中。</p>
-      </div>
+  </div>
+    
+  <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/tomaru/photo_sub.jpg')">
+  </div>
+    
+
+  <div class="Article__inner">
+    <div class="Profile">
+      <div class="Profile__nameJp">大月美帆</div>
+      <div class="Profile__nameEn">MIHO OTSUKI</div>
+      <p class="Profile__text">1986年生まれ。宮崎県出身。<br>高円寺歴13年目突入！　小杉湯の常連客として通う近所の主婦。語学を生かし地域の人と外国人との間に入りおしゃべりコミュニケーターになるべく奮闘中。</p>
     </div>
-  
+  </div>
 </div>
       <div class="Footer">
         <p>© 2017 Sentogurashi</p>
@@ -111,5 +108,32 @@
 </div><!-- /.Content -->
 <script type="text/javascript" src="../../scripts/common.bundle.js"></script>
 <script type="text/javascript" src="../../scripts/feature.bundle.js"></script>
+<!-- GA -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-100837084-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- fb SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '306929856428469',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>

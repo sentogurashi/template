@@ -23,7 +23,7 @@
 <body>
 <div class="Content js-Content">
   <div class="Column">
-    
+
 <div class="Navigation Navigation--pc">
   <a href="./">
     <div class="Navigation__sitelogo">銭湯ぐらし</div>
@@ -66,15 +66,13 @@
 </ul>
 </div>
     <div class="Main">
-      
 <div class="Article">
-  
-  
-        <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/kizuku/photo_main.jpg')">
-        </div>
-      
-        <div class="Article__inner">
-          
+
+  <div class="Article__photoMain" style="background-image:url('../../images/standalone/feature/kizuku/photo_main.jpg')">
+  </div>
+    
+  <div class="Article__inner">
+        
         <div class="Article__headingWrapper">
           <p class="Article__illust" style="background-image:url('../../images/standalone/feature/kizuku/illust_line.png')"></p>
           <h1 class="Article__headingLv1">築く銭湯</h1>
@@ -92,20 +90,19 @@
       
         <p class="Article__text">新しい関係性は、新しい景色を生みます。銭湯の隣に半年空室のアパートがあることと、常連さんに多彩なメンバーがいることを聞き、この企画が浮かびました。「所有」より「所属」が重視されつつある時代において、関係性のデザインから新しい空間像を模索したいと思います。</p>
       
-        </div>
-      
-        <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/kizuku/photo_sub.jpg')">
-        </div>
-      
-  
-    <div class="Article__inner">
-      <div class="Profile">
-        <div class="Profile__nameJp">加藤 優一</div>
-        <div class="Profile__nameEn">YUICHI KATO／建築家・パブリックプランナー／公共R不動産。</div>
-        <p class="Profile__text">1987年生まれ。山形生まれ銭湯育ち。<br>東北大学博士課程にて、復興まちづくりと自治体組織及び計画プロセスの研究に従事した後に現職。建築の企画設計、地方都市のまちづくりや公共空間の活用、本の執筆編集などに携わる。</p>
-      </div>
+  </div>
+    
+  <div class="Article__photoSub" style="background-image:url('../../images/standalone/feature/kizuku/photo_sub.jpg')">
+  </div>
+    
+
+  <div class="Article__inner">
+    <div class="Profile">
+      <div class="Profile__nameJp">加藤 優一</div>
+      <div class="Profile__nameEn">YUICHI KATO／建築家・パブリックプランナー／公共R不動産。</div>
+      <p class="Profile__text">1987年生まれ。山形生まれ銭湯育ち。<br>東北大学博士課程にて、復興まちづくりと自治体組織及び計画プロセスの研究に従事した後に現職。建築の企画設計、地方都市のまちづくりや公共空間の活用、本の執筆編集などに携わる。</p>
     </div>
-  
+  </div>
 </div>
       <div class="Footer">
         <p>© 2017 Sentogurashi</p>
@@ -115,5 +112,32 @@
 </div><!-- /.Content -->
 <script type="text/javascript" src="../../scripts/common.bundle.js"></script>
 <script type="text/javascript" src="../../scripts/feature.bundle.js"></script>
+<!-- GA -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-100837084-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- fb SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '306929856428469',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>
