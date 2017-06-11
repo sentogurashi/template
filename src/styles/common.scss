@@ -35,3 +35,12 @@ html, body {
     float: none;
   }
 };
+
+.Content {
+  opacity: 0;
+  transition: opacity ease .4s;
+
+  &.is-show {
+    opacity: 1;
+  }
+}
