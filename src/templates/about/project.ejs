@@ -21,24 +21,23 @@ const generateText = (textContentArray) => {
   page.content.forEach((elm, idx) => {
     if(elm.type === 'image') {
       const imageType = (idx === 0) ? 'main' : 'sub'; %>
-      <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url(../../images/standalone/about/project/photo_<%= imageType  %>.jpg)">
-      </div>
+  <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url(../../images/standalone/about/project/photo_<%= imageType  %>.jpg)"></div>
 <% } else if (elm.type === 'text') { %>
-      <div class="Article__inner">
+  <div class="Article__inner">
 <%- generateText(elm.content); %>
-      </div>
+  </div>
 <% }
   });
 } %>
 
 <% if(page.profile) { %>
-    <div class="Article__inner">
-      <div class="Profile">
-        <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
-        <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
-        <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
-      </div>
+  <div class="Article__inner">
+    <div class="Profile">
+      <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
+      <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
+      <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
     </div>
+  </div>
 <% } %>
 </div>
 <% }

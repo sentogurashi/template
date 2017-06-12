@@ -29,15 +29,15 @@
   }
 
   .Navigation__main {
-    margin: 40px 0;
 
     & > li {
-      font-family: serif;
-      font-weight: bold;
-      letter-spacing: .2em;
-      text-align: center;
-      margin: 10px auto;
       & > a {
+        display: block;
+        font-family: serif;
+        font-weight: bold;
+        letter-spacing: .2em;
+        text-align: center;
+        padding: 60px 0;
         @include baseLink;
       }
     }
@@ -47,10 +47,6 @@
     padding: 0 15px;
 
     & > li {
-      padding: 20px 0;
-      font-size: rem(14px);
-      font-family: serif;
-      text-align: center;
       border-top: solid 1px #E8E8E8;
 
       &:last-of-type {
@@ -58,6 +54,11 @@
       }
 
       & > a {
+        display: block;
+        padding: 20px 0;
+        font-size: rem(14px);
+        font-family: serif;
+        text-align: center;
         @include baseLink;
       }
     }
@@ -65,17 +66,18 @@
 
   .Navigation__sns {
     display: flex;
-    justify-content: space-between;
-    max-width: 200px;
-    margin: 40px auto;
+    justify-content: space-around;
+    padding: 20px 0;
 
     & a {
       @include hide-text;
       display: block;
-      width: 20px;
-      height: 20px;
+      width: 40px;
+      height: 40px;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 40px;
+      padding: 50px;
+      background-position: center;
     }
 
     &Facebook {

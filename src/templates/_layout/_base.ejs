@@ -29,16 +29,16 @@
 </head>
 <body>
 <div class="Content js-Content">
-  <div class="Column">
+<div class="Column">
 <%- include ./_navigation %>
-    <div class="Main">
+<div class="Main">
 <%- extend(__output) %>
 <%- include ./_socialButton %>
-      <div class="Footer">
-        <p><%= sitedata.common.layout.footer.text %></p>
-      </div>
-    </div>
-  </div>
+<div class="Footer">
+<p><%= sitedata.common.layout.footer.text %></p>
+</div>
+</div>
+</div>
 </div><!-- /.Content -->
 <% resource.js.forEach((path) => { %>
 <script type="text/javascript" src="<%= path %>"></script>

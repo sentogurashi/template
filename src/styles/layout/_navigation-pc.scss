@@ -29,10 +29,12 @@
       -ms-writing-mode: tb-rl;
       letter-spacing: .2em;
       position: absolute;
-      bottom: 160px;
+      bottom: 155px;
       left: 50%;
       transform: translate(-50%, 0%);
       & > a {
+        display: block;
+        padding: 10px 30px;
         @include baseLink;
       }
     }
@@ -42,10 +44,6 @@
     padding: 0 15px;
 
     & > li {
-      padding: 10px 0;
-      font-size: rem(14px);
-      font-family: serif;
-      text-align: center;
       border-top: solid 1px #E8E8E8;
 
       &:last-of-type {
@@ -53,6 +51,11 @@
       }
 
       & > a {
+        display: block;
+        padding: 10px 0;
+        font-size: rem(14px);
+        font-family: serif;
+        text-align: center;
         @include baseLink;
       }
     }

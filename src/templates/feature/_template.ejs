@@ -7,19 +7,19 @@
   const generateText = (textContentArray) => {
     textContentArray.forEach((elm) => {
       if(elm.type === 'pageTitle') { %>
-        <div class="Article__headingWrapper">
-          <p class="Article__illust" style="background-image:url('<%= imagePath %>/illust_line.png')"></p>
-          <h1 class="Article__headingLv1"><%= page.title %></h1>
-        </div>
-      <% } else if (elm.type === 'heading') { %>
-        <h2 class="Article__headingLv2"><%- elm.content %></h2>
-      <% } else if(elm.type === 'text') { %>
-        <p class="Article__text"><%- replaceToBr(elm.content) %></p>
-      <% } else if(elm.type === 'image') { %>
-        <div class="Article__innerImage">
-          <img src="<%= imagePath + '/' + elm.name %>" alt="">
-        </div>
-      <% }
+    <div class="Article__headingWrapper">
+      <p class="Article__illust" style="background-image:url('<%= imagePath %>/illust_line.png')"></p>
+      <h1 class="Article__headingLv1"><%= page.title %></h1>
+    </div>
+<% } else if (elm.type === 'heading') { %>
+    <h2 class="Article__headingLv2"><%- elm.content %></h2>
+<% } else if(elm.type === 'text') { %>
+    <p class="Article__text"><%- replaceToBr(elm.content) %></p>
+<% } else if(elm.type === 'image') { %>
+    <div class="Article__innerImage">
+      <img src="<%= imagePath + '/' + elm.name %>" alt="">
+    </div>
+<% }
     });
   }; %>
 
@@ -30,11 +30,11 @@
       const imageName = elm.name ? elm.name : 'photo_' + imageType +'.jpg'; %>
   <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url('<%= imagePath + '/' + imageName %>')">
   </div>
-    <% } else if (elm.type === 'text') { %>
+<% } else if (elm.type === 'text') { %>
   <div class="Article__inner">
-        <%- generateText(elm.content); %>
+<%- generateText(elm.content); %>
   </div>
-    <% }
+<% }
   });
 } %>
 
