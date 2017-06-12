@@ -42,6 +42,9 @@
   <% } %>
 </div>
 <% }
+function insertMetaTag(buf) { %>
+<meta property="og:type" content="article"/>
+<% }
 var resource = {
   page: page,
   css: [
@@ -50,6 +53,8 @@ var resource = {
   ],
   js: [
     '../../scripts/common.bundle.js'
-  ]};
+  ],
+  insertMetaTagFlag: true
+};
 %>
 <% include ../_layout/_base %>

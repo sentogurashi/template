@@ -1,4 +1,4 @@
-<% var title = resource.page.title + ' - 銭湯ぐらし'; %>
+<% var title = resource.page.id === 'top' ? resource.page.title : resource.page.title + ' - 銭湯ぐらし'; %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,6 +11,8 @@
 <meta property="og:url" content="<%= resource.page.meta.url %>" />
 <meta property="og:description" content="<%= resource.page.meta.description %>" />
 <meta property="og:image" content="http://www.sentogurashi.com/asset/images/share/<%= resource.page.id %>.jpg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="853" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@sentogurashi">
