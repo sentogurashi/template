@@ -24,7 +24,8 @@ gulp.task('deploy:copy', () => {
   const htmlStream = gulp.src([
     build + '/html/**/*'
   ])
-  .pipe($.replace(/(('|"))\.\.\//g, '$1./asset/' ))
+  .pipe($.replace(/(('|"))\.\.\/\.\.\//g, '$1../asset/'))
+  .pipe($.replace(/(('|"))\.\.\/(?!asset)/g, '$1./asset/' ))
   .pipe(gulp.dest(tmp));
 
   const assetStream = gulp.src([
@@ -68,5 +69,5 @@ gulp.task('deploy:clean', () => {
 });
 
 gulp.task('deploy', () => {
-  runSequence('deply:copy', 'deploy:ftp', 'deploy:clean');
+  runSequence('deploy:copy', 'deploy:ftp', 'deploy:clean');
 });

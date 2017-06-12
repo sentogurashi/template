@@ -1,4 +1,5 @@
 .Navigation--sp {
+  display: none;
   opacity: 0;
   transition: opacity .5s ease;
   pointer-events: none;
@@ -136,5 +137,8 @@
 @include mq('sm') {
   .NavigationSpTrigger {
     display: inline-block;
+  }
+  .Navigation--sp {
+    display: block;
   }
 };

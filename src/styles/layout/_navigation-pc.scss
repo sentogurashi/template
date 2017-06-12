@@ -28,7 +28,10 @@
       writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
       letter-spacing: .2em;
-      margin: 10px auto;
+      position: absolute;
+      bottom: 160px;
+      left: 50%;
+      transform: translate(-50%, 0%);
       & > a {
         @include baseLink;
       }

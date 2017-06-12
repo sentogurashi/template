@@ -1,12 +1,13 @@
 <%
-var content = sitedata.pages.top.content;
+const content = sitedata.pages.top.content;
+const replaceToBr = str => {return str.replace(/\n/g, '<br>')};
 function extend(buf) { %>
 <div class="MainVisual js-MainVisual">
   <div class="MainVisual__image js-MainVisual__image" style="background-image: url('../images/standalone/top/mainvisual_1.jpg')"></div>
 </div>
 <div class="Module">
   <h1 class="Module__heading"><%= content.heading.top %></h1>
-  <p class="Module__text"><%= content.text.lead %></p>
+  <p class="Module__text"><%- replaceToBr(content.text.lead) %></p>
   <div class="Module__image">
       <img src="../images/standalone/top/main_illust.png" alt="">
   </div>

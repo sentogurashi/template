@@ -1,10 +1,7 @@
 <% function navigationContent () { %>
-<ul class="Navigation__main">
-  <li><a href="./about/project.html"><%= sitedata.common.layout.navigation.about %></a></li>
-</ul>
 <ul class="Navigation__sub">
   <li><a href="./about/kosugiyu.html"><%= sitedata.common.layout.navigation.kosugiyu %></a></li>
-  <li><a href="TODO"><%= sitedata.common.layout.navigation.contact %></a></li>
+  <li><a class="js-info" href="" target="_blank"><%= sitedata.common.layout.navigation.contact %></a></li>
 </ul>
 <ul class="Navigation__sns">
   <li><a class="Navigation__snsTwitter" href="<%= sitedata.common.info.sns.twitter.url %>" target="_blank"><%= sitedata.common.info.sns.twitter.name %></a></li>
@@ -13,11 +10,14 @@
 <% } %>
 
 <div class="Navigation Navigation--pc">
-  <a href="./">
+  <a href="http://www.sentogurashi.com">
     <div class="Navigation__sitelogo"><%= sitedata.siteTitle %></div>
   </a>
+  <ul class="Navigation__main">
+    <li><a href="./about/project.html"><%= sitedata.common.layout.navigation.about %></a></li>
+  </ul>
   <div class="Navigation__bottom">
-    <%- navigationContent() %>
+<%- navigationContent() %>
   </div>
 </div>
 
@@ -27,8 +27,11 @@
   <span class="NavigationSpTrigger__border"></span>
 </a>
 <div class="Navigation Navigation--sp js-Navigation--sp">
-  <a href="./">
+  <a href="http://www.sentogurashi.com">
     <div class="Navigation__sitelogo"><%= sitedata.siteTitle %></div>
   </a>
-  <%- navigationContent() %>
+  <ul class="Navigation__main">
+    <li><a href="./about/project.html"><%= sitedata.common.layout.navigation.about %></a></li>
+  </ul>
+<%- navigationContent() %>
 </div>

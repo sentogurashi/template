@@ -2,8 +2,8 @@
 <div class="Article">
 <%
   const imagePath = '../../images/standalone/feature/' + page.id;
-  const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')};
-  const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
+  const replaceToBr = str => {return str.replace(/\n/g, '<br>')};
+  const initialToUpperCase = str => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
   const generateText = (textContentArray) => {
     textContentArray.forEach((elm) => {
       if(elm.type === 'pageTitle') { %>
@@ -44,6 +44,15 @@
       <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
       <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
       <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
+<% if(page.profile.links) { %>
+      <ul class="Profile__links">
+<% page.profile.links.forEach((elm) => { %>
+        <li class="Profile__link Profile__link--<%= elm.type %>">
+          <a href="<%= elm.url %>" target="_blank"><%= elm.text ? elm.text : elm.type %></a>
+        </li>
+<% }); %>
+      </ul>
+<% } %>
     </div>
   </div>
 <% } %>

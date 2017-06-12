@@ -1,21 +1,22 @@
+<% var title = resource.page.title + ' - 銭湯ぐらし'; %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title><%= resource.page.title %></title>
+<title><%= title %></title>
 <meta name="description" content="<%= resource.page.meta.description %>">
 
-<meta property="fb:app_id" content="TODO" />
-<meta property="og:title" content="<%= resource.page.title %>" />
+<meta property="fb:app_id" content="306929856428469" />
+<meta property="og:title" content="<%= title %>" />
 <meta property="og:url" content="<%= resource.page.meta.url %>" />
 <meta property="og:description" content="<%= resource.page.meta.description %>" />
-<meta property="og:image" content="<%= resource.page.meta.image %>" />
+<meta property="og:image" content="http://www.sentogurashi.com/asset/images/share/<%= resource.page.id %>.jpg" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@sentogurashi">
-<meta name="twitter:title" content="<%= resource.page.title %>">
+<meta name="twitter:title" content="<%= title %>">
 <meta name="twitter:description" content="<%= resource.page.meta.description %>">
-<meta name="twitter:image:src" content="<%= resource.page.meta.image %>">
+<meta name="twitter:image:src" content="http://www.sentogurashi.com/asset/images/share/<%= resource.page.id %>.jpg">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <% if(resource.insertMetaTagFlag) { %>
 <%- insertMetaTag(__output) %>
@@ -30,6 +31,7 @@
 <%- include ./_navigation %>
     <div class="Main">
 <%- extend(__output) %>
+<%- include ./_socialButton %>
       <div class="Footer">
         <p><%= sitedata.common.layout.footer.text %></p>
       </div>
