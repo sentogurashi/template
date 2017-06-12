@@ -22,4 +22,4 @@ gulp.task('script:lib', () => {
     src + 'scripts/lib/*.json'
   ])
     .pipe(gulp.dest(dest + 'scripts/lib/'));
-})
+});

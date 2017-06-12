@@ -24,8 +24,7 @@ gulp.task('deploy:copy', () => {
   const htmlStream = gulp.src([
     build + '/html/**/*'
   ])
-  .pipe($.replace(/(('|"))\.\.\/\.\.\//g, '$1../asset/'))
-  .pipe($.replace(/(('|"))\.\.\/(?!asset)/g, '$1./asset/' ))
+  .pipe($.replace(/\..*?\/asset/, '/asset'))
   .pipe(gulp.dest(tmp));
 
   const assetStream = gulp.src([

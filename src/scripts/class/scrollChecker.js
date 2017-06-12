@@ -1,4 +1,4 @@
-// jQuery依存
+import $ form 'jQuery';
 export default class ScrollChecker {
 
   constructor() {
