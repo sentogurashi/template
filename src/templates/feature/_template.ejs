@@ -28,7 +28,8 @@
     if(elm.type === 'image') {
       const imageType = (idx === 0) ? 'main' : 'sub';
       const imageName = elm.name ? elm.name : 'photo_' + imageType +'.jpg'; %>
-  <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url('<%= imagePath + '/' + imageName %>')">
+  <div class="Article__photoWrapper">
+    <div class="Article__photo<%= initialToUpperCase(imageType) %> js-Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url('<%= imagePath + '/' + imageName %>')"></div>
   </div>
 <% } else if (elm.type === 'text') { %>
   <div class="Article__inner">

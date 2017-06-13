@@ -1,3 +1,5 @@
+import SimpleParallax from './class/simpleParallax.js';
+
 const $window = $(window);
 const animationClassName = 'is-animate';
 
@@ -40,5 +42,11 @@ function mainvisualAnimation() {
   });
 
 }
+
+$(() => {
+  const simpleParallax = new SimpleParallax();
+  simpleParallax.addElement('.js-MainVisual__image', 0.2);
+  simpleParallax.init();
+});
 
 $window.on('load', mainvisualAnimationSinglePhoto);

@@ -1,4 +1,4 @@
-<% var page = sitedata.pages.about.project %>
+<% var page = sitedata.pages.about.kosugiyu %>
 <% function extend(buf) { %>
 <div class="Article">
 <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')};
@@ -24,7 +24,7 @@ const generateText = (textContentArray) => {
       const imageName = elm.name ? elm.name : 'photo_' + imageType;
       %>
 <div class="Article__photoWrapper">
-  <div class="Article__photo<%= initialToUpperCase(imageType)%> js-Article__photo<%= initialToUpperCase(imageType) %> " style="background-image:url('../../images/standalone/about/project/<%= imageName  %>.jpg')"></div>
+  <div class="Article__photo<%= initialToUpperCase(imageType)%> js-Article__photo<%= initialToUpperCase(imageType) %> " style="background-image:url('../../images/standalone/about/kosugiyu/<%= imageName  %>.jpg')"></div>
 </div>
 <% } else if (elm.type === 'text') { %>
   <div class="Article__inner">
@@ -34,12 +34,12 @@ const generateText = (textContentArray) => {
   });
 } %>
 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.7372884158754!2d139.6466903146042!3d35.70808198018804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f27e71b0d029%3A0xcac1c06748a11ee2!2z5bCP5p2J5rmv!5e0!3m2!1sja!2sjp!4v1497310414905" width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 <% if(page.profile) { %>
   <div class="Article__inner">
     <div class="Profile">
       <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
-      <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
-      <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
       <% if(page.profile.links) { %>
       <ul class="Profile__links">
       <% page.profile.links.forEach((elm) => { %>

@@ -18,8 +18,14 @@
     }
 
     &.is-animate {
-      animation: mainvisual-animation 10s linear;
+      animation: mainvisual-animation 6s linear;
     }
+
+    @include mq('sm') {
+      &.is-animate {
+        animation: mainvisual-animation 2s linear;
+      }
+    };
   }
 }
 
@@ -127,6 +133,10 @@
     &:hover {
       opacity: 1;
     }
+
+    @include mq('sm') {
+      opacity: 1;
+    };
   }
 
   &__text {

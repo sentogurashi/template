@@ -24,7 +24,9 @@ gulp.task('deploy:copy', () => {
   const htmlStream = gulp.src([
     build + '/html/**/*'
   ])
-  .pipe($.replace(/\..*?\/asset/, '/asset'))
+  .pipe($.replace(/('|")(\.|\/)+?\/(styles|scripts|images|fonts)/g, '$1/assets/$3')) // ルート相対パス化
+//  .pipe($.replace(/(('|"))\.\.\/\.\.\//g, '$1../assets/'))
+//  .pipe($.replace(/(('|"))\.\.\/(?!assets)/g, '$1./assets/'))
   .pipe(gulp.dest(tmp));
 
   const assetStream = gulp.src([
@@ -35,7 +37,7 @@ gulp.task('deploy:copy', () => {
   ], {
     base: build
   })
-  .pipe(gulp.dest(tmp + '/asset'));
+  .pipe(gulp.dest(tmp + '/assets'));
 
   return es.merge([htmlStream, assetStream]);
 })

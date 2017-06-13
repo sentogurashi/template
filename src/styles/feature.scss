@@ -30,6 +30,7 @@ $photoSubHeightBase: 500px;
 
     @include mq('sm') {
       padding: 20px 0;
+      font-size: rem(34px);
     };
   }
 
@@ -38,6 +39,10 @@ $photoSubHeightBase: 500px;
     font-family: serif;
     font-size: rem(34px);
     color: $system-color-text;
+    @include mq('sm') {
+      padding: 20px 0;
+      font-size: rem(28px);
+    };
   }
 
   &__text {
@@ -65,12 +70,17 @@ $photoSubHeightBase: 500px;
     }
   }
 
+  &__photoWrapper {
+    overflow: hidden;
+  }
+
   &__photoMain,
   &__photoSub {
     overflow: hidden;
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__photoMain {
@@ -84,6 +94,7 @@ $photoSubHeightBase: 500px;
     padding-bottom: percentage($photoSubHeightBase / $photoSubWidthBase);
     @include mq('sm') {
       padding-bottom: 100%;
+      transform: scale(1.2);
     };
   }
 
@@ -123,9 +134,6 @@ $photoSubHeightBase: 500px;
     letter-spacing: .1em;
     line-height: (30/18);
   }
-  &__links {
-
-  }
   &__link {
     display: inline-block;
     margin-right: 15px;
@@ -145,7 +153,7 @@ $photoSubHeightBase: 500px;
       display: inline-block;
       font-size: rem(14px);
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 18px;
       background-position: left center;
       padding-left: 25px;
       transition: opacity .5s ease;
