@@ -1,0 +1,224 @@
+@import "util";
+@import "foundation/base-style";
+
+$photoMainWidthBase: 1280px;
+$photoMainHeightBase: 650px;
+$photoSubWidthBase: 1280px;
+$photoSubHeightBase: 500px;
+
+.Article {
+
+  &__inner {
+    width: 800px;
+    margin: 0 auto;
+    @include mq('md') {
+      width: auto;
+      margin: 0 20px;
+    };
+  }
+
+  &__headingWrapper {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__headingLv1 {
+    @include baseHeadingLv1;
+    margin: 50px 0;
+    font-size: rem(60px); // TODO アドホック
+
+    @include mq('sm') {
+      padding: 20px 0;
+      font-size: rem(34px);
+    };
+  }
+
+  &__headingLv2 {
+    margin: 60px 0;
+    font-family: serif;
+    font-size: rem(34px);
+    color: $system-color-text;
+    @include mq('sm') {
+      padding: 20px 0;
+      font-size: rem(28px);
+    };
+  }
+
+  &__text {
+    @include baseText;
+    margin: 60px 0 90px;
+
+    @include mq('sm') {
+      margin: 20px 0;
+    };
+
+    & + & {
+      margin-top: -70px; // TODO: ここびみょう
+
+      @include mq('sm') {
+        margin-top: 0;
+      };
+    }
+  }
+
+  &__innerImage {
+    margin-bottom: 90px;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__photoWrapper {
+    overflow: hidden;
+  }
+
+  &__photoMain,
+  &__photoSub {
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__photoMain {
+    padding-bottom: percentage($photoMainHeightBase / $photoMainWidthBase);
+    @include mq('sm') {
+      padding-bottom: 100%;
+    };
+  }
+
+  &__photoSub {
+    padding-bottom: percentage($photoSubHeightBase / $photoSubWidthBase);
+    @include mq('sm') {
+      padding-bottom: 100%;
+      transform: scale(1.2);
+    };
+  }
+
+  &__illust {
+    margin-right: 30px;
+    width: 180px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include mq('sm') {
+      margin-right: 10px;
+      width: 100px;
+      height: 100px;
+    };
+  }
+
+  &__defList {
+    margin: 60px 0;
+
+    &Row {
+      @include baseText;
+      display: flex;
+//      border-bottom: 1px solid #f5f5f5;
+      @include mq('sm') {
+        display: block;
+        margin: 40px 0;
+      }
+
+      & > dt,
+      & > dd {
+        display: block;
+        padding: 20px 0;
+
+        @include mq('sm') {
+          padding: 0;
+        }
+      }
+
+      & > dt {
+        width: 20%;
+        font-weight: bold;
+      }
+      & > dd {
+        flex: 1;
+      }
+    }
+  }
+
+  &__iframeWrapper {
+    margin: 60px 0;
+
+    @include mq('sm') {
+      & > iframe {
+        width: 100%;
+      }
+    };
+  }
+}
+
+
+.Profile {
+  margin: 60px 0;
+
+  &__nameJp {
+    margin: 15px 0;
+    font-size: rem(24px);
+    //font-family: "Yu Gothic", YuGothic;
+    color: $system-color-text;
+  }
+  &__nameEn {
+    margin: 15px 0;
+    font-size: rem(16px);
+    //font-family: "Yu Gothic", YuGothic;
+    color: $system-color-text;
+  }
+  &__text {
+    margin: 40px 0;
+    font-size: rem(14px);
+    color: $system-color-text;
+    letter-spacing: .1em;
+    line-height: (30/18);
+  }
+  &__link {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    &::after {
+      display: inline-block;
+      content: '／';
+      margin-left: 10px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    & > a {
+      display: inline-block;
+      font-size: rem(14px);
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-position: left center;
+      padding-left: 25px;
+      transition: opacity .5s ease;
+      color: #4b4b4b;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &--facebook > a {
+      background-image: url('../images/standalone/common/ico_facebook.svg');
+    }
+    &--twitter > a {
+      background-image: url('../images/standalone/common/ico_twitter.svg');
+    }
+    &--instagram > a {
+      background-image: url('../images/standalone/common/ico_instagram.svg');
+    }
+    &--web > a {
+      background-image: url('../images/standalone/common/ico_web.svg');
+    }
+  }
+}

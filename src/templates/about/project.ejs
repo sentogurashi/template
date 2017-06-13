@@ -6,9 +6,7 @@ const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() +
 const generateText = (textContentArray) => {
   textContentArray.forEach((elm) => {
     if(elm.type === 'pageTitle') { %>
-      <div class="Article__headingWrapper">
-        <h1 class="Article__headingLv1"><%- elm.content %></h1>
-      </div>
+      <h1 class="Article__headingLv1"><%- elm.content %></h1>
 <% } else if (elm.type === 'heading') { %>
       <h2 class="Article__headingLv2"><%- replaceToBr(elm.content) %></h2>
 <% } else if(elm.type === 'text') { %>
@@ -61,12 +59,12 @@ var resource = {
   page: page,
   css: [
     '../../styles/common.css',
-    '../../styles/feature.css'
+    '../../styles/article.css'
   ],
   js: [
     '../../scripts/lib/jquery-3.2.1.min.js',
     '../../scripts/common.bundle.js',
-    '../../scripts/feature.bundle.js'
+    '../../scripts/article.bundle.js'
   ],
   insertMetaTagFlag: true
 };

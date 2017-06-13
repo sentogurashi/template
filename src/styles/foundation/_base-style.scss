@@ -11,7 +11,6 @@
   color: $system-color-text;
   text-align: center;
   font-size: rem(50px);
-  padding: 50px 0;
 
   @include mq('sm') {
     font-size: rem(40px);
