@@ -1,6 +1,19 @@
 @import "util";
 @import "foundation/base-style";
 
+.SpTopHeader {
+  display: none;
+  height: 67px;
+  background-image: url('../images/standalone/common/sitelogo_sp.svg');
+  background-size: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mq('sm') {
+    display: block;
+  }
+}
+
 .MainVisual {
   overflow: hidden;
 
@@ -67,7 +80,7 @@
     text-align: center;
     padding: 20px 0;
     color: $system-color-text;
-    font-family: serif;
+    font-family: $base-font-serif;
     font-weight: bold;
     transition: ease .3s;
 
@@ -142,7 +155,7 @@
 
   &__text {
     @include baseLink;
-    font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+    font-family: "Kokoro", YuMincho, 'Yu Mincho', $base-font-serif;
     font-size: rem(24px);
     text-align: center;
   }

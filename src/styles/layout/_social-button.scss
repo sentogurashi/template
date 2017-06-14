@@ -5,6 +5,15 @@
   margin: 20px auto;
   overflow: hidden;
 
+  &__cell {
+    &--twitter {
+      margin-right: 20px;
+    }
+    &--facebook {
+      width: 97px;
+    }
+  }
+
   @include mq('sm') {
     margin: 20px;
     width: auto;

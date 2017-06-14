@@ -24,7 +24,7 @@
 
   .Navigation__main {
     & > li {
-      font-family: serif;
+      font-family: $base-font-serif;
       font-weight: bold;
       writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -55,7 +55,7 @@
         display: block;
         padding: 10px 0;
         font-size: rem(14px);
-        font-family: serif;
+        font-family: $base-font-serif;
         text-align: center;
         @include baseLink;
       }
