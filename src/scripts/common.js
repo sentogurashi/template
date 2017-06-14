@@ -6,10 +6,6 @@ function display () {
   $('.js-Content').addClass('is-show');
 };
 
-function asyncExec (cb, time = 0) {
-  setTimeout(cb, time);
-}
-
 function insertContact() {
   const convert = str => str.replace(/s[0-9]/g, '').split('').reverse().join('');
   const str1 = 's2:os0ts7ls9s0iams8';

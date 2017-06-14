@@ -45,7 +45,7 @@ function mainvisualAnimation() {
 
 $(() => {
   const simpleParallax = new SimpleParallax();
-  simpleParallax.addElement('.js-MainVisual__image', 0.2);
+  simpleParallax.addElement('.js-MainVisual__image',  simpleParallax.checkIsPortrait() ? 0.2 : 0.4));
   simpleParallax.init();
 });
 
