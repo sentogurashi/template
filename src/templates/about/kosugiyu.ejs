@@ -10,7 +10,7 @@ const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
   <h1 class="Article__headingLv1"><%= page.content.headingMain %></h1>
 
   <div class="Article__inner">
-    <h2 class="Article__headingLv2"><%= replaceToBr(page.content.section[0].headingSub) %></h2>
+    <h2 class="Article__headingLv2"><%- replaceToBr(page.content.section[0].headingSub) %></h2>
     <p class="Article__text"><%= replaceToBr(page.content.section[0].text) %></p>
   </div>
 
