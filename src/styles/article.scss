@@ -48,6 +48,10 @@ $photoSubHeightBase: 500px;
     };
   }
 
+  &__headingLv3 {
+    // TODO
+  }
+
   &__text {
     @include baseText;
     margin: 60px 0 90px;
