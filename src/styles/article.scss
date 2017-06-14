@@ -170,6 +170,13 @@ $photoSubHeightBase: 500px;
 .Profile {
   margin: 60px 0;
 
+  &__nameSub {
+    margin: 15px 0;
+    font-size: rem(16px);
+    //font-family: "Yu Gothic", YuGothic;
+    line-height: 1.4;
+    color: $system-color-text;
+  }
   &__nameJp {
     margin: 15px 0;
     font-size: rem(24px);
@@ -177,11 +184,13 @@ $photoSubHeightBase: 500px;
     color: $system-color-text;
   }
   &__nameEn {
-    margin: 15px 0;
-    font-size: rem(16px);
-    //font-family: "Yu Gothic", YuGothic;
-    line-height: 1.4;
-    color: $system-color-text;
+    display: inline-block;
+    &::after {
+      content: ' ／';
+    }
+  }
+  &__title {
+    display: inline-block;
   }
   &__text {
     margin: 40px 0;
