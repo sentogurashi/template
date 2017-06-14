@@ -1,3 +1,15 @@
+/*
+
+Usage:
+ルートにftp_config.jsonを作成し以下記入
+
+{
+    "host": "ホスト名",
+    "user": "ユーザー名",
+    "pass": "パスワード"
+}
+
+*/
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import es from 'event-stream';
@@ -25,8 +37,6 @@ gulp.task('deploy:copy', () => {
     build + '/html/**/*'
   ])
   .pipe($.replace(/('|")(\.|\/)+?\/(styles|scripts|images|fonts)/g, '$1/assets/$3')) // ルート相対パス化
-//  .pipe($.replace(/(('|"))\.\.\/\.\.\//g, '$1../assets/'))
-//  .pipe($.replace(/(('|"))\.\.\/(?!assets)/g, '$1./assets/'))
   .pipe(gulp.dest(tmp));
 
   const assetStream = gulp.src([
