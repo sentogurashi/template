@@ -6,15 +6,15 @@ function extend(buf) { %>
   <div class="MainVisual__image js-MainVisual__image" style="background-image: url('../images/standalone/top/mainvisual_1.jpg')"></div>
 </div>
 <div class="Module">
-  <h1 class="Module__heading"><%= content.heading.top %></h1>
-  <p class="Module__text"><%- replaceToBr(content.text.lead) %></p>
+  <h1 class="Module__heading"><%= content.section[0].heading %></h1>
+  <p class="Module__text"><%- replaceToBr(content.section[0].text) %></p>
   <div class="Module__image">
       <img src="../images/standalone/top/main_illust.png" alt="">
   </div>
-  <a href="./about/project.html" class="Module__link"><%= content.link.about %></a>
+  <a href="./about/project.html" class="Module__link"><%= content.section[0].link %></a>
 </div>
 <div class="Module">
-  <h1 class="Module__heading"><%= content.heading.activity %></h1>
+  <h1 class="Module__heading"><%= content.section[1].heading %></h1>
 
   <div class="MainMenu">
 <% var menuContents = sitedata.pages.feature, cnt = 0;

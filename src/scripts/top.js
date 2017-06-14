@@ -2,6 +2,7 @@ import SimpleParallax from './class/simpleParallax.js';
 
 const $window = $(window);
 const animationClassName = 'is-animate';
+const simpleParallax = new SimpleParallax();
 
 function asyncExec (cb, time = 0) {
   setTimeout(cb, time);
@@ -44,8 +45,7 @@ function mainvisualAnimation() {
 }
 
 $(() => {
-  const simpleParallax = new SimpleParallax();
-  simpleParallax.addElement('.js-MainVisual__image',  simpleParallax.checkIsPortrait() ? 0.2 : 0.4));
+  simpleParallax.addElement('.js-MainVisual__image',  simpleParallax.checkIsPortrait() ? 0.2 : 0.4);
   simpleParallax.init();
 });
 

@@ -30,7 +30,7 @@ $photoSubHeightBase: 500px;
     font-size: rem(60px); // TODO アドホック
 
     @include mq('sm') {
-      padding: 20px 0;
+      margin: 20px 0;
       font-size: rem(34px);
     };
   }
@@ -40,8 +40,10 @@ $photoSubHeightBase: 500px;
     font-family: serif;
     font-size: rem(34px);
     color: $system-color-text;
+    line-height: 1.4;
+
     @include mq('sm') {
-      padding: 20px 0;
+      margin: 20px 0;
       font-size: rem(28px);
     };
   }
@@ -86,13 +88,22 @@ $photoSubHeightBase: 500px;
 
   &__photoMain {
     padding-bottom: percentage($photoMainHeightBase / $photoMainWidthBase);
+
+    &.is-animate {
+      animation: mainvisual-animation 6s linear;
+    }
+
     @include mq('sm') {
       padding-bottom: 100%;
+      &.is-animate {
+        animation: mainvisual-animation 2s linear;
+      }
     };
   }
 
   &__photoSub {
     padding-bottom: percentage($photoSubHeightBase / $photoSubWidthBase);
+
     @include mq('sm') {
       padding-bottom: 100%;
       transform: scale(1.2);
@@ -169,6 +180,7 @@ $photoSubHeightBase: 500px;
     margin: 15px 0;
     font-size: rem(16px);
     //font-family: "Yu Gothic", YuGothic;
+    line-height: 1.4;
     color: $system-color-text;
   }
   &__text {

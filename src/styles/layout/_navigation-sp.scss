@@ -66,7 +66,7 @@
 
   .Navigation__sns {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px 0;
 
     & a {
@@ -110,7 +110,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: $system-color-text;
+    background-color: $vi-color-blue;
     border-radius: 1.5px;
     transition: all .4s ease;
     box-sizing: border-box;
