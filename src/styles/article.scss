@@ -43,9 +43,25 @@ $photoSubHeightBase: 500px;
     line-height: 1.4;
 
     @include mq('sm') {
-      margin: 20px 0;
+      margin: 40px 0 30px;
       font-size: rem(28px);
     };
+  }
+
+  &__headingLv3 {
+    margin: 40px 0 30px;
+    font-weight: 600;
+    font-size: rem(18px);
+    font-family: $base-font-serif;
+    color: $system-color-text;
+
+    .Article__headingLv2 + & {
+      margin-top: -20px;
+    }
+
+    & + .Article__text  {
+      margin-top: 0px;
+    }
   }
 
   &__text {
@@ -56,6 +72,7 @@ $photoSubHeightBase: 500px;
       margin: 20px 0 60px;
     };
 
+/*
     & + & {
       margin-top: -70px; // TODO: ここびみょう
 
@@ -63,6 +80,7 @@ $photoSubHeightBase: 500px;
         margin-top: 0;
       };
     }
+*/
   }
 
   &__innerImage {

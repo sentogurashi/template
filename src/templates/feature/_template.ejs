@@ -13,6 +13,8 @@
     </div>
 <% } else if (elm.type === 'headingSub') { %>
     <h2 class="Article__headingLv2"><%- replaceToBr(elm.content) %></h2>
+<% } else if (elm.type === 'headingAccent') { %>
+    <h3 class="Article__headingLv3"><%- replaceToBr(elm.content) %></h2>
 <% } else if(elm.type === 'text') { %>
     <p class="Article__text"><%- replaceToBr(elm.content) %></p>
 <% } else if(elm.type === 'image') { %>
