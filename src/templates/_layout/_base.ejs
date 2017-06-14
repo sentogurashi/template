@@ -1,40 +1,48 @@
+<% var title = resource.page.id === 'top' ? resource.page.title : resource.page.title + ' - 銭湯ぐらし'; %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title></title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+<title><%= title %></title>
+<meta name="description" content="<%= resource.page.meta.description %>">
 
-<meta property="fb:app_id" content="" />
-<meta property="og:title" content="" />
-<meta property="og:url" content="" />
-<meta property="og:description" content="" />
-<meta property="og:image" content="" />
+<meta property="fb:app_id" content="306929856428469" />
+<meta property="og:title" content="<%= title %>" />
+<meta property="og:url" content="<%= resource.page.meta.url %>" />
+<meta property="og:description" content="<%= resource.page.meta.description %>" />
+<meta property="og:image" content="http://www.sentogurashi.com/asset/images/share/<%= resource.page.id %>.jpg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="853" />
 
-<meta name="twitter:card" content="">
-<meta name="twitter:site" content="">
-<meta name="twitter:title" content="">
-<meta name="twitter:description" content="">
-<meta name="twitter:image:src" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@sentogurashi">
+<meta name="twitter:title" content="<%= title %>">
+<meta name="twitter:description" content="<%= resource.page.meta.description %>">
+<meta name="twitter:image:src" content="http://www.sentogurashi.com/asset/images/share/<%= resource.page.id %>.jpg">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<% if(resource.insertMetaTagFlag) { %>
+<%- insertMetaTag(__output) %>
+<% } %>
 <% resource.css.forEach((path) => { %>
 <link rel="stylesheet" href="<%= path %>">
 <% }); %>
 </head>
 <body>
 <div class="Content js-Content">
-  <div class="Column">
-    <%- include ./_navigation %>
-    <div class="Main">
-      <!-- コンテンツ -->
-      <%- extend(__output) %>
-      <p class="Footer">© 2017 Sentogurashi</p>
-    </div>
-  </div>
+<div class="Column">
+<%- include ./_navigation %>
+<div class="Main">
+<%- extend(__output) %>
+<%- include ./_socialButton %>
+<div class="Footer">
+<p><%= sitedata.common.layout.footer.text %></p>
+</div>
+</div>
+</div>
 </div><!-- /.Content -->
 <% resource.js.forEach((path) => { %>
 <script type="text/javascript" src="<%= path %>"></script>
 <% }); %>
+<%- include ./_sdk %>
 </body>
 </html>

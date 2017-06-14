@@ -1,0 +1,12 @@
+.SocialButton {
+  width: 800px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px auto;
+  overflow: hidden;
+
+  @include mq('sm') {
+    margin: 20px;
+    width: auto;
+  }
+}

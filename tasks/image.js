@@ -9,9 +9,6 @@ const $ = gulpLoadPlugins();
 const src = pkg.path.src;
 const dest = pkg.path.dest;
 
-gulp.task('image:test', () => {
-})
-
 gulp.task('image', () => {
 
   const normalStream = gulp.src([
@@ -31,15 +28,13 @@ gulp.task('image', () => {
     normalStream,
     jpgStream
   ])
-  .pipe($.imagemin({
-    quality: 1,
-    progressive: true,
-    use: [
-      pngquant(),
-      jpegoptim({
-        max: 60
-      })
-     ]
+  .pipe($.imagemin([
+    pngquant(),
+    jpegoptim({
+      max: 80
+    })
+  ],{
+    verbose: true
   }))
   .pipe(gulp.dest(dest + 'images/standalone'));
 

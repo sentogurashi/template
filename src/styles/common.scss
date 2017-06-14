@@ -4,43 +4,10 @@
 @import "foundation/reset";
 @import "foundation/base-style";
 @import "font/font";
+@import "animation/animation";
 
+@import "layout/base";
 @import "layout/navigation-pc";
 @import "layout/navigation-sp";
 @import "layout/footer";
-
-// TODO: ここに直接は書かない
-html, body {
-  height: 100%;
-}
-
-.Column {
-  overflow: hidden;
-  @include clearfix;
-}
-
-.NavigationPc {
-  float: left;
-  height: 100%;
-}
-
-.Main {
-  width: calc(100% - 120px);
-  float: right;
-}
-
-@include mq('sm') {
-  .Main {
-    width: 100%;
-    float: none;
-  }
-};
-
-.Content {
-  opacity: 0;
-  transition: opacity ease .4s;
-
-  &.is-show {
-    opacity: 1;
-  }
-}
+@import "layout/social-button";

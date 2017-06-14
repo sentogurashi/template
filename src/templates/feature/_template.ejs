@@ -1,55 +1,79 @@
 <% function extend(buf) { %>
 <div class="Article">
-  <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')};
-  const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
+<%
+  const imagePath = '../../images/standalone/feature/' + page.id;
+  const replaceToBr = str => {return str.replace(/\n/g, '<br>')};
+  const initialToUpperCase = str => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
   const generateText = (textContentArray) => {
     textContentArray.forEach((elm) => {
       if(elm.type === 'pageTitle') { %>
-        <div class="Article__headingWrapper">
-          <p class="Article__illust" style="background-image:url('../../images/standalone/top/menu_<%= page.id %>.png')"></p>
-          <h1 class="Article__headingLv1"><%= page.title %></h1>
-        </div>
-      <% } else if (elm.type === 'heading') { %>
-        <h2 class="Article__headingLv2"><%- elm.content %></h2>
-      <% } else if(elm.type === 'text') { %>
-        <p class="Article__text"><%- replaceToBr(elm.content) %></p>
-      <% }
+    <div class="Article__headingWrapper">
+      <p class="Article__illust" style="background-image:url('<%= imagePath %>/illust_line.png')"></p>
+      <h1 class="Article__headingLv1"><%= page.title %></h1>
+    </div>
+<% } else if (elm.type === 'heading') { %>
+    <h2 class="Article__headingLv2"><%- elm.content %></h2>
+<% } else if(elm.type === 'text') { %>
+    <p class="Article__text"><%- replaceToBr(elm.content) %></p>
+<% } else if(elm.type === 'image') { %>
+    <div class="Article__innerImage">
+      <img src="<%= imagePath + '/' + elm.name %>" alt="">
+    </div>
+<% }
     });
   }; %>
 
-  <% if(page.content) {
-    page.content.forEach((elm, idx) => {
-      if(elm.type === 'image') {
-        const imageType = (idx === 0) ? 'main' : 'sub'; %>
-        <div class="Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url(../../images/standalone/feature/<%= page.id %>/photo_<%= imageType  %>.jpg)">
-        </div>
-      <% } else if (elm.type === 'text') { %>
-        <div class="Article__inner">
-          <%- generateText(elm.content); %>
-        </div>
-      <% }
-    });
-  } %>
+<% if(page.content) {
+  page.content.forEach((elm, idx) => {
+    if(elm.type === 'image') {
+      const imageType = (idx === 0) ? 'main' : 'sub';
+      const imageName = elm.name ? elm.name : 'photo_' + imageType +'.jpg'; %>
+  <div class="Article__photoWrapper">
+    <div class="Article__photo<%= initialToUpperCase(imageType) %> js-Article__photo<%= initialToUpperCase(imageType) %>" style="background-image:url('<%= imagePath + '/' + imageName %>')"></div>
+  </div>
+<% } else if (elm.type === 'text') { %>
+  <div class="Article__inner">
+<%- generateText(elm.content); %>
+  </div>
+<% }
+  });
+} %>
 
-  <% if(page.profile) { %>
-    <div class="Article__inner">
-      <h2 class="Article__headingLv2"><%= page.profile.copy %></h2>
-      <div class="Profile">
-        <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
-        <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
-        <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
-      </div>
+<% if(page.profile) { %>
+  <div class="Article__inner">
+    <div class="Profile">
+      <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
+      <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
+      <p class="Profile__text"><%- replaceToBr(page.profile.text) %></p>
+<% if(page.profile.links) { %>
+      <ul class="Profile__links">
+<% page.profile.links.forEach((elm) => { %>
+        <li class="Profile__link Profile__link--<%= elm.type %>">
+          <a href="<%= elm.url %>" target="_blank"><%= elm.text ? elm.text : elm.type %></a>
+        </li>
+<% }); %>
+      </ul>
+<% } %>
     </div>
-  <% } %>
+  </div>
+<% } %>
 </div>
 <% }
+function insertMetaTag(buf) { %>
+<meta property="og:type" content="article"/>
+<% }
 var resource = {
+  page: page,
   css: [
     '../../styles/common.css',
-    '../../styles/feature.css'
+    '../../styles/article.css'
   ],
   js: [
-    '../../scripts/bundle.js'
-  ]};
+    '../../scripts/lib/jquery-3.2.1.min.js',
+    '../../scripts/common.bundle.js',
+    '../../scripts/article.bundle.js'
+  ],
+  insertMetaTagFlag: true
+};
 %>
 <% include ../_layout/_base %>

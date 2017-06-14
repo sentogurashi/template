@@ -5,6 +5,7 @@ const $ = gulpLoadPlugins();
 
 gulp.task('yaml', () => {
   return gulp.src('./site_content.yml')
+    .pipe($.plumber())
     .pipe($.yaml({
       space: 2
     }))

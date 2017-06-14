@@ -1,42 +1,56 @@
-<% function extend(buf) { %>
-<div class="MainVisual">
-  <img src="../images/standalone/top/mainvisual.jpg" alt="">
+<%
+const content = sitedata.pages.top.content;
+const replaceToBr = str => {return str.replace(/\n/g, '<br>')};
+function extend(buf) { %>
+<div class="MainVisual js-MainVisual">
+  <div class="MainVisual__image js-MainVisual__image" style="background-image: url('../images/standalone/top/mainvisual_1.jpg')"></div>
 </div>
 <div class="Module">
-  <h1 class="Module__heading">銭湯ぐらし</h1>
-  <p class="Module__text">杉並区高円寺の銭湯「小杉湯」のとなりには、2018年2月に解体が決まっている1軒の風呂なしアパートが建っています。解体までの期間限定で、このアパートを「湯パート」と名づけ、多彩な仲間たちがひとつ屋根の下で暮らしはじめました。</p>
+  <h1 class="Module__heading"><%= content.heading.top %></h1>
+  <p class="Module__text"><%- replaceToBr(content.text.lead) %></p>
   <div class="Module__image">
       <img src="../images/standalone/top/main_illust.png" alt="">
   </div>
-  <a href="./about.html" class="Module__link">銭湯暮らしとは</a>
+  <a href="./about/project.html" class="Module__link"><%= content.link.about %></a>
 </div>
 <div class="Module">
-  <h1 class="Module__heading">銭湯ぐらしの活動</h1>
+  <h1 class="Module__heading"><%= content.heading.activity %></h1>
 
   <div class="MainMenu">
-    <% var menuContents = pages.feature, cnt = 0; %>
-    <% for (var i = 0; i < 3; i++) { %>
+<% var menuContents = sitedata.pages.feature, cnt = 0;
+for (var i = 0; i < 3; i++) { %>
     <div class="MainMenu__row">
-      <% for (var j = 0; j < 3; j++) { %>
-        <% var menuContent = menuContents[cnt] %>
-        <a href="./feature/<%= menuContent.id %>.html" class="MainMenu__cell">
-          <p class="MainMenu__illust" style="background-image: url('../images/standalone/top/menu_<%= menuContent.id %>.png')"></p>
-          <p class="MainMenu__text"><%= menuContent.title %></p>
-        </a>
-        <% cnt++;%>
-      <% } %>
+<% for (var j = 0; j < 3; j++) {
+var menuContent = menuContents[cnt] %>
+      <a href="./feature/<%= menuContent.id %>.html" class="MainMenu__cell">
+        <div class="MainMenu__illust" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_line.png')">
+          <div class="MainMenu__illustOnCursor" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_color.png')"></div>
+        </div>
+        <p class="MainMenu__text"><%= menuContent.title %></p>
+      </a>
+<% cnt++;
+ } %>
     </div>
-    <% } %>
+<% } %>
   </div>
 </div>
 <% }
+function insertMetaTag(buf) { %>
+<meta name="google-site-verification" content="oIhGG07K5eP0_scMyqal6daNoObMOdQOYAVcmCK0ays" />
+<meta property="og:type" content="website"/>
+<% }
 var resource = {
+  page: sitedata.pages.top,
   css: [
     '../styles/common.css',
     '../styles/top.css'
   ],
   js: [
-    '../scripts/bundle.js'
-  ]};
+    '../scripts/lib/jquery-3.2.1.min.js',
+    '../scripts/common.bundle.js',
+    '../scripts/top.bundle.js'
+  ],
+  insertMetaTagFlag: true
+};
 %>
 <% include ./_layout/_base %>

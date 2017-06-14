@@ -8,17 +8,12 @@ import pkg from './../package.json';
 const src = pkg.path.src;
 const dest = pkg.path.dest;
 
-gulp.task('script', (cb) => {
+gulp.task('script:main', (cb) => {
   return webpack(webpackConfig, (err, stats) => {
     if (err) throw new gulpUtil.pluginError('webpack', err);
     gulpUtil.log('[webpack]', stats.toString(webpackConfig.stats));
     cb();
   });
-  /*
-  return gulp.src('./src/scripts/*.js')
-    .pipe(babel())
-    .pipe(gulp.dest('./build/scripts/'));
-  */
 });
 
 gulp.task('script:lib', () => {
@@ -26,5 +21,7 @@ gulp.task('script:lib', () => {
     src + 'scripts/lib/*.js',
     src + 'scripts/lib/*.json'
   ])
-    .pipe(gulp.dest(dest + 'scripts/lib/'));
-})
+  .pipe(gulp.dest(dest + 'scripts/lib/'));
+});
+
+gulp.task('script', ['script:main', 'script:lib']);

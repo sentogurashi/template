@@ -22,9 +22,12 @@ gulp.task('template:static', () => {
   ])
 
   .pipe($.plumber())
-  .pipe($.ejs(sitedata, {}, {
+  .pipe($.ejs({
+    sitedata: sitedata
+  }, {}, {
     ext: '.html'
   }))
+  .pipe($.replace('\n\n', '\n'))
   .pipe(gulp.dest(dest + 'html/'));
 
   return stream;
@@ -43,10 +46,11 @@ gulp.task('template:generate', () => {
     .pipe($.rename(page.id))
     .pipe($.ejs({
       page: page,
-      original: sitedata
+      sitedata: sitedata
     }, {}, {
       ext: '.html'
     }))
+    .pipe($.replace('\n\n', '\n'))
     .pipe(gulp.dest(dest + 'html/feature'));
 
     return stream;

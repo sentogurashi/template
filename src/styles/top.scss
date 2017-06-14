@@ -2,10 +2,30 @@
 @import "foundation/base-style";
 
 .MainVisual {
+  overflow: hidden;
 
-  & > img{
+  &__image {
     height: auto;
     width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 66.666%;
+
+    @include mq('sm') {
+      padding-bottom: 80%;
+      background-size: cover;
+    }
+
+    &.is-animate {
+      animation: mainvisual-animation 6s linear;
+    }
+
+    @include mq('sm') {
+      &.is-animate {
+        animation: mainvisual-animation 2s linear;
+      }
+    };
   }
 }
 
@@ -13,6 +33,7 @@
 
   &__heading {
     @include baseHeadingLv1;
+    margin: 50px 0;
   }
 
   &__text {
@@ -52,7 +73,7 @@
 
     &:hover {
       color: $system-color-link-hover;
-      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -85,16 +106,38 @@
     }
   }
 
-  &__illust {
+  &__illust,
+  &__illustOnCursor {
     width: 200px;
     height: 200px;
-    margin-bottom: 20px;
     background-repeat: no-repeat;
     background-size: contain;
+
     @include mq('md') {
       width: 150px;
       height: 150px;
     }
+  }
+
+  &__illust {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__illustOnCursor {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity ease .8s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include mq('sm') {
+      opacity: 1;
+    };
   }
 
   &__text {

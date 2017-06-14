@@ -1,0 +1,87 @@
+<% var page = sitedata.pages.about.kosugiyu
+ const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
+<% function extend(buf) { %>
+<div class="Article">
+  <div class="Article__photoWrapper">
+    <div class="Article__photoMain js-Article__photoMain" style="background-image:url('../../images/standalone/about/kosugiyu/photo_main.jpg')"></div>
+  </div>
+
+  <div class="Article__inner">
+    <h1 class="Article__headingLv1">小杉湯について</h1>
+    <h2 class="Article__headingLv2">h2ですほげほげ</h2>
+    <p class="Article__text">てすと</p>
+  </div>
+
+  <div class="Article__photoWrapper">
+    <div class="Article__photoSub js-Article__photoSub" style="background-image:url('../../images/standalone/about/kosugiyu/photo_sub1.jpg')"></div>
+  </div>
+
+  <div class="Article__inner">
+    <h2 class="Article__headingLv2">営業案内・アクセス</h2>
+    <div class="Article__defList">
+      <dl class="Article__defListRow">
+        <dt>営業時間</dt>
+        <dd>午後15時30分から深夜1時45分まで</dd>
+      </dl>
+      <dl class="Article__defListRow">
+        <dt>住所</dt>
+        <dd>杉並区高円寺北3-32-2</dd>
+      </dl>
+      <dl class="Article__defListRow">
+        <dt>電話</dt>
+        <dd>03-3337-6198</dd>
+      </dl>
+      <dl class="Article__defListRow">
+        <dt>定休日</dt>
+        <dd>毎週木曜日</dd>
+      </dl>
+      <dl class="Article__defListRow">
+        <dt>入浴料金</dt>
+        <dd> 大人460円、中人180円(小学生）、小人80円（幼児）</dd>
+      </dl>
+    </div>
+    <div class="Article__iframeWrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.7372884158754!2d139.6466903146042!3d35.70808198018804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f27e71b0d029%3A0xcac1c06748a11ee2!2z5bCP5p2J5rmv!5e0!3m2!1sja!2sjp!4v1497310414905" width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="Article__photoWrapper">
+    <div class="Article__photoSub js-Article__photoSub" style="background-image:url('../../images/standalone/about/kosugiyu/photo_sub2.jpg')"></div>
+  </div>
+
+<% if(page.profile) { %>
+  <div class="Article__inner">
+    <div class="Profile">
+      <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
+      <% if(page.profile.links) { %>
+      <ul class="Profile__links">
+      <% page.profile.links.forEach((elm) => { %>
+        <li class="Profile__link Profile__link--<%= elm.type %>">
+          <a href="<%= elm.url %>" target="_blank"><%= elm.text ? elm.text : elm.type %></a>
+        </li>
+      <% }); %>
+      </ul>
+      <% } %>
+    </div>
+  </div>
+<% } %>
+</div>
+<% }
+function insertMetaTag(buf) { %>
+<meta property="og:type" content="article"/>
+<% }
+var resource = {
+  page: page,
+  css: [
+    '../../styles/common.css',
+    '../../styles/article.css'
+  ],
+  js: [
+    '../../scripts/lib/jquery-3.2.1.min.js',
+    '../../scripts/common.bundle.js',
+    '../../scripts/article.bundle.js'
+  ],
+  insertMetaTagFlag: true
+};
+%>
+<% include ../_layout/_base %>
