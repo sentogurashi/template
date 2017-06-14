@@ -4,6 +4,9 @@ $system-color-text: #4A4A4A;
 $system-color-link: #4A4A4A;
 $system-color-link-hover: #999999;
 
+$vi-color-blue: #1A274B;
+$vi-color-brown: #9B4124;
+
 // spacing
 $setting-default-spacing: 16px;
 $setting-default-spacing-small: $setting-default-spacing / 2;
@@ -11,3 +14,6 @@ $setting-default-spacing-large: $setting-default-spacing * 2;
 
 // radius
 $setting-default-boder-radius: 4px;
+
+// font
+$base-font-serif: "Yu Mincho", "YuMincho", serif;

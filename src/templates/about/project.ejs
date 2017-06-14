@@ -1,13 +1,13 @@
-<% var page = sitedata.pages.about.project %>
+<% const page = sitedata.pages.about.project %>
 <% function extend(buf) { %>
 <div class="Article">
 <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')};
 const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
 const generateText = (textContentArray) => {
   textContentArray.forEach((elm) => {
-    if(elm.type === 'pageTitle') { %>
+    if(elm.type === 'headingMain') { %>
       <h1 class="Article__headingLv1"><%- elm.content %></h1>
-<% } else if (elm.type === 'heading') { %>
+<% } else if (elm.type === 'headingSub') { %>
       <h2 class="Article__headingLv2"><%- replaceToBr(elm.content) %></h2>
 <% } else if(elm.type === 'text') { %>
       <p class="Article__text"><%- replaceToBr(elm.content) %></p>
@@ -55,7 +55,7 @@ const generateText = (textContentArray) => {
 function insertMetaTag(buf) { %>
 <meta property="og:type" content="article"/>
 <% }
-var resource = {
+const resource = {
   page: page,
   css: [
     '../../styles/common.css',

@@ -79,6 +79,6 @@ gulp.task('deploy:clean', () => {
   return del([tmp]);
 });
 
-gulp.task('deploy', () => {
+gulp.task('deploy', ['generate'], () => {
   runSequence('deploy:copy', 'deploy:ftp', 'deploy:clean');
 });

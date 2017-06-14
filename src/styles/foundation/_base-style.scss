@@ -1,5 +1,5 @@
 @mixin baseText {
-  font-family: serif;
+  font-family: $base-font-serif;
   color: $system-color-text;
   font-size: rem(16px);
   line-height: 1.875; // 30/16

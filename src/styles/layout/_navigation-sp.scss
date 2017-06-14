@@ -20,12 +20,12 @@
   .Navigation__sitelogo {
     @include hide-text;
     display: block;
-    width: 120px;
     height: 100px;
     margin: 20px auto;
-    background-image: url('../images/standalone/common/sitelogo.svg');
-    background-size: contain;
+    background-image: url('../images/standalone/common/sitelogo_sp.svg');
+    background-size: 200px;
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   .Navigation__main {
@@ -33,12 +33,13 @@
     & > li {
       & > a {
         display: block;
-        font-family: serif;
+        font-family: $base-font-serif;
         font-weight: bold;
         letter-spacing: .2em;
         text-align: center;
         padding: 60px 0;
         @include baseLink;
+        font-size: rem(20px);
       }
     }
   }
@@ -57,16 +58,17 @@
         display: block;
         padding: 20px 0;
         font-size: rem(14px);
-        font-family: serif;
+        font-family: $base-font-serif;
         text-align: center;
         @include baseLink;
+        font-size: rem(16px);
       }
     }
   }
 
   .Navigation__sns {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px 0;
 
     & a {
@@ -110,7 +112,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: $system-color-text;
+    background-color: $vi-color-blue;
     border-radius: 1.5px;
     transition: all .4s ease;
     box-sizing: border-box;
