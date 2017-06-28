@@ -43,6 +43,11 @@
 }
 
 .Module {
+  margin-bottom: 90px;
+
+  &--lastChild {
+    margin-bottom: 0;
+  }
 
   &__heading {
     @include baseHeadingLv1;
@@ -98,7 +103,7 @@
 }
 
 .MainMenu {
-  padding: 30px;
+  padding: 0 30px 30px;
 
   &__row {
     display: flex;
