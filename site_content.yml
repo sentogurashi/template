@@ -215,36 +215,36 @@ pages:
           url: http://www.tv-tokyo.co.jp/miraicity/backnumber/054.html
           text: 動画：屋台型レストラン／未来シティ研究所・テレビ東京
 
-  - id: amu
-    title: 編む銭湯
-    meta:
-      description: 銭湯ぐらし「編む銭湯」とは。銭湯にまつわる色々なことを、ミニ雑誌や本のかたちにまとめて読者に届けるプロジェクトです。銭湯好きな人へのインタビューや、エッセイ、漫画、対談、写真を盛り込んだゆかいな読みものを作れたらな、と作戦を立てています。
-      url: http://www.sentogurashi.com/feature/amu.html
-    content:
-    - type: image
-    - type: text
-      content:
-      - type: headingMain
-      - type: headingSub
-        content: 編む銭湯とは
-      - type: text
-        content: 銭湯にまつわる色々なことを、ミニ雑誌や本のかたちにまとめて読者に届ける。銭湯好きな人へのインタビューや、エッセイ、漫画、対談、写真を盛り込んだゆかいな読みものを作れたらな、と作戦を立てています。
-      - type: headingSub
-        content: なぜやるのか
-      - type: text
-        content: 帰る場所がある人は強い。これは東京に出てきてから心底感じていることです。銭湯は、誰かにとっての「帰る場所」になりうる装置。自分自身、傷ついたときや考え事をしたいときはまず銭湯に行き、番台のおばちゃんと会話して、湯に浸かってぼ〜っとします。そういう実家のような空間が、何十年後もやさしく街に佇んでいられるような雰囲気を、本によって広げていきたいというのが願いです。
-    - type: image
-    profile:
-      nameJp: 細口 瀬音
-      nameEn: SEOTO HOSOGUCHI
-      title: 編集者
-      text: |-
-        1987年生まれ。北海道出身。
-        早稲田大学卒業後、印刷会社営業を経て出版の道へ。出張先の京都で銭湯愛にめざめ、それ以来いつでもどこでも銭湯に入れるようにタオルとシャンプーを持ち歩くようになる。いつか寅さんのロケ地巡りをしたいと思っている。
-      links:
-        - type: twitter
-          url: https://twitter.com/seotostandard
-
+#  - id: amu
+#    title: 編む銭湯
+#    meta:
+#      description: 銭湯ぐらし「編む銭湯」とは。銭湯にまつわる色々なことを、ミニ雑誌や本のかたちにまとめて読者に届けるプロジェクトです。銭湯好きな人へのインタビューや、エッセイ、漫画、対談、写真を盛り込んだゆかいな読みものを作れたらな、と作戦を立てています。
+#      url: http://www.sentogurashi.com/feature/amu.html
+#    content:
+#    - type: image
+#    - type: text
+#      content:
+#      - type: headingMain
+#      - type: headingSub
+#        content: 編む銭湯とは
+#      - type: text
+#        content: 銭湯にまつわる色々なことを、ミニ雑誌や本のかたちにまとめて読者に届ける。銭湯好きな人へのインタビューや、エッセイ、漫画、対談、写真を盛り込んだゆかいな読みものを作れたらな、と作戦を立てています。
+#      - type: headingSub
+#        content: なぜやるのか
+#      - type: text
+#        content: 帰る場所がある人は強い。これは東京に出てきてから心底感じていることです。銭湯は、誰かにとっての「帰る場所」になりうる装置。自分自身、傷ついたときや考え事をしたいときはまず銭湯に行き、番台のおばちゃんと会話して、湯に浸かってぼ〜っとします。そういう実家のような空間が、何十年後もやさしく街に佇んでいられるような雰囲気を、本によって広げていきたいというのが願いです。
+#    - type: image
+#    profile:
+#      nameJp: 細口 瀬音
+#      nameEn: SEOTO HOSOGUCHI
+#      title: 編集者
+#      text: |-
+#        1987年生まれ。北海道出身。
+#        早稲田大学卒業後、印刷会社営業を経て出版の道へ。出張先の京都で銭湯愛にめざめ、それ以来いつでもどこでも銭湯に入れるようにタオルとシャンプーを持ち歩くようになる。いつか寅さんのロケ地巡りをしたいと思っている。
+#      links:
+#        - type: twitter
+#          url: https://twitter.com/seotostandard
+#
   - id: egaku
     title: 描く銭湯
     meta:

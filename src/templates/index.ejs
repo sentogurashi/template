@@ -22,7 +22,8 @@ function extend(buf) { %>
 for (var i = 0; i < 3; i++) { %>
     <div class="MainMenu__row">
 <% for (var j = 0; j < 3; j++) {
-var menuContent = menuContents[cnt] %>
+var menuContent = menuContents[cnt];
+  if (menuContent) { %>
       <a href="./feature/<%= menuContent.id %>.html" class="MainMenu__cell">
         <div class="MainMenu__illust" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_line.png')">
           <div class="MainMenu__illustOnCursor" style="background-image: url('../images/standalone/feature/<%= menuContent.id %>/illust_color.png')"></div>
@@ -30,6 +31,7 @@ var menuContent = menuContents[cnt] %>
         <p class="MainMenu__text"><%= menuContent.title %></p>
       </a>
 <% cnt++;
+  }
  } %>
     </div>
 <% } %>
