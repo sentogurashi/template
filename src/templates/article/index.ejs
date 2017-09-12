@@ -1,0 +1,88 @@
+<%
+const dummyImageUrl = 'https://placehold.jp/1280x853.png';
+const mockData = [
+  {
+    'category': 'event',
+    'title': 'ライヴレポート：第6回フォークバンケット'
+  },{
+    'category': 'news',
+    'title': 'みんなで縁側を作りました！'
+  }, {
+    'category': 'interview',
+    'title': 'インタビュー：描く銭湯 塩谷 歩波さん'
+  }, {
+    'category': 'event',
+    'title': '小杉湯から紐解く、高円寺の歴史を学ぶ会'
+  }
+];
+const categoryTable = {
+  event: 'イベント',
+  news: 'ニュース',
+  interview: 'インタビュー'
+};
+
+%>
+<% function extend(buf) { %>
+<div class="MainVisual" style="background-image:url('../../images/mediamock/top.jpg')">
+  <h1 class="MainVisual__title">
+    <div>読む銭湯</div>
+  </h1>
+  <!-- <div class="MainVisual__image" style="background-image:url('<%= dummyImageUrl %>')"></div> -->
+</div>
+
+<ul class="CategoryNavigation">
+  <li class="is-active"><a href="">すべて</a></li>
+  <li><a href="">ニュース</a></li>
+  <li><a href="">インタビュー</a></li>
+  <li><a href="">イベント</a></li>
+</ul>
+
+<ul class="CellList">
+<% for(var i = 0; i < 10; i++) { %>
+<% const index = Math.floor(Math.random() * mockData.length); %>
+<% const data = mockData[index] %>
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_<%= index + 1 %>.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--<%= data.category %>"><%= categoryTable[data.category] %></p>
+        <p class="Cell__title"><%= data.title %></p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+<% } %>
+</ul>
+
+<%
+}
+function insertMetaTag(buf) { %>
+<meta property="og:type" content="article"/>
+<% }
+const resource = {
+  page: {
+    id: 'todo',
+    title: 'todo',
+    meta: {
+      url: 'todo',
+      description: 'todo'
+    }
+  },
+  css: [
+    '../../styles/common.css',
+    '../../styles/media-top.css'
+  ],
+  js: [
+    '../../scripts/lib/jquery-3.2.1.min.js',
+    '../../scripts/common.bundle.js',
+    '../../scripts/article.bundle.js'
+  ],
+  insertMetaTagFlag: true
+};
+%>
+<% include ../_layout/_base %>
