@@ -9,8 +9,8 @@ const config = {
   entry: {
     common: src + 'common.js',
     top: src + 'top.js',
-    article: src + 'article.js',
-    mediaArticle: src + 'mediaArticle.js'
+    article: src + 'feature.js',
+    mediaArticle: src + 'article.js'
   },
   output: {
     filename: dest + '[name].bundle.js'

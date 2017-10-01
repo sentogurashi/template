@@ -6,23 +6,7 @@ $photoMainHeightBase: 650px;
 $photoSubWidthBase: 1280px;
 $photoSubHeightBase: 500px;
 
-@mixin normalLink {
-  //display: inline-block;
-  //paddding-bottom: 2px;
-  border-bottom: dashed 1px #aaa;
-  transition: opacity .4s;
-
-  &:link,
-  &:visited {
-    color: #999;
-  }
-  &:hover {
-    opacity: .6;
-  }
-
-}
-
-.MediaArticle {
+.Article {
 
   &__inner {
     width: 800px;
@@ -33,67 +17,17 @@ $photoSubHeightBase: 500px;
     };
   }
 
-  &__title {
-
-    &Info {
-      text-align: center;
-      vertical-align: middle;
-      letter-spacing: .1em;
-    }
-
-    &Category {
-      display: inline-block;
-      padding: 4px 6px;
-      color: #fff;
-      background-color: #ca6492;
-      //font-size: rem(10px);
-      margin-right: 10px;
-      line-height: 1;
-    }
-
-    &Date {
-      display: inline-block;
-      color: #999;
-    }
-
-    &SeriesName {
-      margin-left: 10px;
-      display: inline-block;
-
-      & > a:link,
-      & > a:visited {
-        @include normalLink;
-      }
-    }
-
-    &Tags {
-      margin-top: 15px;
-      font-size: rem(12px);
-
-      & > li {
-        display: inline-block;
-        margin-right: 2px;
-
-        & > a {
-          @include normalLink;
-
-          &:before {
-            content: "#";
-            color: #999;
-          }
-        }
-
-      }
-    }
+  &__headingWrapper {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
-
 
   &__headingLv1 {
     @include baseHeadingLv1;
     margin: 50px 0;
-    font-size: rem(45px); // TODO アドホック
-    //text-align: left;
+    font-size: rem(60px); // TODO アドホック
 
     @include mq('sm') {
       margin: 20px 0;
@@ -104,7 +38,7 @@ $photoSubHeightBase: 500px;
   &__headingLv2 {
     margin: 60px 0;
     font-family: $base-font-serif;
-    font-size: rem(26px);
+    font-size: rem(34px);
     color: $system-color-text;
     line-height: 1.4;
 
@@ -114,52 +48,47 @@ $photoSubHeightBase: 500px;
     };
   }
 
-/*
   &__headingLv3 {
     margin: 40px 0 30px;
-    font-size: rem(22px);
+    font-weight: 600;
+    font-size: rem(18px);
     font-family: $base-font-serif;
     color: $system-color-text;
-  }
-*/
 
-  &__headingLv3 {
-    margin: 40px 0 30px;
-    font-size: rem(18px);
-    //font-family: $base-font-serif;
-    color: $system-color-text;
+    .Article__headingLv2 + & {
+      margin-top: -20px;
+    }
+
+    & + .Article__text  {
+      margin-top: 0px;
+    }
   }
 
   &__text {
     @include baseText;
-    margin: 20px 0 60px;
+    margin: 60px 0 90px;
 
     @include mq('sm') {
       margin: 20px 0 60px;
     };
 
+/*
     & + & {
-      margin-top: -20px;
-    }
+      margin-top: -70px; // TODO: ここびみょう
 
-    & > a {
-      @include normalLink;
-      line-height: 1.3;
+      @include mq('sm') {
+        margin-top: 0;
+      };
     }
-
+*/
   }
 
   &__innerImage {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 
     & > img {
       width: 100%;
     }
-  }
-
-  &__caption {
-    font-size: rem(14px);
-    color: #999;
   }
 
   &__photoWrapper {
@@ -176,7 +105,11 @@ $photoSubHeightBase: 500px;
   }
 
   &__photoMain {
-    padding-bottom: 30%; // TODO: アドホック
+    padding-bottom: percentage($photoMainHeightBase / $photoMainWidthBase);
+
+    &.is-animate {
+      animation: mainvisual-animation 6s linear;
+    }
 
     @include mq('sm') {
       padding-bottom: 100%;
@@ -192,6 +125,19 @@ $photoSubHeightBase: 500px;
     @include mq('sm') {
       padding-bottom: 100%;
       transform: scale(1.2);
+    };
+  }
+
+  &__illust {
+    margin-right: 30px;
+    width: 180px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include mq('sm') {
+      margin-right: 10px;
+      width: 100px;
+      height: 100px;
     };
   }
 

@@ -23,20 +23,25 @@
   }
 
   .Navigation__main {
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
     & > li {
-      font-family: $base-font-serif;
-      font-weight: bold;
-      writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-      letter-spacing: .1em;
-      position: absolute;
-      bottom: 155px;
-      left: 50%;
-      transform: translate(-50%, 0%);
       & > a {
         display: block;
-        padding: 10px 30px;
+        font-family: $base-font-serif;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        letter-spacing: .1em;
         @include baseLink;
+
+        &:first-child {
+          margin-bottom: 20px;
+        }
       }
     }
   }
