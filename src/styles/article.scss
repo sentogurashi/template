@@ -21,11 +21,11 @@ $photoSubHeightBase: 500px;
 }
 
 .MainVisual {
-  background-position: center center;
+  background-position: center 0;
   background-size: cover;
   position: relative;
-  //padding-bottom: 20%;
-  height: 200px;
+  padding-bottom: 40%;
+  //height: 300px;
 
   &__title {
     position: absolute;
@@ -36,16 +36,36 @@ $photoSubHeightBase: 500px;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .5);
+    //background: rgba(0, 0, 0, .5);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & > a {
+      color: $base-color-white;
+    }
   }
 
   &__image {
     // TODO: カルーセル化
     width: 100%;
     padding-bottom: 20%;
+  }
+
+  &__wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    &--1 {
+      height: 20px;
+    }
+    &--2 {
+      height: 30px;
+    }
+    &--3 {
+      height: 10px;
+    }
   }
 }
 
@@ -57,7 +77,9 @@ $photoSubHeightBase: 500px;
 
   & > li {
     &.is-active {
-      border-bottom: solid 1px #000;
+      & > a > span {
+        border-bottom: solid 1px #000;
+      }
     }
 
     & > a {
@@ -66,15 +88,21 @@ $photoSubHeightBase: 500px;
       margin: 0 20px;
       //font-family: serif;
       font-size: rem(14px);
-      padding: 20px;
+      padding: 20px 20px 5px; // bottomはspan分 -5px
 
       @include mq('sm') {
-        padding: 20px 0;
+        margin: 0 12px;
+        padding: 12px 0;
       }
 
       &:link,
       &:visited {
         color: #000;
+      }
+
+      & > span {
+        display: block;
+        padding-bottom: 15px;
       }
     }
   }
@@ -121,20 +149,20 @@ $photoSubHeightBase: 500px;
   &__category {
     display: inline-block;
     color: #fff;
-    margin: 10px 0 0;
+    margin: 10px 5px 0 0;
     padding: 2px 5px;
     font-size: rem(10px);
 
     &--event {
-      background-color: #ca6492;
+      background-color: $vi-color-brown;
     }
 
     &--news {
-      background-color: #40bb8f;
+      background-color: $vi-color-blue;
     }
 
     &--interview {
-      background-color: #88f;
+      background-color: #0b7751;
     }
   }
 
@@ -215,7 +243,7 @@ $photoSubHeightBase: 500px;
       padding: 4px 6px;
       color: #fff;
       background-color: #ca6492;
-      //font-size: rem(10px);
+      font-size: rem(14px);
       margin-right: 10px;
       line-height: 1;
     }
@@ -241,7 +269,7 @@ $photoSubHeightBase: 500px;
 
       & > li {
         display: inline-block;
-        margin-right: 2px;
+        margin-right: 10px;
 
         & > a {
           @include normalLink;
@@ -257,7 +285,6 @@ $photoSubHeightBase: 500px;
   }
 
 
-
   &__headingLv1 {
     @include baseHeadingLv1;
     margin: 50px 0;
@@ -270,52 +297,47 @@ $photoSubHeightBase: 500px;
     };
   }
 
-  &__headingLv2 {
-    margin: 60px 0;
-    font-family: $base-font-serif;
-    font-size: rem(26px);
-    color: $system-color-text;
-    line-height: 1.4;
+  // wordpress投稿枠ラッパー
+  &__main {
 
-    @include mq('sm') {
+    h2 {
+      margin: 60px 0;
+      font-family: $base-font-serif;
+      font-size: rem(26px);
+      color: $system-color-text;
+      line-height: 1.4;
+
+      @include mq('sm') {
+        margin: 40px 0 30px;
+        font-size: rem(28px);
+      };
+    }
+
+    h3 {
       margin: 40px 0 30px;
-      font-size: rem(28px);
-    };
-  }
+      font-size: rem(18px);
+      //font-family: $base-font-serif;
+      color: $system-color-text;
+    }
 
-/*
-  &__headingLv3 {
-    margin: 40px 0 30px;
-    font-size: rem(22px);
-    font-family: $base-font-serif;
-    color: $system-color-text;
-  }
-*/
-
-  &__headingLv3 {
-    margin: 40px 0 30px;
-    font-size: rem(18px);
-    //font-family: $base-font-serif;
-    color: $system-color-text;
-  }
-
-  &__text {
-    @include baseText;
-    margin: 20px 0 60px;
-
-    @include mq('sm') {
+    p {
+      @include baseText;
       margin: 20px 0 60px;
-    };
 
-    & + & {
-      margin-top: -20px;
+      @include mq('sm') {
+        margin: 20px 0 60px;
+      };
+
+      & + & {
+        margin-top: -20px;
+      }
+
+      & > a {
+        @include normalLink;
+        line-height: 1.3;
+      }
+
     }
-
-    & > a {
-      @include normalLink;
-      line-height: 1.3;
-    }
-
   }
 
   &__innerImage {
@@ -323,6 +345,7 @@ $photoSubHeightBase: 500px;
 
     & > img {
       width: 100%;
+      height: auto;
     }
   }
 
@@ -352,15 +375,6 @@ $photoSubHeightBase: 500px;
       &.is-animate {
         animation: mainvisual-animation 2s linear;
       }
-    };
-  }
-
-  &__photoSub {
-    padding-bottom: percentage($photoSubHeightBase / $photoSubWidthBase);
-
-    @include mq('sm') {
-      padding-bottom: 100%;
-      transform: scale(1.2);
     };
   }
 
@@ -410,6 +424,39 @@ $photoSubHeightBase: 500px;
 
 .Profile {
   margin: 60px 0;
+  display: flex;
+
+  @include mq('sm') {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__photo {
+    margin-top: 15px;
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq('sm') {
+      width: 120px;
+      height: 120px;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__role {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: rem(12px);
+    color: $system-color-text;
+    border: solid 1px $system-color-text;
+  }
 
   &__nameSub {
     margin: 15px 0;
@@ -418,28 +465,33 @@ $photoSubHeightBase: 500px;
     line-height: 1.4;
     color: $system-color-text;
   }
+
   &__nameJp {
     margin: 15px 0;
     font-size: rem(24px);
     //font-family: "Yu Gothic", YuGothic;
     color: $system-color-text;
   }
+
   &__nameEn {
     display: inline-block;
     &::after {
       content: ' ／';
     }
   }
-  &__title {
+
+  &__job {
     display: inline-block;
   }
+
   &__text {
-    margin: 40px 0;
+    margin: 15px 0;
     font-size: rem(14px);
     color: $system-color-text;
     letter-spacing: .1em;
     line-height: (30/18);
   }
+
   &__link {
     display: inline-block;
     margin-right: 15px;

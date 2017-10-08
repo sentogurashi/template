@@ -33,7 +33,7 @@
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
     <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
-    <li><a href="/about/project.html">読みもの</a></li>
+    <li><a href="/article">読みもの</a></li>
   </ul>
   <div class="Navigation__bottom">
 <ul class="Navigation__sub">
@@ -55,7 +55,7 @@
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
     <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
-    <li><a href="/about/project.html">読みもの</a></li>
+    <li><a href="/article">読みもの</a></li>
   </ul>
 <ul class="Navigation__sub">
   <li><a href="/about/kosugiyu.html">小杉湯</a></li>
@@ -71,22 +71,89 @@
   <h1 class="MainVisual__title">
     <div>読みもの</div>
   </h1>
+  <canvas class="MainVisual__wave MainVisual__wave--1 js-MainVisual__wave--1"></canvas>
+  <canvas class="MainVisual__wave MainVisual__wave--2 js-MainVisual__wave--2"></canvas>
+  <canvas class="MainVisual__wave MainVisual__wave--3 js-MainVisual__wave--3"></canvas>
   <!-- <div class="MainVisual__image" style="background-image:url('https://placehold.jp/1280x853.png')"></div> -->
 </div>
 <ul class="CategoryNavigation">
-  <li class="is-active"><a href="">すべて</a></li>
-  <li><a href="">ニュース</a></li>
-  <li><a href="">インタビュー</a></li>
-  <li><a href="">イベント</a></li>
+  <li class="is-active"><a href=""><span>すべて</span></a></li>
+  <li><a href=""><span>ニュース</span></a></li>
+  <li><a href=""><span>インタビュー</span></a></li>
+  <li><a href=""><span>イベント</span></a></li>
 </ul>
 <ul class="CellList">
 
   <li class="Cell">
     <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--event">イベント</p>
+        <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
       <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_2.jpg')"></div>
       <div class="Cell__main">
         <p class="Cell__category Cell__category--news">ニュース</p>
         <p class="Cell__title">みんなで縁側を作りました！</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_2.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--news">ニュース</p>
+        <p class="Cell__title">みんなで縁側を作りました！</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_1.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--event">イベント</p>
+        <p class="Cell__title">ライヴレポート：第6回フォークバンケット</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_3.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--interview">インタビュー</p>
+        <p class="Cell__title">インタビュー：描く銭湯 塩谷 歩波さん</p>
         <p class="Cell__date">2017.09.18</p>
       </div>
     </a>
@@ -131,58 +198,10 @@
 
   <li class="Cell">
     <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_2.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--news">ニュース</p>
-        <p class="Cell__title">みんなで縁側を作りました！</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
       <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
       <div class="Cell__main">
         <p class="Cell__category Cell__category--event">イベント</p>
         <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_2.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--news">ニュース</p>
-        <p class="Cell__title">みんなで縁側を作りました！</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_3.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--interview">インタビュー</p>
-        <p class="Cell__title">インタビュー：描く銭湯 塩谷 歩波さん</p>
         <p class="Cell__date">2017.09.18</p>
       </div>
     </a>
@@ -215,22 +234,6 @@
       <div class="Cell__main">
         <p class="Cell__category Cell__category--interview">インタビュー</p>
         <p class="Cell__title">インタビュー：描く銭湯 塩谷 歩波さん</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--event">イベント</p>
-        <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
         <p class="Cell__date">2017.09.18</p>
       </div>
     </a>
