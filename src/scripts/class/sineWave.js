@@ -1,4 +1,6 @@
-class SineWave {
+// サイン波クラス
+// http://noumenon-th.net/programming/2017/04/27/wave1/ 参照
+export default class SineWave {
 
   constructor (element, fill = '#ffffff', period = 1, deflection = 2) {
     this.canvas = element;
@@ -50,7 +52,3 @@ class SineWave {
   }
 
 }
-
-new SineWave(document.querySelector('.js-MainVisual__wave--1'), 'rgba(255, 255, 255, .7)');
-new SineWave(document.querySelector('.js-MainVisual__wave--2'), 'rgba(255, 255, 255, .3)', 1.2);
-new SineWave(document.querySelector('.js-MainVisual__wave--3'), 'rgba(255, 255, 255, 1)', 0.8);

@@ -32,8 +32,8 @@
 <div class="Navigation Navigation--pc">
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
-    <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
     <li><a href="/article">読みもの</a></li>
+    <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
   </ul>
   <div class="Navigation__bottom">
 <ul class="Navigation__sub">
@@ -54,8 +54,8 @@
 <div class="Navigation Navigation--sp js-Navigation--sp">
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
-    <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
     <li><a href="/article">読みもの</a></li>
+    <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
   </ul>
 <ul class="Navigation__sub">
   <li><a href="/about/kosugiyu.html">小杉湯</a></li>
@@ -70,13 +70,16 @@
   <article class="Article">
     <div class="Article__photoWrapper">
       <div class="Article__photoMain js-Article__photoMain" style="background-image:url('../../images/mediamock/article_main.jpg')"></div>
+      <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
+      <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
+      <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
     </div>
     <div class="Article__inner">
       <div class="Article__titleWrapper">
         <!-- <p class="Article__titleDate">2017/09/21</p> -->
         <h1 class="Article__headingLv1">思い出野郎Aチーム、ダンスフロアの魔法とロマンを信じる男たち</h1>
         <div class="Article__titleInfo">
-          <p class="Article__titleCategory">EVENT</p>
+          <p class="Article__titleCategory Article__titleCategory--event">できごと</p>
           <p class="Article__titleDate">2017.09.21</p>
           <p class="Article__titleSeriesName"><a href="TOOD">連載:ほげほげ</a></p>
           <ul class="Article__titleTags">
@@ -100,8 +103,8 @@
         <p>ほんとうに、歌うことって何もいらないしすごく本来的な行為です。シャムキャッツは歌を大事にするバンドなので、そのスタイルとも合っていたと思います。ギター1本と歌声があればいい。……と、言い切ってしまうとベースとドラムが悲しみますが。（笑） お客さんも「今日はアコースティックセットだから歌がよく聞こえました」と言ってくれて。今後の野望として、銭湯で電気を使ったライブもしてみたい。ベースもドラムも入れて銭湯でバンドやったら絶対いいと思うんです。そういえば、教会でレコーディングするアーティストもいます。銭湯と教会の設計って、すこし似てませんか天井が高くて、光が差し込んで。もう絶対にいい音が出ますよ。あんまり言いすぎるとライブハウスに怒られちゃうけど（笑）。</p>
         <h3>その他の表現例。</h3>
         <p><span style="color: green; font-weight: bold">柏井：</span>閉塞感はめちゃくちゃありましたね。初代「<a href="TODO">CINRA.NET</a>」が2003年からスタートして、法人化したのが2006年。「exPoP!!!!!」が2007年からで、スマホもない、SNSも普及してない時代だったから、同じ思いを抱えている人がいたとしてもそれをどこで共有すればいいのかわからなかった。</p>
-        <p><strong>だから「場所をつくる」というのがすごく重要で、</strong>最初は明確に「これをやろう」というよりも、「とりあえず集まろう」という側面が強かったと思います。<strike>その上で、</strike>その時みんなが抱えていた悩みに応える形で、Webメディアやイベントをつくって、そこでみんなの作品を発表しよう、と進んでいきました。
-  </p>
+        <blockquote>必要な情報だけ抜き出したい・・・といった際に正規表現はとても便利です。</blockquote>
+        <p><strong>だから「場所をつくる」というのがすごく重要で、</strong>最初は明確に「これをやろう」というよりも、「とりあえず集まろう」という側面が強かったと思います。<strike>その上で、</strike>その時みんなが抱えていた悩みに応える形で、Webメディアやイベントをつくって、そこでみんなの作品を発表しよう、と進んでいきました。</p>
       </section>
       <section class="Profile">
         <div class="Profile__column Profile__column--left">
@@ -152,7 +155,7 @@
 </div><!-- /.Content -->
 <script type="text/javascript" src="../../scripts/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../scripts/common.bundle.js"></script>
-<script type="text/javascript" src="../../scripts/article.bundle.js"></script>
+<script type="text/javascript" src="../../scripts/article-detail.bundle.js"></script>
 <!-- GA -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

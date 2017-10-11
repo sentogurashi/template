@@ -37,7 +37,7 @@ export default class SimpleParallax {
         func: (obj) => {
           const fliction = element.fliction
           const verticalOffset = (this.isPortrait || element.isNoVerticalOffset) ? 0 : (obj.height * this.originalAspect / 2);
-          console.log(element.isNoVerticalOffset);
+          console.log(verticalOffset);
           obj.$elem.css({
             backgroundPosition: `center ${((this.scrollChecker.scrollPositionTop - obj.positionTop) - verticalOffset) * fliction}px`
       //      filter: `blur(${this.scrollChecker.scrollPositionTop * 0.01}px)`

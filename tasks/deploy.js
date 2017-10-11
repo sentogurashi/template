@@ -82,3 +82,15 @@ gulp.task('deploy:clean', () => {
 gulp.task('deploy', ['generate'], () => {
   runSequence('deploy:copy', 'deploy:ftp', 'deploy:clean');
 });
+
+gulp.task('deploy:template-to-cms', () => {
+  return gulp.src([
+    build + '/styles/**/*',
+    build + '/scripts/**/*',
+    build + '/images/**/*',
+    build + '/fonts/**/*'
+  ], {
+    base: build
+  })
+  .pipe(gulp.dest('../cms/wordpress/wp-content/themes/sentogurashi/static'));
+})
