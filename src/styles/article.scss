@@ -309,12 +309,11 @@ $categoryColors: (
   &__headingLv1 {
     @include baseHeadingLv1;
     margin: 50px 0;
-    font-size: rem(45px); // TODO アドホック
-    //text-align: left;
+    font-size: rem(40px); // override
 
     @include mq('sm') {
       margin: 20px 0;
-      font-size: rem(34px);
+      font-size: rem(30px); // override
     };
   }
 
@@ -330,14 +329,15 @@ $categoryColors: (
 
       @include mq('sm') {
         margin: 40px 0 30px;
-        font-size: rem(28px);
+        font-size: rem(20px);
       };
     }
 
     h3 {
       margin: 40px 0 30px;
-      font-size: rem(18px);
+      font-size: rem(16px);
       color: $system-color-text;
+      line-height: 1.4;
     }
 
     p {
@@ -357,15 +357,18 @@ $categoryColors: (
 
     blockquote {
       font-family: $base-font-serif;
-      font-size: 1.6rem;
+      font-size: rem(16px);
       line-height: 1.875;
       margin: 20px 0 30px;
       letter-spacing: .1em;
       padding: 20px 40px;
-      //border: solid 1px $system-color-text;
       font-style: italic;
       color: lighten($system-color-text, 10%);
       position: relative;
+
+      @include mq('sm') {
+        font-size: rem(14px);
+      }
 
       &::before,
       &::after {
@@ -393,6 +396,12 @@ $categoryColors: (
   &__innerImage {
     margin-bottom: 60px;
 
+    @include mq('sm') {
+      margin-left: -20px;
+      margin-right: -20px;
+      margin-bottom: 30px;
+    }
+
     & > img {
       width: 100%;
       height: auto;
@@ -400,8 +409,14 @@ $categoryColors: (
   }
 
   &__caption {
+    margin-top: 10px;
     font-size: rem(14px);
     color: #999;
+
+    @include mq('sm') {
+      margin-left: 10px;
+      font-size: rem(12px);
+    }
   }
 
   &__photoWrapper {
