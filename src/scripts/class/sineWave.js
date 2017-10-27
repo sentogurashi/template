@@ -3,6 +3,7 @@
 export default class SineWave {
 
   constructor (element, fill = '#ffffff', period = 1, deflection = 2) {
+    this.pixelRatio = parseInt(window.devicePixelRatio, 10);
     this.canvas = element;
     this.ctx = this.canvas.getContext('2d');
     this.sizeFix();
@@ -20,8 +21,11 @@ export default class SineWave {
   }
 
   sizeFix () {
-    this.canvas.setAttribute('width', this.canvas.clientWidth);
-    this.canvas.setAttribute('height', this.canvas.clientHeight);
+    this.canvas.setAttribute('width', this.canvas.clientWidth * this.pixelRatio);
+    this.canvas.setAttribute('height', this.canvas.clientHeight * this.pixelRatio);
+
+    //this.canvas.style.width = '50%';
+
     this.width = this.canvas.width;
     this.height = this.canvas.height;
   }

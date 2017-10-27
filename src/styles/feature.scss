@@ -108,7 +108,7 @@ $photoSubHeightBase: 500px;
     padding-bottom: percentage($photoMainHeightBase / $photoMainWidthBase);
 
     &.is-animate {
-      animation: mainvisual-animation 6s linear;
+      animation: mainvisual-animation 4s linear;
     }
 
     @include mq('sm') {
