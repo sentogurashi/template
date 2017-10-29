@@ -93,6 +93,7 @@ $photoSubHeightBase: 500px;
 
   &__photoWrapper {
     overflow: hidden;
+    position: relative;
   }
 
   &__photoMain,

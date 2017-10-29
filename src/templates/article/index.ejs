@@ -27,19 +27,16 @@ const categoryTable = {
   <h1 class="MainVisual__title">
     <div>読みもの</div>
   </h1>
-  <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
-  <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
-  <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
-  <!-- <div class="MainVisual__image" style="background-image:url('<%= dummyImageUrl %>')"></div> -->
+  <%- include ../_layout/_wave %>
 </div>
 
-<div class="js-CategoryNavigationWrap CategoryNavigationWrap">
-<ul class="CategoryNavigation">
-  <li class="is-active"><a href="">すべて</a></li>
-  <li><a href="">ニュース</a></li>
-  <li><a href="">インタビュー</a></li>
-  <li><a href="">イベント</a></li>
-</ul>
+<div class="CategoryNavigation js-CategoryNavigation">
+  <ul class="CategoryNavigation__items">
+    <li class="CategoryNavigation__item is-active"><a href="">すべて</a></li>
+    <li class="CategoryNavigation__item"><a href="">ニュース</a></li>
+    <li class="CategoryNavigation__item"><a href="">インタビュー</a></li>
+    <li class="CategoryNavigation__item"><a href="">イベント</a></li>
+  </ul>
 </div>
 
 <ul class="CellList">

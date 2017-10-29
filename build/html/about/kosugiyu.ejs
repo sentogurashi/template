@@ -1,0 +1,54 @@
+<%
+const page = sitedata.pages.about.kosugiyu;
+const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
+<% function extend(buf) { %>
+<div class="Feature">
+  <div class="Feature__photoWrapper">
+    <div class="Feature__photoMain js-Feature__photoMain" style="background-image:url('../../images/standalone/about/kosugiyu/photo_main.jpg')"></div>
+    <%- include ../_layout/_wave %>
+  </div>
+  <h1 class="Feature__headingLv1"><%= page.content.headingMain %></h1>
+  <div class="Feature__inner">
+    <h2 class="Feature__headingLv2"><%- replaceToBr(page.content.section[0].headingSub) %></h2>
+    <p class="Feature__text"><%= replaceToBr(page.content.section[0].text) %></p>
+  </div>
+  <div class="Feature__photoWrapper">
+    <div class="Feature__photoSub js-Feature__photoSub" style="background-image:url('../../images/standalone/about/kosugiyu/photo_sub1.jpg')"></div>
+  </div>
+  <div class="Feature__inner">
+    <h2 class="Feature__headingLv2"></h2>
+    <div class="Feature__defList">
+<% page.content.section[1].defList.forEach((definition) => { %>
+      <dl class="Feature__defListRow">
+        <dt><%= definition.title %></dt>
+        <dd><%= definition.description %></dd>
+      </dl>
+<% }); %>
+    </div>
+    <div class="Feature__iframeWrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.7372884158754!2d139.6466903146042!3d35.70808198018804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f27e71b0d029%3A0xcac1c06748a11ee2!2z5bCP5p2J5rmv!5e0!3m2!1sja!2sjp!4v1497310414905" width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="Feature__photoWrapper">
+    <div class="Feature__photoSub js-Feature__photoSub" style="background-image:url('../../images/standalone/about/kosugiyu/photo_sub2.jpg')"></div>
+  </div>
+</div>
+<% }
+function insertMetaTag(buf) { %>
+<meta property="og:type" content="article"/>
+<% }
+const resource = {
+  page: page,
+  css: [
+    '../../styles/common.css',
+    '../../styles/feature.css'
+  ],
+  js: [
+    '../../scripts/lib/jquery-3.2.1.min.js',
+    '../../scripts/common.bundle.js',
+    '../../scripts/feature.bundle.js'
+  ],
+  insertMetaTagFlag: true
+};
+%>
+<% include ../_layout/_base %>

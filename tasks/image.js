@@ -41,35 +41,3 @@ gulp.task('image', () => {
   return stream;
 });
 
-gulp.task('image:mediamock', () => {
-
-  const normalStream = gulp.src([
-    src + 'images/mediamock/*.png',
-    src + 'images/mediamock/*.gif',
-    src + 'images/mediamock/*.svg'
-  ]);
-
-  const jpgStream = gulp.src([
-    src + 'images/mediamock/*.jpg'
-  ])
-  .pipe($.imageResize({
-    width: 1280
-  }))
-
-  const stream = es.merge([
-    normalStream,
-    jpgStream
-  ])
-  .pipe($.imagemin([
-    pngquant(),
-    jpegoptim({
-      max: 80
-    })
-  ],{
-    verbose: true
-  }))
-  .pipe(gulp.dest(dest + 'images/mediamock'));
-
-  return stream;
-});
-

@@ -4,9 +4,7 @@
 
     <div class="Article__photoWrapper">
       <div class="Article__photoMain js-Article__photoMain" style="background-image:url('../../images/mediamock/article_main.jpg')"></div>
-      <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
-      <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
-      <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
+      <%- include ../_layout/_wave %>
     </div>
 
     <div class="Article__inner">
@@ -43,6 +41,8 @@
         <blockquote>必要な情報だけ抜き出したい・・・といった際に正規表現はとても便利です。</blockquote>
         <p><strong>だから「場所をつくる」というのがすごく重要で、</strong>最初は明確に「これをやろう」というよりも、「とりあえず集まろう」という側面が強かったと思います。<strike>その上で、</strike>その時みんなが抱えていた悩みに応える形で、Webメディアやイベントをつくって、そこでみんなの作品を発表しよう、と進んでいきました。</p>
       </section>
+
+      <%- include ../_layout/_socialButton %>
 
       <section class="Profile">
         <div class="Profile__column Profile__column--left">

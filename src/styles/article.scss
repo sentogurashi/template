@@ -26,29 +26,11 @@ $categoryColors: (
 
 }
 
-.Wave {
-  &__canvas {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-
-    &--1 {
-      height: 20px;
-    }
-    &--2 {
-      height: 30px;
-    }
-    &--3 {
-      height: 10px;
-    }
-  }
-}
-
 .MainVisual {
   background-position: center 0;
   background-size: cover;
   position: relative;
-  padding-bottom: 40%;
+  padding-bottom: 30%;
 
   @include mq('sm') {
     padding-bottom: 80%;
@@ -82,12 +64,34 @@ $categoryColors: (
 }
 
 .CategoryNavigation {
-  display: flex;
-  margin:30px auto 50px;
-  align-items: center;
-  justify-content: center;
 
-  & > li {
+  @include mq('sm') {
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+  }
+
+  &__items {
+    display: flex;
+    margin:30px auto 50px;
+    align-items: center;
+    justify-content: center;
+
+    @include mq('sm') {
+      display: inline-table;
+      margin: 30px 20px;
+      white-space: nowrap;
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &__item {
+
+    @include mq('sm') {
+      display: table-cell;
+    }
+
     &.is-active {
       & > a::after {
         border-bottom: solid 1px $system-color-text;
@@ -98,12 +102,12 @@ $categoryColors: (
       display: block;
       text-align: center;
       margin: 0 20px;
-      //font-family: serif;
+      font-family: $base-font-sans-serif;
       font-size: rem(14px);
       padding: 20px 20px 5px; // bottomはspan分 -5px
 
       @include mq('sm') {
-        margin: 0 12px;
+        margin: 0 12px 0 0;
         padding: 12px 0;
       }
 
@@ -150,6 +154,7 @@ $categoryColors: (
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 5px;
 
     @include mq('sm') {
       width: 100%;

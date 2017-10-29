@@ -23,6 +23,7 @@ const generateText = (textContentArray) => {
       %>
 <div class="Feature__photoWrapper">
   <div class="Feature__photo<%= initialToUpperCase(imageType)%> js-Feature__photo<%= initialToUpperCase(imageType) %> " style="background-image:url('../../images/standalone/about/project/<%= imageName  %>.jpg')"></div>
+  <%- include ../_layout/_wave %>
 </div>
 <% } else if (elm.type === 'text') { %>
   <div class="Feature__inner">
@@ -64,7 +65,7 @@ const resource = {
   js: [
     '../../scripts/lib/jquery-3.2.1.min.js',
     '../../scripts/common.bundle.js',
-    '../../scripts/article.bundle.js'
+    '../../scripts/feature.bundle.js'
   ],
   insertMetaTagFlag: true
 };

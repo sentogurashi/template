@@ -71,18 +71,18 @@
   <h1 class="MainVisual__title">
     <div>読みもの</div>
   </h1>
+  
   <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
   <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
   <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
-  <!-- <div class="MainVisual__image" style="background-image:url('https://placehold.jp/1280x853.png')"></div> -->
 </div>
-<div class="js-CategoryNavigationWrap CategoryNavigationWrap">
-<ul class="CategoryNavigation">
-  <li class="is-active"><a href="">すべて</a></li>
-  <li><a href="">ニュース</a></li>
-  <li><a href="">インタビュー</a></li>
-  <li><a href="">イベント</a></li>
-</ul>
+<div class="CategoryNavigation js-CategoryNavigation">
+  <ul class="CategoryNavigation__items">
+    <li class="CategoryNavigation__item is-active"><a href="">すべて</a></li>
+    <li class="CategoryNavigation__item"><a href="">ニュース</a></li>
+    <li class="CategoryNavigation__item"><a href="">インタビュー</a></li>
+    <li class="CategoryNavigation__item"><a href="">イベント</a></li>
+  </ul>
 </div>
 <ul class="CellList">
 
@@ -104,90 +104,10 @@
 
   <li class="Cell">
     <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_2.jpg')"></div>
       <div class="Cell__main">
-        <p class="Cell__category Cell__category--event">イベント</p>
-        <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--event">イベント</p>
-        <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--event">イベント</p>
-        <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--event">イベント</p>
-        <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_3.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--interview">インタビュー</p>
-        <p class="Cell__title">インタビュー：描く銭湯 塩谷 歩波さん</p>
-        <p class="Cell__date">2017.09.18</p>
-      </div>
-    </a>
-    <ul class="Cell__tags">
-      <li><a href="TODO">タグ1</a></li>
-      <li><a href="TODO">タグ2</a></li>
-      <li><a href="TODO">タグ3</a></li>
-    </ul>
-  </li>
-
-  <li class="Cell">
-    <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_3.jpg')"></div>
-      <div class="Cell__main">
-        <p class="Cell__category Cell__category--interview">インタビュー</p>
-        <p class="Cell__title">インタビュー：描く銭湯 塩谷 歩波さん</p>
+        <p class="Cell__category Cell__category--news">ニュース</p>
+        <p class="Cell__title">みんなで縁側を作りました！</p>
         <p class="Cell__date">2017.09.18</p>
       </div>
     </a>
@@ -245,15 +165,94 @@
       <li><a href="TODO">タグ3</a></li>
     </ul>
   </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_4.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--event">イベント</p>
+        <p class="Cell__title">小杉湯から紐解く、高円寺の歴史を学ぶ会</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_2.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--news">ニュース</p>
+        <p class="Cell__title">みんなで縁側を作りました！</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_1.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--event">イベント</p>
+        <p class="Cell__title">ライヴレポート：第6回フォークバンケット</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_1.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--event">イベント</p>
+        <p class="Cell__title">ライヴレポート：第6回フォークバンケット</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
+
+  <li class="Cell">
+    <a href="./detail.html">
+      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_1.jpg')"></div>
+      <div class="Cell__main">
+        <p class="Cell__category Cell__category--event">イベント</p>
+        <p class="Cell__title">ライヴレポート：第6回フォークバンケット</p>
+        <p class="Cell__date">2017.09.18</p>
+      </div>
+    </a>
+    <ul class="Cell__tags">
+      <li><a href="TODO">タグ1</a></li>
+      <li><a href="TODO">タグ2</a></li>
+      <li><a href="TODO">タグ3</a></li>
+    </ul>
+  </li>
 </ul>
 
-<div class="SocialButton">
-  <div class="SocialButton__cell SocialButton__cell--twitter">
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  <div class="SocialButton__cell SocialButton__cell--facebook">
-    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-  </div>
+<div class="SocialButtonContainer">
+<ul class="SocialButton">
+  <li class="SocialButton__item SocialButton__item--twitter js-SocialButton__item--twitter"><a href="https://twitter.com/share?url=todo&text=todo%20-%20%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97"><span>ツイート</span></a></li>
+  <li class="SocialButton__item SocialButton__item--facebook js-SocialButton__item--facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=todo"><span>シェア</span></a></li>
+  <li class="SocialButton__item SocialButton__item--line js-SocialButton__item--line"><a href="http://line.me/R/msg/text/?todo%20-%20%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97%E3%80%80todo"><span>LINEで送る</span></a></li>
+</ul>
 </div>
 <div class="Footer">
 <p>© 2017 Sentogurashi</p>

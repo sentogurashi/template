@@ -32,6 +32,10 @@
       const imageName = elm.name ? elm.name : 'photo_' + imageType +'.jpg'; %>
   <div class="Feature__photoWrapper">
     <div class="Feature__photo<%= initialToUpperCase(imageType) %> js-Feature__photo<%= initialToUpperCase(imageType) %>" style="background-image:url('<%= imagePath + '/' + imageName %>')"></div>
+
+    <% if(imageType === 'main') { %>
+    <%- include ../_layout/_wave %>
+    <% } %>
   </div>
 <% } else if (elm.type === 'text') { %>
   <div class="Feature__inner">

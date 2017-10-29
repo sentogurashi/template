@@ -70,9 +70,10 @@
   <article class="Article">
     <div class="Article__photoWrapper">
       <div class="Article__photoMain js-Article__photoMain" style="background-image:url('../../images/mediamock/article_main.jpg')"></div>
-      <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
-      <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
-      <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
+      
+  <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
     </div>
     <div class="Article__inner">
       <div class="Article__titleWrapper">
@@ -106,6 +107,12 @@
         <blockquote>必要な情報だけ抜き出したい・・・といった際に正規表現はとても便利です。</blockquote>
         <p><strong>だから「場所をつくる」というのがすごく重要で、</strong>最初は明確に「これをやろう」というよりも、「とりあえず集まろう」という側面が強かったと思います。<strike>その上で、</strike>その時みんなが抱えていた悩みに応える形で、Webメディアやイベントをつくって、そこでみんなの作品を発表しよう、と進んでいきました。</p>
       </section>
+      <ul class="SocialButton">
+  <li class="SocialButton__item SocialButton__item--twitter js-SocialButton__item--twitter"><a href="todo"><span>投稿</span></a></li>
+  <li class="SocialButton__item SocialButton__item--facebook js-SocialButton__item--facebook"><a href=""><span>シェア</span></a></li>
+  <li class="SocialButton__item SocialButton__item--line js-SocialButton__item--line"><a href=""><span>送る</span></a></li>
+</ul>
+
       <section class="Profile">
         <div class="Profile__column Profile__column--left">
           <div class="Profile__photo" style="background-image: url('https://placehold.jp/150x150.png')"></div>
@@ -139,13 +146,13 @@
   <aside class="RelatedArticles">
     <h2>関連記事</h2>
   </aside>
-<div class="SocialButton">
-  <div class="SocialButton__cell SocialButton__cell--twitter">
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  <div class="SocialButton__cell SocialButton__cell--facebook">
-    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-  </div>
+
+<div class="SocialButtonContainer">
+<ul class="SocialButton">
+  <li class="SocialButton__item SocialButton__item--twitter js-SocialButton__item--twitter"><a href="todo"><span>投稿</span></a></li>
+  <li class="SocialButton__item SocialButton__item--facebook js-SocialButton__item--facebook"><a href=""><span>シェア</span></a></li>
+  <li class="SocialButton__item SocialButton__item--line js-SocialButton__item--line"><a href=""><span>送る</span></a></li>
+</ul>
 </div>
 <div class="Footer">
 <p>© 2017 Sentogurashi</p>
