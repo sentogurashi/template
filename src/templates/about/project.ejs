@@ -1,16 +1,16 @@
 <% const page = sitedata.pages.about.project %>
 <% function extend(buf) { %>
-<div class="Article">
+<div class="Feature">
 <% const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')};
 const initialToUpperCase = (str) => { return str.substring(0, 1).toUpperCase() + str.substring(1) }
 const generateText = (textContentArray) => {
   textContentArray.forEach((elm) => {
     if(elm.type === 'headingMain') { %>
-      <h1 class="Article__headingLv1"><%- elm.content %></h1>
+      <h1 class="Feature__headingLv1"><%- elm.content %></h1>
 <% } else if (elm.type === 'headingSub') { %>
-      <h2 class="Article__headingLv2"><%- replaceToBr(elm.content) %></h2>
+      <h2 class="Feature__headingLv2"><%- replaceToBr(elm.content) %></h2>
 <% } else if(elm.type === 'text') { %>
-      <p class="Article__text"><%- replaceToBr(elm.content) %></p>
+      <p class="Feature__text"><%- replaceToBr(elm.content) %></p>
 <% }
  });
 }; %>
@@ -21,11 +21,12 @@ const generateText = (textContentArray) => {
       const imageType = (idx === 0) ? 'main' : 'sub';
       const imageName = elm.name ? elm.name : 'photo_' + imageType;
       %>
-<div class="Article__photoWrapper">
-  <div class="Article__photo<%= initialToUpperCase(imageType)%> js-Article__photo<%= initialToUpperCase(imageType) %> " style="background-image:url('../../images/standalone/about/project/<%= imageName  %>.jpg')"></div>
+<div class="Feature__photoWrapper">
+  <div class="Feature__photo<%= initialToUpperCase(imageType)%> js-Feature__photo<%= initialToUpperCase(imageType) %> " style="background-image:url('../../images/standalone/about/project/<%= imageName  %>.jpg')"></div>
+  <%- include ../_layout/_wave %>
 </div>
 <% } else if (elm.type === 'text') { %>
-  <div class="Article__inner">
+  <div class="Feature__inner">
 <%- generateText(elm.content); %>
   </div>
 <% }
@@ -33,7 +34,7 @@ const generateText = (textContentArray) => {
 } %>
 
 <% if(page.profile) { %>
-  <div class="Article__inner">
+  <div class="Feature__inner">
     <div class="Profile">
       <div class="Profile__nameJp"><%= page.profile.nameJp %></div>
       <div class="Profile__nameEn"><%= page.profile.nameEn %></div>
@@ -59,12 +60,12 @@ const resource = {
   page: page,
   css: [
     '../../styles/common.css',
-    '../../styles/article.css'
+    '../../styles/feature.css'
   ],
   js: [
     '../../scripts/lib/jquery-3.2.1.min.js',
     '../../scripts/common.bundle.js',
-    '../../scripts/article.bundle.js'
+    '../../scripts/feature.bundle.js'
   ],
   insertMetaTagFlag: true
 };

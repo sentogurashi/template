@@ -1,21 +1,9 @@
 @import "util";
 @import "foundation/base-style";
 
-.SpTopHeader {
-  display: none;
-  height: 67px;
-  background-image: url('../images/standalone/common/sitelogo_sp.svg');
-  background-size: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @include mq('sm') {
-    display: block;
-  }
-}
-
 .MainVisual {
   overflow: hidden;
+  position: relative;
 
   &__image {
     height: auto;
@@ -107,7 +95,7 @@
 
   &__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 auto 80px;
     max-width: 800px;
 

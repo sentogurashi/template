@@ -34,7 +34,8 @@ escapeFileList = escapeFileList.map((fileName) => {
 
 gulp.task('deploy:copy', () => {
   const htmlStream = gulp.src([
-    build + '/html/**/*'
+    build + '/html/**/*',
+    '!' + build + '/html/article/*.html'
   ])
   .pipe($.replace(/('|")(\.|\/)+?\/(styles|scripts|images|fonts)/g, '$1/assets/$3')) // ルート相対パス化
   .pipe(gulp.dest(tmp));
@@ -43,6 +44,7 @@ gulp.task('deploy:copy', () => {
     build + '/styles/**/*',
     build + '/scripts/**/*',
     build + '/images/**/*',
+    '!' + build + '/images/mediamock/*',
     build + '/fonts/**/*'
   ], {
     base: build
@@ -55,14 +57,14 @@ gulp.task('deploy:copy', () => {
 gulp.task('deploy:ftp', () => {
 
   var conn = ftp.create(Object.assign(ftpConfig, {
-    parallel: 2,
+    parallel: 5,
     log: $.util.log
   }));
 
   return  gulp.src([
     tmp + '/**/*',
 //    '!' + dest + '**/*.map',
-//    '!' + dest + 'html/*.html',
+//    '!' + dest + 'html/article/*.html',
     ...escapeFileList
   ], {
     base: tmp,
@@ -82,3 +84,16 @@ gulp.task('deploy:clean', () => {
 gulp.task('deploy', ['generate'], () => {
   runSequence('deploy:copy', 'deploy:ftp', 'deploy:clean');
 });
+
+
+// gulp.task('deploy:template-to-cms', () => {
+//   return gulp.src([
+//     build + '/styles/**/*',
+//     build + '/scripts/**/*',
+//     build + '/images/**/*',
+//     build + '/fonts/**/*'
+//   ], {
+//     base: build
+//   })
+//   .pipe(gulp.dest('../cms/wordpress/wp-content/themes/sentogurashi/static'));
+// })

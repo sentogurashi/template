@@ -1,0 +1,17 @@
+.Wave {
+  &__canvas {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    &--1 {
+      height: 20px;
+    }
+    &--2 {
+      height: 30px;
+    }
+    &--3 {
+      height: 10px;
+    }
+  }
+}
