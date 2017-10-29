@@ -32,6 +32,7 @@
 <div class="Navigation Navigation--pc">
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
+    <li><a href="/article">読みもの</a></li>
     <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
   </ul>
   <div class="Navigation__bottom">
@@ -53,6 +54,7 @@
 <div class="Navigation Navigation--sp js-Navigation--sp">
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
+    <li><a href="/article">読みもの</a></li>
     <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
   </ul>
 <ul class="Navigation__sub">
@@ -65,9 +67,12 @@
 </ul>
 </div>
 <div class="Main">
-<div class="SpTopHeader"></div>
 <div class="MainVisual js-MainVisual">
   <div class="MainVisual__image js-MainVisual__image" style="background-image: url('../images/standalone/top/mainvisual_1.jpg')"></div>
+  
+  <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
 </div>
 <div class="Module">
   <h1 class="Module__heading">銭湯ぐらし</h1>
@@ -142,13 +147,13 @@
     </div>
   </div>
 </div>
-<div class="SocialButton">
-  <div class="SocialButton__cell SocialButton__cell--twitter">
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  <div class="SocialButton__cell SocialButton__cell--facebook">
-    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-  </div>
+
+<div class="SocialButtonContainer">
+<ul class="SocialButton">
+  <li class="SocialButton__item SocialButton__item--twitter js-SocialButton__item--twitter"><a href="https://twitter.com/share?url=http%3A%2F%2Fwww.sentogurashi.com%2F&text=%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97"><span>ツイート</span></a></li>
+  <li class="SocialButton__item SocialButton__item--facebook js-SocialButton__item--facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sentogurashi.com%2F"><span>シェア</span></a></li>
+  <li class="SocialButton__item SocialButton__item--line js-SocialButton__item--line"><a href="http://line.me/R/msg/text/?%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97%E3%80%80http%3A%2F%2Fwww.sentogurashi.com%2F"><span>送る</span></a></li>
+</ul>
 </div>
 <div class="Footer">
 <p>© 2017 Sentogurashi</p>

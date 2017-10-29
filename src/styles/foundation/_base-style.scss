@@ -4,10 +4,14 @@
   font-size: rem(16px);
   line-height: 1.875; // 30/16
   letter-spacing: .1em;
+
+  @include mq('sm') {
+    font-size: rem(14px);
+  };
 }
 
 @mixin baseHeadingLv1 {
-  font-family: "Kokoro", YuMincho, 'Yu Mincho', serif;
+  font-family: $base-font-yumincho;
   color: $system-color-text;
   text-align: center;
   font-size: rem(50px);

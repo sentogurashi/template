@@ -1,3 +1,5 @@
+import SineWave from './class/sineWave.js';
+
 // TODO: 仮
 const $window = $(window);
 
@@ -13,6 +15,11 @@ function insertContact() {
   $('.js-info').attr('href', convert(str1) + atob(convert(str2)));
 }
 
+function openSocialShareWindowHandler(e) {
+  e.preventDefault();
+  window.open(e.currentTarget.href, 'sharewindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1');
+}
+
 function start () {
 
   const $trigger = $('.js-NavigationSpTrigger');
@@ -25,6 +32,15 @@ function start () {
   });
 
   insertContact();
+
+  if(document.querySelector('.js-Wave__canvas--1')) {
+    new SineWave(document.querySelector('.js-Wave__canvas--1'), 'rgba(255, 255, 255, .7)');
+    new SineWave(document.querySelector('.js-Wave__canvas--2'), 'rgba(255, 255, 255, .3)', 1.2);
+    new SineWave(document.querySelector('.js-Wave__canvas--3'), 'rgba(255, 255, 255, 1)', 0.8);
+  }
+
+  document.querySelector('.js-SocialButton__item--twitter a').addEventListener('click', openSocialShareWindowHandler);
+  document.querySelector('.js-SocialButton__item--facebook a').addEventListener('click', openSocialShareWindowHandler);
 
 };
 

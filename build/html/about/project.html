@@ -23,7 +23,7 @@
 <meta property="og:type" content="article"/>
 
 <link rel="stylesheet" href="../../styles/common.css">
-<link rel="stylesheet" href="../../styles/article.css">
+<link rel="stylesheet" href="../../styles/feature.css">
 </head>
 <body>
 <div class="Content js-Content">
@@ -32,6 +32,7 @@
 <div class="Navigation Navigation--pc">
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
+    <li><a href="/article">読みもの</a></li>
     <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
   </ul>
   <div class="Navigation__bottom">
@@ -53,6 +54,7 @@
 <div class="Navigation Navigation--sp js-Navigation--sp">
   <a href="/" class="Navigation__sitelogo">銭湯ぐらし</a>
   <ul class="Navigation__main">
+    <li><a href="/article">読みもの</a></li>
     <li><a href="/about/project.html">銭湯ぐらしとは</a></li>
   </ul>
 <ul class="Navigation__sub">
@@ -65,39 +67,55 @@
 </ul>
 </div>
 <div class="Main">
-<div class="Article">
+<div class="Feature">
 
-<div class="Article__photoWrapper">
-  <div class="Article__photoMain js-Article__photoMain " style="background-image:url('../../images/standalone/about/project/photo_main.jpg')"></div>
+<div class="Feature__photoWrapper">
+  <div class="Feature__photoMain js-Feature__photoMain " style="background-image:url('../../images/standalone/about/project/photo_main.jpg')"></div>
+  
+  <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
 </div>
-  <div class="Article__inner">
-      <h1 class="Article__headingLv1">銭湯ぐらしについて</h1>
-      <h2 class="Article__headingLv2">解体が決まったアパートではじまった、<br>期間限定の“銭湯ぐらし”。</h2>
-      <p class="Article__text">杉並区高円寺の銭湯「小杉湯」のとなりには、1軒の風呂なしアパートが建っています。このアパートは2018年2月に解体が決まっていて、期間限定で多彩な仲間が一つ屋根の下で暮らすことになりました。アパートの名前は銭湯つきアパート「湯パート」。ミュージシャン、建築家、編集者、イラストレーター、プロモーションプロデューサー、デザイナー、アートディレクター、主婦、マーケター、WEBデザイナー…職種も性格もまったくちがう彼らの銭湯ぐらしは、どうやら様々な化学反応を起こしながら、銭湯と人の新しい物語をつむぎ出していくことになりそうです。</p>
-      <h2 class="Article__headingLv2">小杉湯ファンのつながりから生まれたプロジェクト</h2>
-      <p class="Article__text">私が会社をやめ小杉湯で働くようになってまもない、2017年1月末のこと。解体が決まったアパート住民の方たちの引越しが予定よりも早く終了し、全12戸が空室になりました。「1年間も空いているなんてもったいないな」と友人に相談してみると、「銭湯が好き」な人とのふしぎな縁がつぎつぎに生まれ、気がつくと「銭湯ぐらし」プロジェクトが発足しそれぞれのやりたい構想が集まっていきました。おどろいたのは、この縁はすべて小杉湯のファンから生まれたものだったこと。「これだけ幅広いファンを持つ小杉湯ってもしかしてすごいんじゃないか」。いてもたってもいられず、期待と可能性を企画書に込め、アパートのオーナーである父親にプレゼンテーションをしました。そして、メンバーたちの銭湯にかける想いが父親にも通じ、このプロジェクトは形になったのです。</p>
+  <div class="Feature__inner">
+      <h1 class="Feature__headingLv1">銭湯ぐらしについて</h1>
+      <h2 class="Feature__headingLv2">解体が決まったアパートではじまった、<br>期間限定の“銭湯ぐらし”。</h2>
+      <p class="Feature__text">杉並区高円寺の銭湯「小杉湯」のとなりには、1軒の風呂なしアパートが建っています。このアパートは2018年2月に解体が決まっていて、期間限定で多彩な仲間が一つ屋根の下で暮らすことになりました。アパートの名前は銭湯つきアパート「湯パート」。ミュージシャン、建築家、編集者、イラストレーター、プロモーションプロデューサー、デザイナー、アートディレクター、主婦、マーケター、WEBデザイナー…職種も性格もまったくちがう彼らの銭湯ぐらしは、どうやら様々な化学反応を起こしながら、銭湯と人の新しい物語をつむぎ出していくことになりそうです。</p>
+      <h2 class="Feature__headingLv2">小杉湯ファンのつながりから生まれたプロジェクト</h2>
+      <p class="Feature__text">私が会社をやめ小杉湯で働くようになってまもない、2017年1月末のこと。解体が決まったアパート住民の方たちの引越しが予定よりも早く終了し、全12戸が空室になりました。「1年間も空いているなんてもったいないな」と友人に相談してみると、「銭湯が好き」な人とのふしぎな縁がつぎつぎに生まれ、気がつくと「銭湯ぐらし」プロジェクトが発足しそれぞれのやりたい構想が集まっていきました。おどろいたのは、この縁はすべて小杉湯のファンから生まれたものだったこと。「これだけ幅広いファンを持つ小杉湯ってもしかしてすごいんじゃないか」。いてもたってもいられず、期待と可能性を企画書に込め、アパートのオーナーである父親にプレゼンテーションをしました。そして、メンバーたちの銭湯にかける想いが父親にも通じ、このプロジェクトは形になったのです。</p>
   </div>
-<div class="Article__photoWrapper">
-  <div class="Article__photoSub js-Article__photoSub " style="background-image:url('../../images/standalone/about/project/photo_sub1.jpg')"></div>
+<div class="Feature__photoWrapper">
+  <div class="Feature__photoSub js-Feature__photoSub " style="background-image:url('../../images/standalone/about/project/photo_sub1.jpg')"></div>
+  
+  <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
 </div>
-  <div class="Article__inner">
-      <h2 class="Article__headingLv2">人と人とのつながりを確認しにくる場所</h2>
-      <p class="Article__text">小杉湯の3代目として銭湯で働いてみて、とてもおどろいたことがあります。それは、平日で300〜400人、土日では多いときに500人以上のお客さんが来て下さっていたことです。ご高齢の方から、家族連れ、10代、20代若者と年代はさまざま。最近では外国人も増えてきました。それほど多世代で多様な人たちが、裸でひとつの空間を共有し「元気かい」とことばを交わしたり、気づかい合ったりすること。そして、そこはお風呂という誰もが心地よく感じるものであること。東日本大震災以降とくに言われるようになった「日常に地域コミュニティを作っていきましょう」という考え方ではなく、小杉湯はすでに日常の中に根づいている人と人のつながりを感じにくる（確認しにくる）場所という大きな価値をずっと作り続けていたようです。</p>
-      <h2 class="Article__headingLv2">小杉湯を高円寺の財産にしていく</h2>
-      <p class="Article__text">小杉湯の地域コミュニティとしての価値を知るにつれ、思うようになってきたことがあります。<br>昭和8年に創業して以来、84年ものあいだお風呂屋さんとして街と人を支えてきたことは、高円寺というディープな街の文化が築かれるのに実は大きな役目を担ってきたのではないかということです。それは、これからも変わらない気がしています。古きよき歴史と、新しい文化が混在しながら、エネルギーがうねり溢れる高円寺の街の価値を高めつづけ、「高円寺に小杉湯あり」というブランドにしていく。そして、小杉湯が150年、200年と続いていくために私がこれから挑戦していく大仕事のはじまりが、この「銭湯ぐらし」だと思っています。おおげさなことを言っているのかもしれませんが、そうやって思わせてくれるだけの仲間たちが、いま集まってくれていることは事実なのです。</p>
+  <div class="Feature__inner">
+      <h2 class="Feature__headingLv2">人と人とのつながりを確認しにくる場所</h2>
+      <p class="Feature__text">小杉湯の3代目として銭湯で働いてみて、とてもおどろいたことがあります。それは、平日で300〜400人、土日では多いときに500人以上のお客さんが来て下さっていたことです。ご高齢の方から、家族連れ、10代、20代若者と年代はさまざま。最近では外国人も増えてきました。それほど多世代で多様な人たちが、裸でひとつの空間を共有し「元気かい」とことばを交わしたり、気づかい合ったりすること。そして、そこはお風呂という誰もが心地よく感じるものであること。東日本大震災以降とくに言われるようになった「日常に地域コミュニティを作っていきましょう」という考え方ではなく、小杉湯はすでに日常の中に根づいている人と人のつながりを感じにくる（確認しにくる）場所という大きな価値をずっと作り続けていたようです。</p>
+      <h2 class="Feature__headingLv2">小杉湯を高円寺の財産にしていく</h2>
+      <p class="Feature__text">小杉湯の地域コミュニティとしての価値を知るにつれ、思うようになってきたことがあります。<br>昭和8年に創業して以来、84年ものあいだお風呂屋さんとして街と人を支えてきたことは、高円寺というディープな街の文化が築かれるのに実は大きな役目を担ってきたのではないかということです。それは、これからも変わらない気がしています。古きよき歴史と、新しい文化が混在しながら、エネルギーがうねり溢れる高円寺の街の価値を高めつづけ、「高円寺に小杉湯あり」というブランドにしていく。そして、小杉湯が150年、200年と続いていくために私がこれから挑戦していく大仕事のはじまりが、この「銭湯ぐらし」だと思っています。おおげさなことを言っているのかもしれませんが、そうやって思わせてくれるだけの仲間たちが、いま集まってくれていることは事実なのです。</p>
   </div>
-<div class="Article__photoWrapper">
-  <div class="Article__photoSub js-Article__photoSub " style="background-image:url('../../images/standalone/about/project/photo_sub2.jpg')"></div>
+<div class="Feature__photoWrapper">
+  <div class="Feature__photoSub js-Feature__photoSub " style="background-image:url('../../images/standalone/about/project/photo_sub2.jpg')"></div>
+  
+  <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
 </div>
-  <div class="Article__inner">
-      <h2 class="Article__headingLv2">銭湯と人との、<br>色とりどりな物語を生み出すプロジェクト</h2>
-      <p class="Article__text">3月初めにおこなった「銭湯ぐらし」キックオフミーティングで、私からプロジェクトメンバーにお願いしたことがひとつだけあります。それは、小杉湯や湯パート、プロジェクトから生まれるつながりを大いに利用して、自分自身がやってみたいこと・やってみたかったことに挑戦してほしいということです。なぜなら、小杉湯の役目は高円寺の人びとを支えて元気づけることで、その先にある、ひとりひとりの想いや夢、大きくいえば“志”を応援したいからです。そんな私の想いを汲んでくれたからなのか、結果的に集まった仲間の数だけプロジェクトが生まれています。「銭湯ぐらし」のゴール達成のためではなく、個人の「やりたい」を実現するために「銭湯ぐらし」は存在しているのです。まったくの個人的な夢でいい。銭湯でつながった仲間どうし、プロジェクトどうし予測不能の化学反応を起こし、見たことのない景色を生み出してほしい。ゴールがどうなるか想像もつきません。筋書きのないものがたりを仲間たちと楽しみながら、「銭湯ぐらし」をしていきたいなと思っています。</p>
+  <div class="Feature__inner">
+      <h2 class="Feature__headingLv2">銭湯と人との、<br>色とりどりな物語を生み出すプロジェクト</h2>
+      <p class="Feature__text">3月初めにおこなった「銭湯ぐらし」キックオフミーティングで、私からプロジェクトメンバーにお願いしたことがひとつだけあります。それは、小杉湯や湯パート、プロジェクトから生まれるつながりを大いに利用して、自分自身がやってみたいこと・やってみたかったことに挑戦してほしいということです。なぜなら、小杉湯の役目は高円寺の人びとを支えて元気づけることで、その先にある、ひとりひとりの想いや夢、大きくいえば“志”を応援したいからです。そんな私の想いを汲んでくれたからなのか、結果的に集まった仲間の数だけプロジェクトが生まれています。「銭湯ぐらし」のゴール達成のためではなく、個人の「やりたい」を実現するために「銭湯ぐらし」は存在しているのです。まったくの個人的な夢でいい。銭湯でつながった仲間どうし、プロジェクトどうし予測不能の化学反応を起こし、見たことのない景色を生み出してほしい。ゴールがどうなるか想像もつきません。筋書きのないものがたりを仲間たちと楽しみながら、「銭湯ぐらし」をしていきたいなと思っています。</p>
   </div>
-<div class="Article__photoWrapper">
-  <div class="Article__photoSub js-Article__photoSub " style="background-image:url('../../images/standalone/about/project/photo_sub3.jpg')"></div>
+<div class="Feature__photoWrapper">
+  <div class="Feature__photoSub js-Feature__photoSub " style="background-image:url('../../images/standalone/about/project/photo_sub3.jpg')"></div>
+  
+  <canvas class="Wave__canvas Wave__canvas--1 js-Wave__canvas--1"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--2 js-Wave__canvas--2"></canvas>
+  <canvas class="Wave__canvas Wave__canvas--3 js-Wave__canvas--3"></canvas>
 </div>
 
-  <div class="Article__inner">
+  <div class="Feature__inner">
     <div class="Profile">
       <div class="Profile__nameJp">平松 佑介</div>
       <div class="Profile__nameEn">YUSUKE HIRAMATSU</div>
@@ -122,13 +140,13 @@
     </div>
   </div>
 </div>
-<div class="SocialButton">
-  <div class="SocialButton__cell SocialButton__cell--twitter">
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  <div class="SocialButton__cell SocialButton__cell--facebook">
-    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-  </div>
+
+<div class="SocialButtonContainer">
+<ul class="SocialButton">
+  <li class="SocialButton__item SocialButton__item--twitter js-SocialButton__item--twitter"><a href="https://twitter.com/share?url=http%3A%2F%2Fwww.sentogurashi.com%2Fabout%2Fprojcet.html&text=%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97%E3%81%A8%E3%81%AF%20-%20%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97"><span>ツイート</span></a></li>
+  <li class="SocialButton__item SocialButton__item--facebook js-SocialButton__item--facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sentogurashi.com%2Fabout%2Fprojcet.html"><span>シェア</span></a></li>
+  <li class="SocialButton__item SocialButton__item--line js-SocialButton__item--line"><a href="http://line.me/R/msg/text/?%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97%E3%81%A8%E3%81%AF%20-%20%E9%8A%AD%E6%B9%AF%E3%81%90%E3%82%89%E3%81%97%E3%80%80http%3A%2F%2Fwww.sentogurashi.com%2Fabout%2Fprojcet.html"><span>送る</span></a></li>
+</ul>
 </div>
 <div class="Footer">
 <p>© 2017 Sentogurashi</p>
@@ -138,7 +156,7 @@
 </div><!-- /.Content -->
 <script type="text/javascript" src="../../scripts/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../scripts/common.bundle.js"></script>
-<script type="text/javascript" src="../../scripts/article.bundle.js"></script>
+<script type="text/javascript" src="../../scripts/feature.bundle.js"></script>
 <!-- GA -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

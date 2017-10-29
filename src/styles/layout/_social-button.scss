@@ -1,21 +1,76 @@
 .SocialButton {
-  width: 800px;
   display: flex;
-  justify-content: flex-end;
-  margin: 20px auto;
-  overflow: hidden;
 
-  &__cell {
-    &--twitter {
-      margin-right: 20px;
+  &__item {
+
+    &:last-child {
+      & > a {
+        margin-right: 0;
+      }
     }
-    &--facebook {
-      width: 97px;
+
+    & > a {
+      display: block;
+      margin-right: 10px;
+      padding: 5px 10px;
+      background-color: $system-color-text;
+      color: $base-color-white;
+      font-size: rem(12px);
+      border-radius: 2px;
+
+      & > span {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 8px;
+        width: 14px;
+        height: 14px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
+
+    &--twitter > a {
+      &::before {
+        background-image: url('../images/standalone/common/ico_twitter_white.svg');
+      }
+    }
+
+    &--facebook > a {
+      &::before {
+        background-image: url('../images/standalone/common/ico_facebook_white.svg');
+      }
+    }
+
+    &--line {
+      display: none;
+      @include mq('sm') {
+        display: block;
+      }
+      & > a {
+        &::before {
+          background-image: url('../images/standalone/common/ico_line_white.svg');
+        }
+      }
+    }
+  }
+}
+
+.SocialButtonContainer {
+  width: 800px;
+  margin: 0 auto;
+
+  .SocialButton {
+    justify-content: flex-end;
   }
 
   @include mq('sm') {
-    margin: 20px;
     width: auto;
+    margin: 0 20px;
   }
 }

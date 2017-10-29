@@ -4,6 +4,7 @@
   background-color: $base-color-white;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
   border-collapse: collapse;
+  z-index: 1;
 
   .Navigation__sitelogo {
     @include hide-text;
@@ -23,20 +24,25 @@
   }
 
   .Navigation__main {
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
     & > li {
-      font-family: $base-font-serif;
-      font-weight: bold;
-      writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-      letter-spacing: .1em;
-      position: absolute;
-      bottom: 155px;
-      left: 50%;
-      transform: translate(-50%, 0%);
       & > a {
         display: block;
-        padding: 10px 30px;
+        font-family: $base-font-serif;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        letter-spacing: .1em;
         @include baseLink;
+
+        &:first-child {
+          margin-bottom: 20px;
+        }
       }
     }
   }

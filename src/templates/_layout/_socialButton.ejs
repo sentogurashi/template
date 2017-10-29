@@ -1,8 +1,9 @@
-<div class="SocialButton">
-  <div class="SocialButton__cell SocialButton__cell--twitter">
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  <div class="SocialButton__cell SocialButton__cell--facebook">
-    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-  </div>
-</div>
+<%
+const shareUrl = resource.page.meta.url;
+const shareTitle = title;
+%>
+<ul class="SocialButton">
+  <li class="SocialButton__item SocialButton__item--twitter js-SocialButton__item--twitter"><a href="https://twitter.com/share?url=<%= encodeURIComponent(shareUrl); %>&text=<%= encodeURIComponent(shareTitle); %>"><span>ツイート</span></a></li>
+  <li class="SocialButton__item SocialButton__item--facebook js-SocialButton__item--facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(shareUrl); %>"><span>シェア</span></a></li>
+  <li class="SocialButton__item SocialButton__item--line js-SocialButton__item--line"><a href="http://line.me/R/msg/text/?<%= encodeURIComponent(`${shareTitle}　${shareUrl}`); %>"><span>送る</span></a></li>
+</ul>
