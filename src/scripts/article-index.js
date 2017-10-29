@@ -1,3 +1,4 @@
+/*
 import IScroll from 'iscroll';
 
 new IScroll(document.querySelector('.js-CategoryNavigation'), {
@@ -7,3 +8,4 @@ new IScroll(document.querySelector('.js-CategoryNavigation'), {
   scrollX: true,
   scrollY: false
 });
+*/

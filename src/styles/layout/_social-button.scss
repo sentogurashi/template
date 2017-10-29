@@ -3,6 +3,12 @@
 
   &__item {
 
+    &:last-child {
+      & > a {
+        margin-right: 0;
+      }
+    }
+
     & > a {
       display: block;
       margin-right: 10px;

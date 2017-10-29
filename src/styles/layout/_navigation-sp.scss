@@ -21,7 +21,7 @@
     @include hide-text;
     display: block;
     height: 100px;
-    margin: 80px auto 0;
+    margin: 60px auto 0;
     background-image: url('../images/standalone/common/sitelogo_sp.svg');
     background-size: 200px;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
   }
 
   .Navigation__main {
-    padding: 20px 0;
+    padding: 10px 0;
 
     & > li {
       & > a {
@@ -79,7 +79,7 @@
       height: 20px;
       background-repeat: no-repeat;
       background-size: 20px;
-      padding: 50px;
+      padding: 30px;
       background-position: center;
     }
 
