@@ -24,24 +24,39 @@
   }
 
   .Navigation__main {
-    padding: 10px 30px;
+    //padding: 10px 30px;
     position: absolute;
-    bottom: 130px;
+    bottom: 135px;
     left: 50%;
-    transform: translate(-50%, 0%);
+    // なぜかsafariでこれきかない？
+    //transform: translate(-50%, 0%);
+    transform: translate(-10px, 0%);
 
     & > li {
       & > a {
         display: block;
+        margin-bottom: 20px;
         font-family: $base-font-serif;
         font-weight: bold;
         writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
         letter-spacing: .1em;
         @include baseLink;
+      }
 
-        &:first-child {
-          margin-bottom: 20px;
+      // TODO MS Browser向け暫定
+      &:nth-of-type(1) {
+        & > a {
+          .is-msBrowser & {
+            height: 80px;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        & > a {
+          .is-msBrowser & {
+            height: 125px;
+          }
         }
       }
     }

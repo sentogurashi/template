@@ -1,9 +1,6 @@
 @import "util";
 @import "foundation/base-style";
 
-$photoMainWidthBase: 1280px;
-$photoMainHeightBase: 650px;
-
 $categoryColors: (
   event: $vi-color-brown,
   news: $vi-color-blue,
@@ -137,8 +134,14 @@ $categoryColors: (
   justify-content: center;
 
   @include mq('sm') {
-    //grid-template-columns: auto; // これだとだめっぽい？
     display: block;
+  }
+
+  // TODO: IE Grid対応
+  .is-msBrowser & {
+    display: block;
+    overflow: hidden;
+    padding: 0 50px;
   }
 }
 .Cell {
@@ -151,6 +154,13 @@ $categoryColors: (
 
   @include mq('sm') {
     padding: 20px;
+  }
+
+  // TODO: IE Grid対応
+  .is-msBrowser & {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
   }
 
   &__thumbNail {
@@ -433,7 +443,7 @@ $categoryColors: (
 
     & > img {
       width: 100%;
-      height: auto;
+      //height: auto;
     }
   }
 

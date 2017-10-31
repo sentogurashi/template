@@ -1,4 +1,5 @@
 import SineWave from './class/sineWave.js';
+import BrowserCheker from './class/browserChecker.js';
 
 // TODO: 仮
 const $window = $(window);
@@ -7,6 +8,13 @@ const $window = $(window);
 function display () {
   $('.js-Content').addClass('is-show');
 };
+
+function checkMsBrowser() {
+  const browserChecker = new BrowserCheker();
+  if(browserChecker.checkMsBrowser()){
+    $('.js-Content').addClass('is-msBrowser');
+  }
+}
 
 function insertContact() {
   const convert = str => str.replace(/s[0-9]/g, '').split('').reverse().join('');
@@ -20,6 +28,7 @@ function openSocialShareWindowHandler(e) {
   window.open(e.currentTarget.href, 'sharewindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1');
 }
 
+
 function start () {
 
   const $trigger = $('.js-NavigationSpTrigger');
@@ -30,6 +39,8 @@ function start () {
     $trigger.toggleClass('is-active');
     $main.toggleClass('is-show')
   });
+
+  checkMsBrowser();
 
   insertContact();
 
