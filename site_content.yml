@@ -467,3 +467,70 @@ pages:
           url: ttps://twitter.com/n_11o
         - type: instagram
           url: https://www.instagram.com/n_11o/
+
+  - id: tsunagu
+    title: つなぐ銭湯
+    meta:
+      description: 銭湯ぐらし「つなぐ銭湯」について。何をやるのか、また、そこにこめられた想いとは。
+      url: http://www.sentogurashi.com/feature/tsunagu.html
+    content:
+    - type: image
+    - type: text
+      content:
+      - type: headingMain
+      - type: headingSub
+        content: つなぐ銭湯とは
+      - type: text
+        content: |-
+          おもに銭湯をよく知らなかったり利用したことがない人、とくに外国人を対象とした銭湯体験ツアーを開催します。意外と知られていない銭湯の入り方や設備、歴史を学んだうえで実際に入浴し、その魅力を存分に味わってもらいます。「銭湯」という独自の文化を通して日本と世界をつなぎます。
+      - type: headingSub
+        content: なぜやるのか
+      - type: text
+        content: |-
+           学生時代、農学研究員として訪れたベトナムやアメリカで日本の文化が受け入れらているのを目の当たりにしました。武道や浴場文化など、先人たちが海外に切り開いてくれたことを誇らしく思うと同時に、自分も日本の良さを世界に伝えられる人間になりたいという気持ちが湧き立ちました。ぼくにとって銭湯は居心地のいい飲み屋のような場所。大好きな銭湯を架け橋にして文化と文化、人と人との交流を広めていきたいと考えています。
+    - type: image
+    profile:
+      nameJp: 稲垣 郁哉
+      nameEn: FUMIYA INAGAKI
+      text: |-
+        1992年生まれ。岐阜県出身。
+        大学時代を過ごした京都で銭湯に目覚める。上京一年目の今年は商社に勤めるかたわら、バイブル『サ道』片手に東京の銭湯・サウナを巡る日々。
+
+  - id: tabisuru
+    title: 旅する銭湯
+    meta:
+      description: 銭湯ぐらし「旅する銭湯」について。何をやるのか、また、そこにこめられた想いとは。
+      url: http://www.sentogurashi.com/feature/tabisuru.html
+    content:
+    - type: image
+    - type: text
+      content:
+      - type: headingMain
+      - type: headingSub
+        content: 旅する銭湯とは
+      - type: text
+        content: |-
+          足湯を積んだ軽トラックで日本各地に銭湯の癒しを届けます。
+          お湯は各地の温泉や銭湯で分けてもらうことで、移動式銭湯を実現します。銭湯という「場」を提供することで、人と人のつながりを生み出します。
+      - type: headingSub
+        content: なぜやるのか
+      - type: text
+        content: |-
+           第一に銭湯と旅がとにかく好きだからです。
+           心身を癒してくれる銭湯にはまり、高円寺の小杉湯に通い始めました。そこで、銭湯が地元の人や移住してきた人など地域の老若男女が誰でも気軽に集うことができる場だと気がつきました。
+           また、日本各地を旅する中で、ゲストハウスや居酒屋のような地元の人と旅の人が出会える場に魅力を感じるようになりました。
+           そこで、自分自身が地域のコミュニティである銭湯となり、旅先で地元の人や旅の人をつなぐ場を作るために「旅する銭湯」をすることにしました。
+    - type: image
+    profile:
+      nameJp: 大野 輝
+      nameEn: HIKARU ONO
+      title: 旅人
+      text: |-
+        1994年生まれ。神奈川県出身。
+        大学3年次に米国オレゴン州のポートランドに1年間の交換留学をし、グラフィックデザインや写真を学ぶ。ヒッチハイクの旅が好きで、これまでに3カ国で計50台以上の車に乗せてもらった経験をもつ。
+        2017年9月に早稲田大学を卒業後、10月10日の銭湯の日より、全国に銭湯の癒しを届ける旅に出ている。
+      links:
+        - type: twitter
+          url: https://twitter.com/tabisurusentou
+        - type: instagram
+          url: https://www.instagram.com/hikaru_ono_/

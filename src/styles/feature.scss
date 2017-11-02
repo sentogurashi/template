@@ -204,12 +204,12 @@ $photoSubHeightBase: 500px;
   }
   &__nameEn {
     display: inline-block;
-    &::after {
-      content: ' ／';
-    }
   }
   &__title {
     display: inline-block;
+    &::before {
+      content: ' ／';
+    }
   }
   &__text {
     margin: 40px 0;
