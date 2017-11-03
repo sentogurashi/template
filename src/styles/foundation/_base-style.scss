@@ -22,7 +22,7 @@
 }
 
 @mixin baseLink {
-  color: $system-color-text;
+  color: $system-color-link;
   transition: ease .3s;
 
   &:hover {

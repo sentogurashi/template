@@ -1,3 +1,22 @@
+<?php
+// ローカル環境の判定
+function checkIsLocalEnv() {
+  $S_AD = $_SERVER['SERVER_ADDR'];
+  $R_AD = $_SERVER['REMOTE_ADDR'];
+  return (substr($S_AD,0,mb_strrpos($S_AD,'.')) === substr($R_AD,0,mb_strrpos($R_AD,'.')));
+}
+
+$filePath = dirname( __FILE__);
+$wpLoadPath = '';
+
+if(checkIsLocalEnv()) {
+  $wpLoadPath = $filePath . '/../../../cms/wordpress/wp-load.php';
+} else {
+  $wpLoadPath = $filePath . '/article/wp-load.php';
+}
+
+require_once($wpLoadPath);
+?>
 <%
 const content = sitedata.pages.top.content;
 const replaceToBr = str => {return str.replace(/\n/g, '<br>')};
@@ -13,10 +32,68 @@ function extend(buf) { %>
       <img src="../images/standalone/top/main_illust.png" alt="">
   </div>
   <a href="./about/project.html" class="Module__link"><%= content.section[0].link %></a>
-</div>
+</div><!--/ .Module -->
+<div class="Module">
+  <h1 class="Module__heading">読みものより</h1>
+<!-- GULP:REMOVE_ON_REMOTE:START -->
+  <ul class="CellList">
+<%
+  const mockData = sitedata.others.dummyArticle.data;
+  const categoryTable = sitedata.others.dummyArticle.categories;
+  const thumbnailTable = sitedata.others.dummyArticle.thumbnails;
+  let index = 0;
+  for(var i = 0; i < 3; i++) {
+    const data = mockData[index]; %>
+    <li class="Cell">
+      <a href="./detail.html">
+        <div class="Cell__thumbNail" style="background-image:url('../images/standalone/feature/<%= thumbnailTable[index] %>/photo_main.jpg')"></div>
+        <div class="Cell__main">
+          <p class="Cell__category Cell__category--<%= data.category %>"><%= categoryTable[data.category] %></p>
+          <p class="Cell__title"><%= data.title %></p>
+          <p class="Cell__date">2017.09.18</p>
+        </div>
+      </a>
+      <ul class="Cell__tags">
+        <li><a href="TODO">タグ1</a></li>
+        <li><a href="TODO">タグ2</a></li>
+        <li><a href="TODO">タグ3</a></li>
+      </ul>
+    </li>
+<%
+    index++;
+    if(index >= mockData.length) index = 0;
+    } %>
+  </ul>
+<!-- GULP:REMOVE_ON_REMOTE:END -->
+  <ul class="CellList">
+<?php
+$the_query = new WP_Query(['posts_per_page' => 3]);
+if($the_query->have_posts()):
+  while($the_query->have_posts()):
+     $the_query->the_post(); ?>
+     <li class="Cell">
+       <a href="<?php the_permalink(); ?>">
+         <?php if (has_post_thumbnail()) { ?>
+         <div class="Cell__thumbNail" style="background-image:url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail')[0] ?>')"></div>
+         <?php } else { ?>
+         <div class="Cell__thumbNail Cell__thumbNail--noImage"></div>
+         <?php } ?>
+         <div class="Cell__main">
+           <?php get_categories_label(false, 'Cell__category') ?>
+           <p class="Cell__title"><?php the_title(); ?></p>
+           <p class="Cell__date"><?php echo get_the_date();?></p>
+         </div>
+       </a>
+       <?php the_tags( '<ul class="Cell__tags"><li>', '</li><li>', '</li></ul>' ); ?>
+     </li>
+<?php
+  endwhile;
+endif; ?>
+  </ul>
+  <a href="./article/" class="Module__link">もっと読む</a>
+</div><!--/ .Module -->
 <div class="Module Module--lastChild">
   <h1 class="Module__heading Module__heading--longText"><%= content.section[1].heading %></h1>
-
   <div class="MainMenu">
 <% var menuContents = sitedata.pages.feature, cnt = 0;
 for (var i = 0; i < 4; i++) { %>
@@ -36,7 +113,7 @@ var menuContent = menuContents[cnt];
     </div>
 <% } %>
   </div>
-</div>
+</div><!--/ .Module -->
 <% }
 function insertMetaTag(buf) { %>
 <meta name="google-site-verification" content="oIhGG07K5eP0_scMyqal6daNoObMOdQOYAVcmCK0ays" />

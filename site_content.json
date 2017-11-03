@@ -878,5 +878,39 @@
         }
       }
     ]
+  },
+  "others": {
+    "dummyArticle": {
+      "data": [
+        {
+          "category": "event",
+          "title": "ライヴレポート：第6回フォークバンケット"
+        },
+        {
+          "category": "news",
+          "title": "みんなで縁側を作りました！"
+        },
+        {
+          "category": "interview",
+          "title": "インタビュー：描く銭湯 塩谷 歩波さん"
+        },
+        {
+          "category": "event",
+          "title": "小杉湯から紐解く、高円寺の歴史を学ぶ会"
+        }
+      ],
+      "categories": {
+        "event": "できごと",
+        "news": "おしらせ",
+        "interview": "ことば",
+        "story": "おはなし"
+      },
+      "thumbnails": [
+        "utau",
+        "kizuku",
+        "egaku",
+        "tsunagu"
+      ]
+    }
   }
 }

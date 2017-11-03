@@ -1,9 +1,14 @@
 @import "util";
+
+@import "variables/variables";
+
 @import "foundation/box-sizing";
 @import "foundation/page";
 @import "foundation/reset";
 @import "foundation/base-style";
+
 @import "font/font";
+
 @import "animation/animation";
 
 @import "layout/base";
@@ -11,4 +16,7 @@
 @import "layout/navigation-sp";
 @import "layout/footer";
 @import "layout/social-button";
-@import "layout/wave";
+
+@import "component/wave";
+@import "component/cell-list";
+@import "component/cell";

@@ -43,6 +43,8 @@ gulp.task('deploy:copy', () => {
     isFile: true
   }))
   .pipe($.replace(/('|")(\.|\/)+?\/(styles|scripts|images|fonts)/g, '$1/assets/$3')) // ルート相対パス化
+  .pipe($.replace(/<!-- GULP:REMOVE_ON_REMOTE:START -->[\s\S]*?<!-- GULP:REMOVE_ON_REMOTE:END -->/g, '')) // 除去タグ内を削除 [\s\S] は改行をふくむ全てのパターン
+  .pipe($.replace('\n\n', '\n'))
   .pipe(gulp.dest(tmp));
 
   const assetStream = gulp.src([
@@ -139,4 +141,5 @@ gulp.task('deploy', ['generate'], () => {
 
 gulp.task('deploy:staging', ['generate'], () => {
   runSequence('deploy:copy', 'deploy:stagingChangePath', 'deploy:stagingFtp', 'deploy:clean');
+  //runSequence('deploy:copy');
 });

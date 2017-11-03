@@ -1,30 +1,5 @@
-<%
-const dummyImageUrl = 'https://placehold.jp/1280x853.png';
-const title = 'todo';
-const mockData = [
-  {
-    'category': 'event',
-    'title': 'ライヴレポート：第6回フォークバンケット'
-  },{
-    'category': 'news',
-    'title': 'みんなで縁側を作りました！'
-  }, {
-    'category': 'interview',
-    'title': 'インタビュー：描く銭湯 塩谷 歩波さん'
-  }, {
-    'category': 'event',
-    'title': '小杉湯から紐解く、高円寺の歴史を学ぶ会'
-  }
-];
-const categoryTable = {
-  event: 'イベント',
-  news: 'ニュース',
-  interview: 'インタビュー'
-};
-
-%>
 <% function extend(buf) { %>
-<div class="MainVisual" style="background-image:url('../../images/mediamock/top.jpg')">
+<div class="MainVisual" style="background-image:url('../../images/standalone/article/top.jpg')">
   <h1 class="MainVisual__title">
     <div>読みもの</div>
   </h1>
@@ -41,12 +16,16 @@ const categoryTable = {
 </div>
 
 <ul class="CellList">
-<% for(var i = 0; i < 10; i++) { %>
-<% const index = Math.floor(Math.random() * mockData.length); %>
-<% const data = mockData[index] %>
+<%
+const mockData = sitedata.others.dummyArticle.data;
+const categoryTable = sitedata.others.dummyArticle.categories;
+const thumbnailTable = sitedata.others.dummyArticle.thumbnails;
+let index = 0;
+for(var i = 0; i < 10; i++) {
+  const data = mockData[index]; %>
   <li class="Cell">
     <a href="./detail.html">
-      <div class="Cell__thumbNail" style="background-image:url('../../images/mediamock/thumb_<%= index + 1 %>.jpg')"></div>
+      <div class="Cell__thumbNail" style="background-image:url('../../images/standalone/feature/<%= thumbnailTable[index] %>/photo_main.jpg')"></div>
       <div class="Cell__main">
         <p class="Cell__category Cell__category--<%= data.category %>"><%= categoryTable[data.category] %></p>
         <p class="Cell__title"><%= data.title %></p>
@@ -59,7 +38,10 @@ const categoryTable = {
       <li><a href="TODO">タグ3</a></li>
     </ul>
   </li>
-<% } %>
+<%
+  index++;
+  if(index >= mockData.length) index = 0;
+  } %>
 </ul>
 
 <%
