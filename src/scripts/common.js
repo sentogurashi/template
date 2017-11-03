@@ -1,14 +1,14 @@
 import SineWave from './class/sineWave.js';
 import BrowserCheker from './class/browserChecker.js';
 
+let isPageLoaded = false;
+let domElements = {};
+
 const CLASSNAME_STATE_IS_SHOW = 'is-show';
 const CLASSNAME_STATE_IS_ACTIVE = 'is-active';
 const CLASSNAME_STATE_IS_MSBROWSER = 'is-msBrowser';
 
-let isPageLoaded = false;
-let domElements = {};
-
-let timeOutChecker = (() => {
+const timeOutChecker = (() => {
   const start = Date.now();
 
   const checker = (callback, timeOutSec = 4) => {
