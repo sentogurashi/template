@@ -34,7 +34,7 @@ function extend(buf) { %>
   <a href="./about/project.html" class="Module__link"><%= content.section[0].link %></a>
 </div><!--/ .Module -->
 <div class="Module">
-  <h1 class="Module__heading">読みものより</h1>
+  <h1 class="Module__heading"><%= content.section[1].heading %></h1>
 <!-- GULP:REMOVE_ON_REMOTE:START -->
   <ul class="CellList">
 <%
@@ -90,10 +90,10 @@ if($the_query->have_posts()):
   endwhile;
 endif; ?>
   </ul>
-  <a href="./article/" class="Module__link">もっと読む</a>
+  <a href="./article/" class="Module__link"><%= content.section[1].link %></a>
 </div><!--/ .Module -->
 <div class="Module Module--lastChild">
-  <h1 class="Module__heading Module__heading--longText"><%= content.section[1].heading %></h1>
+  <h1 class="Module__heading Module__heading--longText"><%= content.section[2].heading %></h1>
   <div class="MainMenu">
 <% var menuContents = sitedata.pages.feature, cnt = 0;
 for (var i = 0; i < 4; i++) { %>

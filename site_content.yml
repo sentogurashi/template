@@ -2,6 +2,7 @@
 siteTitle: 銭湯ぐらし
 common:
   info:
+    version: 2.0
     url: http://www.sentogurashi.com/
     sns:
       twitter:
@@ -32,6 +33,8 @@ pages:
           text: 高円寺の銭湯「小杉湯」のとなりに、2018年2月に解体が決まった、風呂なしアパートがあります。
               解体までの期間、このアパートに多彩な仲間たちが暮らしはじめました。それぞれの個性と得意分野を活かした彼らの“銭湯ぐらし”は、銭湯と人の新しい物語をつむぎ出していくことになりそうです。
           link: 銭湯ぐらしとは
+        - heading: 読みものより
+          link: もっと読む
         - heading: 銭湯ぐらしの活動
 
   about:
