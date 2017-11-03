@@ -1,24 +1,11 @@
 @import "util";
 @import "foundation/base-style";
-
-$categoryColors: (
-  event: $vi-color-brown,
-  news: $vi-color-blue,
-  interview: #0b7751
-);
+@import "variables/variables";
 
 @mixin normalLink {
   border-bottom: dashed 1px #aaa;
-  transition: opacity .4s;
-
-  &:link,
-  &:visited {
-    color: #999;
-  }
-  &:hover {
-    opacity: .6;
-  }
-
+  @include baseLink;
+  color: #6f6f6f;
 }
 
 .MainVisual {
@@ -127,127 +114,6 @@ $categoryColors: (
   }
 }
 
-.CellList {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 320px);
-  justify-content: center;
-
-  @include mq('sm') {
-    display: block;
-  }
-
-  // TODO: IE Grid対応
-  .is-msBrowser & {
-    display: block;
-    overflow: hidden;
-    padding: 0 50px;
-  }
-}
-.Cell {
-  margin-bottom: 40px;
-  transition: .5s;
-
-  &:hover {
-    opacity: .8;
-  }
-
-  @include mq('sm') {
-    padding: 20px;
-  }
-
-  // TODO: IE Grid対応
-  .is-msBrowser & {
-    width: 300px;
-    float: left;
-    margin-right: 20px;
-  }
-
-  &__thumbNail {
-    width: 300px;
-    padding-bottom: (2 / 3) * 100%; // TODO アドホック
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-
-    @include mq('sm') {
-      width: 100%;
-    }
-  }
-
-  &__main {
-    padding-right: 20px;
-  }
-
-  &__category {
-    display: inline-block;
-    color: #fff;
-    margin: 10px 5px 0 0;
-    padding: 2px 5px;
-    font-size: rem(10px);
-
-    @each $categoryName, $categoryColor in $categoryColors {
-      &--#{$categoryName} {
-        background-color: $categoryColor;
-      }
-    }
-
-  }
-
-  &__title {
-    margin: 10px 0;
-    font-family: $base-font-yumincho;
-    color: $system-color-text;
-    font-size: rem(22px);
-  }
-
-  &__date {
-    margin: 5px 0;
-    color: #999;
-    font-size: rem(14px);
-    letter-spacing: .2em;
-  }
-
-  &__tags {
-    font-size: rem(12px);
-
-    & > li {
-      display: inline-block;
-      margin-right: 5px;
-      letter-spacing: .2em;
-
-      & > a {
-
-        &:link,
-        &:visited {
-          color: #999;
-        }
-
-        &:before {
-          content: "#";
-        }
-      }
-    }
-  }
-}
-
-@mixin normalLink {
-  //display: inline-block;
-  //paddding-bottom: 2px;
-  border-bottom: dashed 1px #aaa;
-  transition: opacity .4s;
-
-  &:link,
-  &:visited {
-    color: #999;
-  }
-  &:hover {
-    opacity: .6;
-  }
-
-}
-
 .Article {
 
   &__inner {
@@ -290,7 +156,7 @@ $categoryColors: (
 
     &Date {
       display: inline-block;
-      color: #999;
+      color: $system-color-link;
     }
 
     &SeriesName {
@@ -403,7 +269,7 @@ $categoryColors: (
       &::before,
       &::after {
         position: absolute;
-        color: #f3f3f3;
+        color: #e4e4e4;
         font-size: rem(50px);
         line-height: 1;
         font-family: 'Georgia', serif;

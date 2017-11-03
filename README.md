@@ -1,7 +1,8 @@
 #銭湯ぐらしテンプレート
 
 ## 使い方
-gulpを使用しています
+yarn, gulpを使用しています
+
 ### clone
 ```
 $ git clone git@github.com:sentogurashi/template.git
@@ -9,12 +10,12 @@ $ cd template
 ```
 ### install
 ```
-$ npm install
+$ yarn install
 ```
 
 ### watch & browsersync
 ```
-$ npm run watch
+$ yarn run watch
 ```
 
 ## gulpコマンド

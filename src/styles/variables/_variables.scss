@@ -22,3 +22,10 @@ $base-font-yumincho: "Kokoro", YuMincho, 'Yu Mincho', serif;
 
 // box-shadow
 $base-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.12);
+
+// category colors
+$categoryColors: (
+  event: $vi-color-brown,
+  news: $vi-color-blue,
+  interview: #0b7751
+);

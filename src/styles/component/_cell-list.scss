@@ -1,0 +1,17 @@
+.CellList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  justify-content: center;
+
+  @include mq('sm') {
+    display: block;
+  }
+
+  // TODO: IE Grid対応
+  .is-msBrowser & {
+    display: block;
+    overflow: hidden;
+    padding: 0 50px;
+  }
+}

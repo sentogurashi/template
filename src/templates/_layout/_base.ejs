@@ -24,7 +24,7 @@
 <%- insertMetaTag(__output) %>
 <% } %>
 <% resource.css.forEach((path) => { %>
-<link rel="stylesheet" href="<%= path %>">
+<link rel="stylesheet" href="<%= `${path}?v=${sitedata.common.info.version}` %>">
 <% }); %>
 </head>
 <body>
@@ -45,7 +45,7 @@
 </div>
 </div><!-- /.Content -->
 <% resource.js.forEach((path) => { %>
-<script type="text/javascript" src="<%= path %>"></script>
+<script type="text/javascript" src="<%= `${path}?v=${sitedata.common.info.version}` %>"></script>
 <% }); %>
 <%- include ./_sdk %>
 </body>

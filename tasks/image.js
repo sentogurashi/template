@@ -21,7 +21,7 @@ gulp.task('image', () => {
     src + 'images/standalone/**/*.jpg'
   ])
   .pipe($.imageResize({
-    width: 1280
+    width: 1600
   }))
 
   const stream = es.merge([

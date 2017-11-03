@@ -28,10 +28,46 @@
       }
     };
   }
+
+  &__scrollTicker {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-25px, 0);
+    animation: tick 2s infinite;
+
+    @include mq('sm') {
+      display: none;
+    };
+
+    &Label {
+      color: $base-color-white;
+      font-size: rem(11px);
+      position: absolute;
+      bottom: 30px;
+      font-family: serif;
+      letter-spacing: .1em;
+      text-align: center;
+      transform: translate(2px, 0);
+    }
+    &Arrow {
+      transform: rotate(45deg);
+      width: 40px;
+      height: 40px;
+      border-bottom: solid 2px $base-color-white;
+      border-right: solid 2px $base-color-white;
+      position: absolute;
+      bottom: 0;
+    }
+
+    &.is-hide {
+      display: none;
+    }
+  }
 }
 
 .Module {
-  margin-bottom: 90px;
+  margin-bottom: 120px;
 
   &--lastChild {
     margin-bottom: 0;

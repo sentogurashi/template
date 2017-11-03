@@ -24,8 +24,6 @@ export default class SineWave {
     this.canvas.setAttribute('width', this.canvas.clientWidth * this.pixelRatio);
     this.canvas.setAttribute('height', this.canvas.clientHeight * this.pixelRatio);
 
-    //this.canvas.style.width = '50%';
-
     this.width = this.canvas.width;
     this.height = this.canvas.height;
   }
