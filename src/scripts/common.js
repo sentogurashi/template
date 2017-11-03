@@ -53,8 +53,8 @@ function main () {
 
   domElements.spNavigationTrigger.addEventListener('click', (e) => {
     e.preventDefault();
-    domElements.classList.toggle(CLASSNAME_STATE_IS_ACTIVE);
-    domElements.classList.toggle(CLASSNAME_STATE_IS_SHOW);
+    domElements.spNavigationTrigger.classList.toggle(CLASSNAME_STATE_IS_ACTIVE);
+    domElements.spNavigationMain.classList.toggle(CLASSNAME_STATE_IS_SHOW);
   });
 
   const browserChecker = new BrowserCheker();

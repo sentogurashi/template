@@ -36,11 +36,19 @@
     transform: translate(-25px, 0);
     animation: tick 2s infinite;
 
+    @include mq('sm') {
+      display: none;
+    };
+
     &Label {
       color: $base-color-white;
-      font-size: rem(12px);
+      font-size: rem(11px);
       position: absolute;
       bottom: 30px;
+      font-family: serif;
+      letter-spacing: .1em;
+      text-align: center;
+      transform: translate(2px, 0);
     }
     &Arrow {
       transform: rotate(45deg);
