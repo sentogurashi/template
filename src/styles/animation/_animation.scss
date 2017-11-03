@@ -19,6 +19,18 @@
   }
 }
 
+@keyframes tick {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @mixin fadeIn($duration, $easing) {
   opacity: 0;
   transition: opacity $duration $easing;
@@ -30,6 +42,7 @@
     opacity: 1;
   }
 }
+
 
 /*
 @keyframes mainvisual-animation {
