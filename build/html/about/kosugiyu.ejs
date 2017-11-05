@@ -7,21 +7,16 @@ const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
     <div class="Feature__photoMain js-Feature__photoMain" style="background-image:url('../../images/standalone/about/kosugiyu/photo_main.jpg')"></div>
     <%- include ../_layout/_wave %>
   </div>
-
   <h1 class="Feature__headingLv1"><%= page.content.headingMain %></h1>
-
   <div class="Feature__inner">
     <h2 class="Feature__headingLv2"><%- replaceToBr(page.content.section[0].headingSub) %></h2>
     <p class="Feature__text"><%= replaceToBr(page.content.section[0].text) %></p>
   </div>
-
   <div class="Feature__photoWrapper">
     <div class="Feature__photoSub js-Feature__photoSub" style="background-image:url('../../images/standalone/about/kosugiyu/photo_sub1.jpg')"></div>
   </div>
-
   <div class="Feature__inner">
     <h2 class="Feature__headingLv2"></h2>
-
     <div class="Feature__defList">
 <% page.content.section[1].defList.forEach((definition) => { %>
       <dl class="Feature__defListRow">
@@ -30,44 +25,23 @@ const replaceToBr = (str) => {return str.replace(/\n/g, '<br>')}; %>
       </dl>
 <% }); %>
     </div>
-
-    <div class="Feature__mapWrapper">
-      <div class="Feature__map js-Feature__map"></div>
+    <div class="Feature__iframeWrapper">
+      <div class="js-gmap" style="width:800px; height:450px;"></div>
     </div>
   </div>
-
   <div class="Feature__photoWrapper">
     <div class="Feature__photoSub js-Feature__photoSub" style="background-image:url('../../images/standalone/about/kosugiyu/photo_sub2.jpg')"></div>
   </div>
-
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var position = new google.maps.LatLng(35.708082, 139.648879);
   var map = new google.maps.Map(
-    document.querySelector('.js-Feature__map'), {
-      zoom: 16,
-      center: position,
-      scrollWheel: false,
-      // disable UI controls
-      mapTypeControl: false,
-      scaleControl: false,
-      streetViewControl: false,
-      rotateControl: false,
-      fullscreenControl: false
+    document.querySelector('.js-gmap'), {
+      zoo: 18, // 地図の初期拡大率
+      center: new google.maps.LatLng(34.683497, 135.4888082),
+      scrollWheel: false
     }
   )
-  map.setOptions({
-    styles: [{
-      stylers: [{
-        saturation: -100
-      }]
-    }]
-  });
-  var marker = new google.maps.Marker({
-    position: position,
-    map: map
-  })
 });
 </script>
 <% }
@@ -84,7 +58,8 @@ const resource = {
     '../../scripts/lib/jquery-3.2.1.min.js',
     '../../scripts/common.bundle.js',
     '../../scripts/feature.bundle.js',
-    'https://maps.googleapis.com/maps/api/js?key=AIzaSyB4I0l_TnkmiAjPeKgJJ6OOy27h_5uFtxk'
+    'https://maps.googleapis.com/maps/api/js?key=AIzaSyB4I0l_TnkmiAjPeKgJJ6OOy27h_5uFtxk&callback=initMap
+'
   ],
   insertMetaTagFlag: true
 };
