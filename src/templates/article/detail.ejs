@@ -75,7 +75,35 @@ function extend(buf) { %>
     </div>
   </article>
   <aside class="RelatedArticles">
-    <h2>関連記事</h2>
+    <h2 class="RelatedArticles__title">あわせて読みたい</h2>
+    <ul class="CellList">
+<%
+const mockData = sitedata.others.dummyArticle.data;
+const categoryTable = sitedata.others.dummyArticle.categories;
+const thumbnailTable = sitedata.others.dummyArticle.thumbnails;
+let index = 0;
+for(var i = 0; i < 3; i++) {
+  const data = mockData[index]; %>
+      <li class="Cell">
+        <a href="./detail.html">
+          <div class="Cell__thumbNail" style="background-image:url('../../images/standalone/feature/<%= thumbnailTable[index] %>/photo_main.jpg')"></div>
+          <div class="Cell__main">
+            <p class="Cell__category Cell__category--<%= data.category %>"><%= categoryTable[data.category] %></p>
+            <p class="Cell__title"><%= data.title %></p>
+            <p class="Cell__date">2017.09.18</p>
+          </div>
+        </a>
+        <ul class="Cell__tags">
+          <li><a href="TODO">タグ1</a></li>
+          <li><a href="TODO">タグ2</a></li>
+          <li><a href="TODO">タグ3</a></li>
+        </ul>
+      </li>
+<%
+  index++;
+  if(index >= mockData.length) index = 0;
+  } %>
+    </ul>
   </aside>
 <%
 }
