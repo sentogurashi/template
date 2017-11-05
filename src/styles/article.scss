@@ -8,6 +8,17 @@
   color: #6f6f6f;
 }
 
+@mixin normalTitle {
+  @include baseHeadingLv1;
+  margin: 50px 0;
+  font-size: rem(40px); // override
+
+  @include mq('sm') {
+    margin: 20px 0;
+    font-size: rem(30px); // override
+  };
+}
+
 .MainVisual {
   background-position: center 0;
   background-size: cover;
@@ -192,14 +203,7 @@
 
 
   &__headingLv1 {
-    @include baseHeadingLv1;
-    margin: 50px 0;
-    font-size: rem(40px); // override
-
-    @include mq('sm') {
-      margin: 20px 0;
-      font-size: rem(30px); // override
-    };
+    @include normalTitle;
   }
 
   // wordpress投稿枠ラッパー
@@ -502,6 +506,12 @@
     &--web > a {
       background-image: url('../images/standalone/common/ico_web.svg');
     }
+  }
+}
+
+.RelatedArticles {
+  &__title {
+    @include normalTitle;
   }
 }
 

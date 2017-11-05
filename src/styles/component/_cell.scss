@@ -29,10 +29,6 @@
     background-repeat: no-repeat;
     border-radius: 5px;
 
-    &--noImage {
-
-    }
-
     @include mq('sm') {
       width: 100%;
     }
