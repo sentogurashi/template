@@ -300,6 +300,30 @@
         }
       }
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: $system-color-text;
+      margin-bottom: 60px;
+
+      thead {
+        th, td {
+          border-bottom: 2px solid $system-color-text;
+        }
+      }
+      tbody {
+        th, td {
+          border-bottom: 1px dotted $system-color-text;
+        }
+      }
+      th, td {
+        padding: 20px;
+      }
+      th {
+        font-weight: bold;
+      }
+    }
   }
 
   &__innerImage {
