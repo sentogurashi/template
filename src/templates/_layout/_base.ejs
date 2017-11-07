@@ -45,7 +45,7 @@
 </div>
 </div><!-- /.Content -->
 <% resource.js.forEach((path) => { %>
-<script type="text/javascript" src="<%= `${path}?v=${sitedata.common.info.version}` %>"></script>
+<script type="text/javascript" src="<%= `${path}` %>"></script>
 <% }); %>
 <%- include ./_sdk %>
 </body>
