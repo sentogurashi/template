@@ -140,6 +140,12 @@
 
     &Wrapper {
       margin: 30px 0;
+
+      .SocialButton {
+        margin-top: 20px;
+        justify-content: center;
+      }
+
     }
 
     &Info {
@@ -167,7 +173,23 @@
 
     &Date {
       display: inline-block;
+      margin-right: 10px;
       color: $system-color-link;
+
+      @include mq('sm') {
+        margin-right: 0;
+      }
+    }
+
+    &WriterName {
+      margin-top: 20px;
+      display: inline-block;
+      font-size: rem(12px);
+      color: $system-color-text;
+
+      @include mq('sm') {
+        display: block;
+      }
     }
 
     &SeriesName {
@@ -232,6 +254,7 @@
     p {
       @include baseText;
       margin: 20px 0 30px;
+      word-break: break-all; // URLなど折り返し
 
       // TODO: これなんとかする
       & + & {
@@ -254,7 +277,7 @@
       }
     }
 
-    blockquote {
+    blockquote.message {
       font-family: $base-font-serif;
       font-size: rem(16px);
       line-height: 1.875;
@@ -345,6 +368,11 @@
       th, td {
         padding: 20px;
         line-height: 1.4;
+        word-break: break-all; // URLなど折り返し
+
+        & > a {
+            @include normalLink;
+        }
 
         @include mq('sm') {
           padding: 20px 10px;

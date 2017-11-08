@@ -13,8 +13,7 @@
       display: block;
       margin-right: 10px;
       padding: 5px 10px;
-      background-color: $system-color-text;
-      color: $base-color-white;
+      color: $system-color-text;
       font-size: rem(12px);
       border-radius: 2px;
 
@@ -37,13 +36,13 @@
 
     &--twitter > a {
       &::before {
-        background-image: url('../images/standalone/common/ico_twitter_white.svg');
+        background-image: url('../images/standalone/common/ico_twitter.svg');
       }
     }
 
     &--facebook > a {
       &::before {
-        background-image: url('../images/standalone/common/ico_facebook_white.svg');
+        background-image: url('../images/standalone/common/ico_facebook.svg');
       }
     }
 
@@ -54,7 +53,7 @@
       }
       & > a {
         &::before {
-          background-image: url('../images/standalone/common/ico_line_white.svg');
+          background-image: url('../images/standalone/common/ico_line.svg');
         }
       }
     }
