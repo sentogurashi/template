@@ -265,7 +265,6 @@
     p {
       @include baseText;
       margin: 20px 0 30px;
-      word-break: break-all; // URLなど折り返し
 
       // TODO: これなんとかする
       & + & {
@@ -292,7 +291,6 @@
 
     blockquote.message {
       font-family: $base-font-serif;
-      //font-size: rem(16px);
       line-height: 1.875;
       margin: 20px 0 30px;
       letter-spacing: .1em;
@@ -381,7 +379,6 @@
       th, td {
         padding: 20px;
         line-height: 1.4;
-        word-break: break-all; // URLなど折り返し
 
         & > a {
             @include normalLink;
@@ -410,7 +407,6 @@
 
     & > img {
       width: 100%;
-      //height: auto;
     }
   }
 
