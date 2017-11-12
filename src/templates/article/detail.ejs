@@ -14,7 +14,7 @@ function extend(buf) { %>
         <div class="Article__titleInfo">
           <p class="Article__titleCategory Article__titleCategory--event">できごと</p>
           <p class="Article__titleDate">2017.09.21</p>
-          <p class="Article__titleWriterName">text by 銭湯ぐらし</p>
+          <p class="Article__titleAuthorName">text by <a href="">銭湯ぐらし</a></p>
           <!-- <p class="Article__titleSeriesName"><a href="TOOD">連載:ほげほげ</a></p> -->
           <ul class="Article__titleTags">
             <li><a href="TODO">タグ1</a></li>
@@ -59,7 +59,7 @@ function extend(buf) { %>
         <p>ほんとうに、歌うことって何もいらないしすごく本来的な行為です。シャムキャッツは歌を大事にするバンドなので、そのスタイルとも合っていたと思います。ギター1本と歌声があればいい。……と、言い切ってしまうとベースとドラムが悲しみますが。（笑） お客さんも「今日はアコースティックセットだから歌がよく聞こえました」と言ってくれて。今後の野望として、銭湯で電気を使ったライブもしてみたい。ベースもドラムも入れて銭湯でバンドやったら絶対いいと思うんです。そういえば、教会でレコーディングするアーティストもいます。銭湯と教会の設計って、すこし似てませんか天井が高くて、光が差し込んで。もう絶対にいい音が出ますよ。あんまり言いすぎるとライブハウスに怒られちゃうけど（笑）。</p>
         <h3>その他の表現例。</h3>
         <p><span style="color: green; font-weight: bold">柏井：</span>閉塞感はめちゃくちゃありましたね。初代「<a href="TODO">CINRA.NET</a>」が2003年からスタートして、法人化したのが2006年。「exPoP!!!!!」が2007年からで、スマホもない、SNSも普及してない時代だったから、同じ思いを抱えている人がいたとしてもそれをどこで共有すればいいのかわからなかった。</p>
-        <blockquote>必要な情報だけ抜き出したい・・・といった際に正規表現はとても便利です。</blockquote>
+        <blockquote class="message">必要な情報だけ抜き出したい・・・といった際に正規表現はとても便利です。</blockquote>
         <p><strong>だから「場所をつくる」というのがすごく重要で、</strong>最初は明確に「これをやろう」というよりも、「とりあえず集まろう」という側面が強かったと思います。<strike>その上で、</strike>その時みんなが抱えていた悩みに応える形で、Webメディアやイベントをつくって、そこでみんなの作品を発表しよう、と進んでいきました。</p>
       </section>
 
@@ -71,7 +71,7 @@ function extend(buf) { %>
         </div>
         <div class="Profile__column Profile__column--right">
           <div class="Profile__role">執筆</div>
-          <p class="Profile__nameJp">江本 祐介</p>
+          <p class="Profile__nameJp"><a href="">江本 祐介</a></p>
           <div class="Profile__nameSub">
             <p class="Profile__nameEn">YUSUKE EMOTO</p>
             <p class="Profile__job">ライター</p>
@@ -95,8 +95,8 @@ function extend(buf) { %>
       </section>
     </div>
   </article>
-  <aside class="RelatedArticles">
-    <h2 class="RelatedArticles__title">あわせて読みたい</h2>
+  <aside class="RelatedArticles Module">
+    <h2 class="Module__heading">あわせて読みたい</h2>
     <ul class="CellList">
 <%
 const mockData = sitedata.others.dummyArticle.data;
