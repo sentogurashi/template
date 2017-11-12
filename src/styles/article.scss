@@ -181,7 +181,7 @@
       }
     }
 
-    &WriterName {
+    &AuthorName {
       margin-top: 20px;
       display: inline-block;
       font-size: rem(12px);
@@ -189,6 +189,11 @@
 
       @include mq('sm') {
         display: block;
+      }
+
+      & > a:link,
+      & > a:visited {
+        @include normalLink;
       }
     }
 
@@ -246,9 +251,15 @@
 
     h3 {
       margin: 40px 0 30px;
-      font-size: rem(16px);
+      font-size: rem(20px);
       color: $system-color-text;
       line-height: 1.4;
+      font-weight: bold;
+
+      @include mq('sm') {
+        margin: 30px 0 20px;
+        font-size: rem(16px);
+      };
     }
 
     p {
@@ -272,6 +283,8 @@
     }
 
     li {
+      @include baseText;
+
       &:before {
         content: '・';
       }
@@ -279,7 +292,7 @@
 
     blockquote.message {
       font-family: $base-font-serif;
-      font-size: rem(16px);
+      //font-size: rem(16px);
       line-height: 1.875;
       margin: 20px 0 30px;
       letter-spacing: .1em;
@@ -487,6 +500,7 @@ h2 + .Article__tableWrapper {
   @include mq('sm') {
     flex-flow: column nowrap;
     align-items: center;
+    text-align: center;
   }
 
   &__photo {
@@ -520,6 +534,13 @@ h2 + .Article__tableWrapper {
     margin: 15px 0;
     font-size: rem(24px);
     color: $system-color-text;
+
+    & > a:link,
+    & > a:visited {
+      @include normalLink;
+      color: $system-color-text;
+    }
+
   }
 
   &__nameSub {
@@ -527,6 +548,7 @@ h2 + .Article__tableWrapper {
     font-size: rem(16px);
     line-height: 1.4;
     color: $system-color-text;
+
   }
 
   &__nameEn {
@@ -546,6 +568,11 @@ h2 + .Article__tableWrapper {
     color: $system-color-text;
     letter-spacing: .1em;
     line-height: (30/18);
+    text-align: left; // override
+  }
+
+  &__links {
+    text-align: left; // override
   }
 
   &__link {
@@ -593,9 +620,143 @@ h2 + .Article__tableWrapper {
   }
 }
 
-.RelatedArticles {
-  &__title {
+.AuthorPageProfile {
+  width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  @include mq('sm') {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &__photo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq('sm') {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &__nameJp {
+    margin: 15px 0;
+    font-family: $base-font-kokoro;
+    font-size: rem(50px);
+    color: $system-color-text;
+
+    @include mq('sm') {
+      font-size: rem(35px);
+    }
+  }
+
+  &__nameSub {
+    margin: -10px 0 15px;
+    font-size: rem(16px);
+    line-height: 1.4;
+    color: $system-color-text;
+  }
+
+  &__nameEn {
+    display: inline-block;
+  }
+
+  &__job {
+    display: inline-block;
+    &::before {
+      content: ' ／';
+    }
+  }
+
+  &__text {
+    margin: 50px 0;
+    font-size: rem(14px);
+    color: $system-color-text;
+    letter-spacing: .1em;
+    line-height: (30/18);
+
+    @include mq('sm') {
+      margin: 30px 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    @include mq('sm') {
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      display: inline-block;
+      content: '／';
+      margin-left: 10px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    & > a {
+      display: inline-block;
+      font-size: rem(14px);
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-position: left center;
+      padding-left: 25px;
+      transition: opacity .5s ease;
+      color: #4b4b4b;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &--facebook > a {
+      background-image: url('../images/standalone/common/ico_facebook.svg');
+    }
+    &--twitter > a {
+      background-image: url('../images/standalone/common/ico_twitter.svg');
+    }
+    &--instagram > a {
+      background-image: url('../images/standalone/common/ico_instagram.svg');
+    }
+    &--web > a {
+      background-image: url('../images/standalone/common/ico_web.svg');
+    }
+  }
+}
+
+.Module {
+
+  &--fixWidth {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq('sm') {
+      margin: 20px;
+      width: auto;
+    }
+  }
+
+  &__heading{
     @include normalTitle;
+
+    &TextBlock {
+      display: inline-block;
+    }
   }
 }
 
@@ -603,7 +764,7 @@ h2 + .Article__tableWrapper {
   margin: 50px 0 100px;
 
   &__text {
-    font-family: $base-font-yumincho;
+    font-family: $base-font-kokoro;
     color: #4a4a4a;
     text-align: center;
     font-size: rem(16px);

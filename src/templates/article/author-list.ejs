@@ -1,0 +1,65 @@
+<% const title = 'todo';
+function extend(buf) { %>
+
+
+<div class="Module Module--fixWidth">
+
+<%- // include ../_layout/_socialButton %>
+
+  <h1 class="Module__heading">執筆者一覧</h1>
+
+  <section class="Profile">
+    <div class="Profile__column Profile__column--left">
+      <div class="Profile__photo" style="background-image: url('https://placehold.jp/150x150.png')"></div>
+    </div>
+    <div class="Profile__column Profile__column--right">
+      <p class="Profile__nameJp"><a href="">江本 祐介</a></p>
+      <div class="Profile__nameSub">
+        <p class="Profile__nameEn">YUSUKE EMOTO</p>
+        <p class="Profile__job">ライター</p>
+      </div>
+      <p class="Profile__text">1988年生まれ。埼玉県出身。<br>バンド、弾き語りの活動を経て現在は自身の楽曲やCM音楽やドラマの劇伴の制作ほかアーティストのREMIXや編曲を行う。 ENJOY MUSIC CLUBではトラックと歌とラップを担当。小杉湯では深夜営業後の浴室清掃バイトを担当。</p>
+      <ul class="Profile__links">
+        <li class="Profile__link Profile__link--web">
+          <a href="" target="_blank">ウェブサイト</a>
+        </li>
+        <li class="Profile__link Profile__link--twitter">
+          <a href="" target="_blank">twitterアカウント</a>
+        </li>
+        <li class="Profile__link Profile__link--facebook">
+          <a href="" target="_blank">facebookアカウント</a>
+        </li>
+        <li class="Profile__link Profile__link--instagram">
+          <a href="" target="_blank">instagramアカウント</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+<%
+}
+function insertMetaTag(buf) { %>
+<meta property="og:type" content="article"/>
+<% }
+const resource = {
+  page: {
+    id: 'todo',
+    title: 'todo',
+    meta: {
+      url: 'todo',
+      description: 'todo'
+    }
+  },
+  css: [
+    '../../styles/common.css',
+    '../../styles/article.css'
+  ],
+  js: [
+    '../../scripts/lib/jquery-3.2.1.min.js',
+    '../../scripts/common.bundle.js',
+    '../../scripts/article-detail.bundle.js'
+  ],
+  insertMetaTagFlag: true
+};
+%>
+<% include ../_layout/_base %>

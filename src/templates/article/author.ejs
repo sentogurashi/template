@@ -1,0 +1,86 @@
+<% function extend(buf) { %>
+
+<section class="AuthorPageProfile">
+  <div class="AuthorPageProfile__photo" style="background-image: url('https://placehold.jp/150x150.png')"></div>
+  <p class="AuthorPageProfile__nameJp">江本 祐介</p>
+  <div class="AuthorPageProfile__nameSub">
+    <p class="AuthorPageProfile__nameEn">YUSUKE EMOTO</p>
+    <p class="AuthorPageProfile__job">ライター</p>
+  </div>
+  <p class="AuthorPageProfile__text">1988年生まれ。埼玉県出身。<br>バンド、弾き語りの活動を経て現在は自身の楽曲やCM音楽やドラマの劇伴の制作ほかアーティストのREMIXや編曲を行う。 ENJOY MUSIC CLUBではトラックと歌とラップを担当。小杉湯では深夜営業後の浴室清掃バイトを担当。</p>
+  <ul class="AuthorPageProfile__links">
+    <li class="AuthorPageProfile__link AuthorPageProfile__link--web">
+      <a href="" target="_blank">ウェブサイト</a>
+    </li>
+    <li class="AuthorPageProfile__link AuthorPageProfile__link--twitter">
+      <a href="" target="_blank">twitterアカウント</a>
+    </li>
+    <li class="AuthorPageProfile__link AuthorPageProfile__link--facebook">
+      <a href="" target="_blank">facebookアカウント</a>
+    </li>
+    <li class="AuthorPageProfile__link AuthorPageProfile__link--instagram">
+      <a href="" target="_blank">instagramアカウント</a>
+    </li>
+  </ul>
+</section>
+
+<section class="Module">
+  <h2 class="Module__heading"><span class="Module__headingTextBlock">江本祐介が</span><span class="Module__headingTextBlock">携わった記事</span></h2>
+
+  <ul class="CellList">
+<%
+const mockData = sitedata.others.dummyArticle.data;
+const categoryTable = sitedata.others.dummyArticle.categories;
+const thumbnailTable = sitedata.others.dummyArticle.thumbnails;
+let index = 0;
+for(var i = 0; i < 10; i++) {
+  const data = mockData[index]; %>
+    <li class="Cell">
+      <a href="./detail.html">
+        <div class="Cell__thumbNail" style="background-image:url('../../images/standalone/feature/<%= thumbnailTable[index] %>/photo_main.jpg')"></div>
+        <div class="Cell__main">
+          <p class="Cell__category Cell__category--<%= data.category %>"><%= categoryTable[data.category] %></p>
+          <p class="Cell__title"><%= data.title %></p>
+          <p class="Cell__date">2017.09.18</p>
+        </div>
+      </a>
+      <ul class="Cell__tags">
+        <li><a href="TODO">タグ1</a></li>
+        <li><a href="TODO">タグ2</a></li>
+        <li><a href="TODO">タグ3</a></li>
+      </ul>
+    </li>
+<%
+  index++;
+  if(index >= mockData.length) index = 0;
+  } %>
+  </ul>
+</section>
+
+<%
+}
+function insertMetaTag(buf) { %>
+<meta property="og:type" content="article"/>
+<% }
+const resource = {
+  page: {
+    id: 'todo',
+    title: 'todo',
+    meta: {
+      url: 'todo',
+      description: 'todo'
+    }
+  },
+  css: [
+    '../../styles/common.css',
+    '../../styles/article.css'
+  ],
+  js: [
+    '../../scripts/lib/jquery-3.2.1.min.js',
+    '../../scripts/common.bundle.js',
+    '../../scripts/article-index.bundle.js'
+  ],
+  insertMetaTagFlag: true
+};
+%>
+<% include ../_layout/_base %>

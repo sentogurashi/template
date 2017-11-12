@@ -4,7 +4,7 @@
   "description": "銭湯ぐらしテンプレート",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
+    "start": "gulp",
     "script": "gulp script",
     "style": "gulp style",
     "watch": "gulp watch"
