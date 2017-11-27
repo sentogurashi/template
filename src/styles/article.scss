@@ -214,6 +214,7 @@
       & > li {
         display: inline-block;
         margin-right: 10px;
+        line-height: 2; // ややアドホック
 
         & > a {
           @include normalLink;
@@ -281,11 +282,29 @@
       }
     }
 
+    ol {
+      & > li {
+        list-style-type: decimal;
+      }
+    }
+
+    ul {
+      & > li {
+        &:before {
+          content: '・';
+        }
+      }
+    }
+
     li {
       @include baseText;
+      // https://qiita.com/harapeko_wktk/items/6393acb8eb277904071e
+      padding-left: 1em;
+      text-indent: -1em;
+      list-style-position: inside;
 
-      &:before {
-        content: '・';
+      & > a {
+        @include normalLink;
       }
     }
 
@@ -379,9 +398,11 @@
       th, td {
         padding: 20px;
         line-height: 1.4;
+        letter-spacing: .1em;
+        word-break: break-all;
 
         & > a {
-            @include normalLink;
+          @include normalLink;
         }
 
         @include mq('sm') {
@@ -449,7 +470,7 @@
   &__defList {
     margin: 20px 0;
 
-    &Row {
+    & > dl {
       @include baseText;
       display: flex;
       @include mq('sm') {
@@ -464,6 +485,11 @@
 
         @include mq('sm') {
           padding: 0;
+        }
+
+        & > a:link,
+        & > a:visited {
+          @include normalLink;
         }
       }
 
