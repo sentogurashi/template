@@ -8,6 +8,10 @@
     display: block;
   }
 
+  @include mq('xl') {
+    grid-template-columns: repeat(auto-fit, 22%);
+  }
+
   // TODO: IE Grid対応
   .is-msBrowser & {
     display: block;

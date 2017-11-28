@@ -4,14 +4,11 @@
 
   @include mq('sm') {
     margin-bottom: 20px;
+    padding: 20px;
   }
 
   &:hover {
     opacity: .8;
-  }
-
-  @include mq('sm') {
-    padding: 20px;
   }
 
   // TODO: IE Grid対応
@@ -31,6 +28,10 @@
 
     @include mq('sm') {
       width: 100%;
+    }
+    
+    @include mq('xl') {
+      width: calc(100% - 20px);
     }
   }
 
