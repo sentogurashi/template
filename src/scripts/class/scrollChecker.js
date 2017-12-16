@@ -54,7 +54,7 @@ export default class ScrollChecker {
       }
     });
 
-    this.objects = this.objects.concat(newArray);
+    this.objects = [...this.objects, ...newArray];
   }
 
 };

@@ -77,8 +77,11 @@
     "webpack": "^1.13.3"
   },
   "dependencies": {
+    "events": "^1.1.1",
     "iscroll": "^5.2.0",
     "jquery": "^3.2.1",
+    "lodash.template": "^4.4.0",
+    "qs": "^6.5.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
   }

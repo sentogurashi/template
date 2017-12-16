@@ -1,6 +1,6 @@
 .Cell {
   margin-bottom: 40px;
-  transition: .5s;
+  transition: .8s;
 
   @include mq('sm') {
     margin-bottom: 20px;
@@ -18,6 +18,17 @@
     margin-right: 20px;
   }
 
+  // AjaxでAppendされたもの
+  &.is-added {
+    opacity: 0;
+    transform: translateY(10px);
+
+    &.is-show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   &__thumbNail {
     width: 300px;
     padding-bottom: (2 / 3) * 100%; // TODO アドホック
@@ -29,7 +40,7 @@
     @include mq('sm') {
       width: 100%;
     }
-    
+
     @include mq('xl') {
       width: calc(100% - 20px);
     }
