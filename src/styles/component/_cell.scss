@@ -7,10 +7,6 @@
     padding: 20px;
   }
 
-  &:hover {
-    opacity: .8;
-  }
-
   // TODO: IE Grid対応
   .is-msBrowser & {
     width: 300px;
@@ -27,6 +23,10 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  &:hover {
+    opacity: .8 !important;
   }
 
   &__thumbNail {
