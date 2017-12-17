@@ -25,8 +25,8 @@ const config = {
   plugins: [
     new webpack.optimize.DedupePlugin(),  //重複排除
     new webpack.optimize.AggressiveMergingPlugin(),　//できるだけまとめてコードを圧縮する
-    new webpack.optimize.UglifyJsPlugin()
-//    new es3ifyPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    //new webpack.optimize.OccurrenceOrderPlugin(),
   ],
   externals: [{
     jQuery: true,
@@ -35,12 +35,12 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx*$/,
         exclude: /node_modules/,
         loader: ['babel-loader'],
         query: {
           presets: ['es2015', 'stage-3'],
-          plugins: ['transform-runtime']
+          plugins: ['transform-runtime', 'transform-react-jsx']
         }
       }
     ]

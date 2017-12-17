@@ -59,7 +59,7 @@ function main () {
 
   const browserChecker = new BrowserCheker();
   if (browserChecker.checkMsBrowser()) {
-    domeelements.content.classList.add(CLASSNAME_STATE_IS_MSBROWSER);
+    domElements.content.classList.add(CLASSNAME_STATE_IS_MSBROWSER);
   }
 
   if (document.querySelector('.js-Wave__canvas--1')) {

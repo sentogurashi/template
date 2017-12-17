@@ -1,11 +1,14 @@
-/*
-import IScroll from 'iscroll';
+import PageLoadingController from './mvc/PageLoadingController.js';
+import { setScrollBottomEvent } from './mvc/utils.js';
 
-new IScroll(document.querySelector('.js-CategoryNavigation'), {
-  tap: true,
-  click: true,
-  mousewheel: true,
-  scrollX: true,
-  scrollY: false
-});
-*/
+function main () {
+  setScrollBottomEvent();
+  const pageLoadingController = new PageLoadingController(WP_API_SETTINGS);
+  document.addEventListener('scrollBottom', () => {
+    if(!pageLoadingController.checkIsFetching()) {
+      pageLoadingController.update();
+    }
+  });
+}
+
+window.addEventListener('DOMContentLoaded', main);
