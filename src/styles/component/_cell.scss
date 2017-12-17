@@ -10,8 +10,10 @@
   // TODO: IE Grid対応
   .is-msBrowser & {
     width: 300px;
-    float: left;
     margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
   }
 
   // AjaxでAppendされたもの
