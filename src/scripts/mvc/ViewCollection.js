@@ -27,7 +27,7 @@ export default class ViewCollection extends EventEmitter {
     elems.forEach((elem, index) => {
       setTimeout(() => {
         elem.classList.add('is-show');
-      }, (index + 1) * 500);
+      }, (index === 0) ? 10 : index * 400);
     });
   }
 }

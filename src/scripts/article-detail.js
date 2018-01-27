@@ -12,7 +12,6 @@ $(() => {
   if(!checkMainVisualExists()) return;
   simpleParallax.addElement('.js-Article__photoMain');
   simpleParallax.init();
-
 });
 
 $window.on('load', () => {

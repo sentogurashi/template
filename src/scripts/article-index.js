@@ -4,6 +4,7 @@ import { setScrollBottomEvent } from './mvc/utils.js';
 function main () {
   setScrollBottomEvent();
   const pageLoadingController = new PageLoadingController(WP_API_SETTINGS);
+  pageLoadingController.update();
   document.addEventListener('scrollBottom', () => {
     if(!pageLoadingController.checkIsFetching()) {
       pageLoadingController.update();
