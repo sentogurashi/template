@@ -24,8 +24,6 @@ export default class PageLoadingController extends Controller {
 
   async update () {
 
-    console.log('request');
-
     this.isFetching = true;
 
     if(!this.isMore) return;
