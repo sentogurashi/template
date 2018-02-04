@@ -7,7 +7,8 @@
     "start": "gulp",
     "script": "gulp script",
     "style": "gulp style",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",

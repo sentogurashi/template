@@ -7,7 +7,7 @@ export function setScrollBottomEvent() {
 
   document.addEventListener('scroll', () => {
 
-    const bottomLine = 600; // Magic Number感
+    const bottomLine = 1000; // Magic Number感
 
     const body = document.body;
     const html = document.documentElement;
