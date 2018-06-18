@@ -13,10 +13,10 @@
   margin: 50px 0;
   font-size: rem(40px); // override
 
-  @include mq('sm') {
+  @include mq("sm") {
     margin: 20px 0;
     font-size: rem(30px); // override
-  };
+  }
 }
 
 .MainVisual {
@@ -25,7 +25,7 @@
   position: relative;
   padding-bottom: 30%;
 
-  @include mq('sm') {
+  @include mq("sm") {
     padding-bottom: 80%;
     background-size: 200%; // TODO: アドホック
   }
@@ -56,8 +56,7 @@
 }
 
 .CategoryNavigation {
-
-  @include mq('sm') {
+  @include mq("sm") {
     position: relative;
     overflow: hidden;
     height: 100px;
@@ -65,11 +64,11 @@
 
   &__items {
     display: flex;
-    margin:30px auto 50px;
+    margin: 30px auto 50px;
     align-items: center;
     justify-content: center;
 
-    @include mq('sm') {
+    @include mq("sm") {
       margin: 30px 20px;
       white-space: nowrap;
     }
@@ -78,13 +77,13 @@
   &__item {
     margin: 0 20px;
 
-    @include mq('sm') {
+    @include mq("sm") {
       margin-left: 0;
-      margin-right: 20px;;
+      margin-right: 20px;
     }
 
     &:last-child {
-      @include mq('sm') {
+      @include mq("sm") {
         margin-right: 0;
       }
     }
@@ -102,7 +101,7 @@
       font-size: rem(14px);
       padding: 20px 20px 5px; // bottomはspan分 -5px
 
-      @include mq('sm') {
+      @include mq("sm") {
         padding: 12px 0;
       }
 
@@ -112,7 +111,7 @@
       }
 
       &::after {
-        content: '';
+        content: "";
         display: block;
         padding-bottom: 15px;
       }
@@ -121,18 +120,16 @@
 }
 
 .Article {
-
   &__inner {
     width: 800px;
     margin: 0 auto;
-    @include mq('md') {
+    @include mq("md") {
       width: auto;
       margin: 0 20px;
-    };
+    }
   }
 
   &__title {
-
     &Wrapper {
       margin: 30px 0;
 
@@ -140,13 +137,12 @@
         margin-top: 20px;
         justify-content: center;
       }
-
     }
 
     &Info {
       text-align: center;
       vertical-align: middle;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
     }
 
     &Category {
@@ -171,7 +167,7 @@
       margin-right: 10px;
       color: $system-color-link;
 
-      @include mq('sm') {
+      @include mq("sm") {
         margin-right: 0;
       }
     }
@@ -182,7 +178,7 @@
       font-size: rem(12px);
       color: $system-color-text;
 
-      @include mq('sm') {
+      @include mq("sm") {
         display: block;
       }
 
@@ -219,11 +215,9 @@
             color: #999;
           }
         }
-
       }
     }
   }
-
 
   &__headingLv1 {
     @include normalTitle;
@@ -231,7 +225,6 @@
 
   // wordpress投稿枠ラッパー
   &__main {
-
     h2 {
       margin: 120px 0 60px;
       font-family: $base-font-serif;
@@ -239,10 +232,10 @@
       color: $system-color-text;
       line-height: 1.4;
 
-      @include mq('sm') {
+      @include mq("sm") {
         margin: 40px 0 30px;
         font-size: rem(20px);
-      };
+      }
     }
 
     h3 {
@@ -252,10 +245,10 @@
       line-height: 1.4;
       font-weight: bold;
 
-      @include mq('sm') {
+      @include mq("sm") {
         margin: 30px 0 20px;
         font-size: rem(16px);
-      };
+      }
     }
 
     p {
@@ -267,7 +260,7 @@
         margin-top: -20px;
       }
 
-      & > a {
+      & a {
         @include normalLink;
         line-height: 1.3;
       }
@@ -277,7 +270,8 @@
       }
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 20px 0 30px;
     }
 
@@ -290,7 +284,7 @@
     ul {
       & > li {
         &:before {
-          content: '・';
+          content: "・";
         }
       }
     }
@@ -311,13 +305,13 @@
       font-family: $base-font-serif;
       line-height: 1.875;
       margin: 20px 0 30px;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       padding: 20px 40px;
       font-style: italic;
       color: lighten($system-color-text, 10%);
       position: relative;
 
-      @include mq('sm') {
+      @include mq("sm") {
         font-size: rem(14px);
         padding: 20px 30px;
       }
@@ -328,31 +322,30 @@
         color: #e4e4e4;
         font-size: rem(50px);
         line-height: 1;
-        font-family: 'Georgia', serif;
+        font-family: "Georgia", serif;
       }
 
       &::before {
-        content: '“';
+        content: "“";
         top: 10px;
         left: 10px;
 
-        @include mq('sm') {
+        @include mq("sm") {
           top: 0;
           left: 0;
         }
       }
 
       &::after {
-        content: '”';
+        content: "”";
         bottom: -20px;
         right: 10px;
 
-        @include mq('sm') {
+        @include mq("sm") {
           right: 0;
         }
       }
     }
-
   }
 
   &__movie {
@@ -370,7 +363,6 @@
     }
   }
 
-
   &__profile {
     margin: 60px 0;
     display: flex;
@@ -381,7 +373,7 @@
       margin-top: -30px;
     }
 
-    @include mq('sm') {
+    @include mq("sm") {
       flex-flow: column nowrap;
       align-items: center;
       text-align: center;
@@ -397,7 +389,7 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      @include mq('sm') {
+      @include mq("sm") {
         margin-top: 0;
         margin-right: 0;
         margin-bottom: 15px;
@@ -414,15 +406,14 @@
       margin: 15px 0 0;
       font-size: rem(14px);
       color: $system-color-text;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       line-height: (30/18);
       text-align: left; // override
     }
   }
 
   &__tableWrapper {
-
-    @include mq('sm') {
+    @include mq("sm") {
       margin-left: -20px;
       margin-right: -20px;
     }
@@ -433,43 +424,47 @@
       color: $system-color-text;
       margin-bottom: 60px;
       border-top: 1px dotted $system-color-text;
-      border-bottom:  1px dotted $system-color-text;
+      border-bottom: 1px dotted $system-color-text;
       font-family: $base-font-serif;
 
-      @include mq('sm') {
+      @include mq("sm") {
         font-size: rem(14px);
       }
 
       thead {
-        th, td {
+        th,
+        td {
           border-bottom: 2px solid $system-color-text;
         }
       }
       tbody {
-        th, td {
+        th,
+        td {
           border-bottom: 1px dotted $system-color-text;
         }
 
-        tr{
+        tr {
           &:last-child {
-            th, td {
+            th,
+            td {
               border: none;
             }
           }
         }
       }
 
-      th, td {
+      th,
+      td {
         padding: 20px;
         line-height: 1.4;
-        letter-spacing: .1em;
+        letter-spacing: 0.1em;
         word-break: break-all;
 
         & > a {
           @include normalLink;
         }
 
-        @include mq('sm') {
+        @include mq("sm") {
           padding: 20px 10px;
           min-width: 80px;
         }
@@ -484,7 +479,7 @@
   &__innerImage {
     margin-bottom: 30px;
 
-    @include mq('sm') {
+    @include mq("sm") {
       margin-left: -20px;
       margin-right: -20px;
     }
@@ -499,7 +494,7 @@
     font-size: rem(14px);
     color: #999;
 
-    @include mq('sm') {
+    @include mq("sm") {
       margin-left: 10px;
       font-size: rem(12px);
     }
@@ -522,12 +517,12 @@
       animation: mainvisual-animation 4s linear;
     }
 
-    @include mq('sm') {
+    @include mq("sm") {
       padding-bottom: 100%;
       &.is-animate {
         animation: mainvisual-animation 2s linear;
       }
-    };
+    }
   }
 
   &__defList {
@@ -536,7 +531,7 @@
     & > dl {
       @include baseText;
       display: flex;
-      @include mq('sm') {
+      @include mq("sm") {
         display: block;
         margin: 30px 0;
       }
@@ -546,7 +541,7 @@
         display: block;
         padding: 15px 0;
 
-        @include mq('sm') {
+        @include mq("sm") {
           padding: 0;
         }
 
@@ -563,7 +558,8 @@
       & > dd {
         flex: 1;
       }
-      ul, ol {
+      ul,
+      ol {
         margin: 0;
       }
     }
@@ -572,7 +568,6 @@
   .wp-embedded-content {
     width: 100%;
   }
-
 }
 
 // dependencies
@@ -580,7 +575,7 @@ h2 + .Article__defList,
 h2 + .Article__tableWrapper {
   margin-top: -30px;
 
-  @include mq('sm') {
+  @include mq("sm") {
     margin-top: -10px;
   }
 }
@@ -589,7 +584,7 @@ h2 + .Article__tableWrapper {
   margin: 60px 0;
   display: flex;
 
-  @include mq('sm') {
+  @include mq("sm") {
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
@@ -605,7 +600,7 @@ h2 + .Article__tableWrapper {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include mq('sm') {
+    @include mq("sm") {
       width: 120px;
       height: 120px;
       margin-top: 0;
@@ -632,7 +627,6 @@ h2 + .Article__tableWrapper {
       @include normalLink;
       color: $system-color-text;
     }
-
   }
 
   &__nameSub {
@@ -640,7 +634,6 @@ h2 + .Article__tableWrapper {
     font-size: rem(16px);
     line-height: 1.4;
     color: $system-color-text;
-
   }
 
   &__nameEn {
@@ -650,7 +643,7 @@ h2 + .Article__tableWrapper {
   &__job {
     display: inline-block;
     &::before {
-      content: ' ／';
+      content: " ／";
     }
   }
 
@@ -658,7 +651,7 @@ h2 + .Article__tableWrapper {
     margin: 15px 0;
     font-size: rem(14px);
     color: $system-color-text;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     line-height: (30/18);
     text-align: left; // override
   }
@@ -674,7 +667,7 @@ h2 + .Article__tableWrapper {
 
     &::after {
       display: inline-block;
-      content: '／';
+      content: "／";
       margin-left: 10px;
     }
 
@@ -689,25 +682,25 @@ h2 + .Article__tableWrapper {
       background-size: 18px;
       background-position: left center;
       padding-left: 25px;
-      transition: opacity .5s ease;
+      transition: opacity 0.5s ease;
       color: #4b4b4b;
 
       &:hover {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
 
     &--facebook > a {
-      background-image: url('../images/standalone/common/ico_facebook.svg');
+      background-image: url("../images/standalone/common/ico_facebook.svg");
     }
     &--twitter > a {
-      background-image: url('../images/standalone/common/ico_twitter.svg');
+      background-image: url("../images/standalone/common/ico_twitter.svg");
     }
     &--instagram > a {
-      background-image: url('../images/standalone/common/ico_instagram.svg');
+      background-image: url("../images/standalone/common/ico_instagram.svg");
     }
     &--web > a {
-      background-image: url('../images/standalone/common/ico_web.svg');
+      background-image: url("../images/standalone/common/ico_web.svg");
     }
   }
 }
@@ -719,7 +712,7 @@ h2 + .Article__tableWrapper {
   flex-flow: column nowrap;
   align-items: center;
 
-  @include mq('sm') {
+  @include mq("sm") {
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
@@ -734,7 +727,7 @@ h2 + .Article__tableWrapper {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include mq('sm') {
+    @include mq("sm") {
       width: 150px;
       height: 150px;
     }
@@ -746,7 +739,7 @@ h2 + .Article__tableWrapper {
     font-size: rem(50px);
     color: $system-color-text;
 
-    @include mq('sm') {
+    @include mq("sm") {
       font-size: rem(35px);
     }
   }
@@ -765,7 +758,7 @@ h2 + .Article__tableWrapper {
   &__job {
     display: inline-block;
     &::before {
-      content: ' ／';
+      content: " ／";
     }
   }
 
@@ -773,10 +766,10 @@ h2 + .Article__tableWrapper {
     margin: 50px 0;
     font-size: rem(14px);
     color: $system-color-text;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     line-height: (30/18);
 
-    @include mq('sm') {
+    @include mq("sm") {
       margin: 30px 0;
     }
   }
@@ -786,13 +779,13 @@ h2 + .Article__tableWrapper {
     margin-right: 15px;
     margin-bottom: 15px;
 
-    @include mq('sm') {
+    @include mq("sm") {
       margin-bottom: 10px;
     }
 
     &::after {
       display: inline-block;
-      content: '／';
+      content: "／";
       margin-left: 10px;
     }
 
@@ -807,43 +800,42 @@ h2 + .Article__tableWrapper {
       background-size: 18px;
       background-position: left center;
       padding-left: 25px;
-      transition: opacity .5s ease;
+      transition: opacity 0.5s ease;
       color: #4b4b4b;
 
       &:hover {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
 
     &--facebook > a {
-      background-image: url('../images/standalone/common/ico_facebook.svg');
+      background-image: url("../images/standalone/common/ico_facebook.svg");
     }
     &--twitter > a {
-      background-image: url('../images/standalone/common/ico_twitter.svg');
+      background-image: url("../images/standalone/common/ico_twitter.svg");
     }
     &--instagram > a {
-      background-image: url('../images/standalone/common/ico_instagram.svg');
+      background-image: url("../images/standalone/common/ico_instagram.svg");
     }
     &--web > a {
-      background-image: url('../images/standalone/common/ico_web.svg');
+      background-image: url("../images/standalone/common/ico_web.svg");
     }
   }
 }
 
 .Module {
-
   &--fixWidth {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
 
-    @include mq('sm') {
+    @include mq("sm") {
       margin: 20px;
       width: auto;
     }
   }
 
-  &__heading{
+  &__heading {
     @include normalTitle;
 
     &TextBlock {
