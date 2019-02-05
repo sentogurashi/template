@@ -12,7 +12,7 @@ $wpLoadPath = '';
 if(checkIsLocalEnv()) {
   $wpLoadPath = $filePath . '/../../../cms/wordpress/wp-load.php';
 } else {
-  $wpLoadPath = $filePath . '/article/wp-load.php';
+  $wpLoadPath = $filePath . '/../article/wp-load.php';
 }
 
 require_once($wpLoadPath);
