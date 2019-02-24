@@ -1,6 +1,6 @@
-@import "util";
-@import "foundation/base-style";
-@import "variables/variables";
+@import 'util';
+@import 'foundation/base-style';
+@import 'variables/variables';
 
 @mixin normalLink {
   border-bottom: dashed 1px #aaa;
@@ -13,7 +13,7 @@
   margin: 50px 0;
   font-size: rem(40px); // override
 
-  @include mq("sm") {
+  @include mq('sm') {
     margin: 20px 0;
     font-size: rem(30px); // override
   }
@@ -25,7 +25,7 @@
   position: relative;
   padding-bottom: 30%;
 
-  @include mq("sm") {
+  @include mq('sm') {
     padding-bottom: 80%;
     background-size: 200%; // TODO: アドホック
   }
@@ -56,7 +56,7 @@
 }
 
 .CategoryNavigation {
-  @include mq("sm") {
+  @include mq('sm') {
     position: relative;
     overflow: hidden;
     height: 100px;
@@ -68,7 +68,7 @@
     align-items: center;
     justify-content: center;
 
-    @include mq("sm") {
+    @include mq('sm') {
       margin: 30px 20px;
       white-space: nowrap;
     }
@@ -77,13 +77,13 @@
   &__item {
     margin: 0 20px;
 
-    @include mq("sm") {
+    @include mq('sm') {
       margin-left: 0;
       margin-right: 20px;
     }
 
     &:last-child {
-      @include mq("sm") {
+      @include mq('sm') {
         margin-right: 0;
       }
     }
@@ -101,7 +101,7 @@
       font-size: rem(14px);
       padding: 20px 20px 5px; // bottomはspan分 -5px
 
-      @include mq("sm") {
+      @include mq('sm') {
         padding: 12px 0;
       }
 
@@ -111,7 +111,7 @@
       }
 
       &::after {
-        content: "";
+        content: '';
         display: block;
         padding-bottom: 15px;
       }
@@ -123,7 +123,7 @@
   &__inner {
     width: 800px;
     margin: 0 auto;
-    @include mq("md") {
+    @include mq('md') {
       width: auto;
       margin: 0 20px;
     }
@@ -167,7 +167,7 @@
       margin-right: 10px;
       color: $system-color-link;
 
-      @include mq("sm") {
+      @include mq('sm') {
         margin-right: 0;
       }
     }
@@ -178,7 +178,7 @@
       font-size: rem(12px);
       color: $system-color-text;
 
-      @include mq("sm") {
+      @include mq('sm') {
         display: block;
       }
 
@@ -211,7 +211,7 @@
           @include normalLink;
 
           &:before {
-            content: "#";
+            content: '#';
             color: #999;
           }
         }
@@ -232,7 +232,7 @@
       color: $system-color-text;
       line-height: 1.4;
 
-      @include mq("sm") {
+      @include mq('sm') {
         margin: 40px 0 30px;
         font-size: rem(20px);
       }
@@ -245,7 +245,7 @@
       line-height: 1.4;
       font-weight: bold;
 
-      @include mq("sm") {
+      @include mq('sm') {
         margin: 30px 0 20px;
         font-size: rem(16px);
       }
@@ -284,7 +284,7 @@
     ul {
       & > li {
         &:before {
-          content: "・";
+          content: '・';
         }
       }
     }
@@ -311,7 +311,7 @@
       color: lighten($system-color-text, 10%);
       position: relative;
 
-      @include mq("sm") {
+      @include mq('sm') {
         font-size: rem(14px);
         padding: 20px 30px;
       }
@@ -322,26 +322,26 @@
         color: #e4e4e4;
         font-size: rem(50px);
         line-height: 1;
-        font-family: "Georgia", serif;
+        font-family: 'Georgia', serif;
       }
 
       &::before {
-        content: "“";
+        content: '“';
         top: 10px;
         left: 10px;
 
-        @include mq("sm") {
+        @include mq('sm') {
           top: 0;
           left: 0;
         }
       }
 
       &::after {
-        content: "”";
+        content: '”';
         bottom: -20px;
         right: 10px;
 
-        @include mq("sm") {
+        @include mq('sm') {
           right: 0;
         }
       }
@@ -373,7 +373,7 @@
       margin-top: -30px;
     }
 
-    @include mq("sm") {
+    @include mq('sm') {
       flex-flow: column nowrap;
       align-items: center;
       text-align: center;
@@ -389,7 +389,7 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      @include mq("sm") {
+      @include mq('sm') {
         margin-top: 0;
         margin-right: 0;
         margin-bottom: 15px;
@@ -413,7 +413,7 @@
   }
 
   &__tableWrapper {
-    @include mq("sm") {
+    @include mq('sm') {
       margin-left: -20px;
       margin-right: -20px;
     }
@@ -427,7 +427,7 @@
       border-bottom: 1px dotted $system-color-text;
       font-family: $base-font-serif;
 
-      @include mq("sm") {
+      @include mq('sm') {
         font-size: rem(14px);
       }
 
@@ -464,7 +464,7 @@
           @include normalLink;
         }
 
-        @include mq("sm") {
+        @include mq('sm') {
           padding: 20px 10px;
           min-width: 80px;
         }
@@ -479,7 +479,7 @@
   &__innerImage {
     margin-bottom: 30px;
 
-    @include mq("sm") {
+    @include mq('sm') {
       margin-left: -20px;
       margin-right: -20px;
     }
@@ -494,9 +494,15 @@
     font-size: rem(14px);
     color: #999;
 
-    @include mq("sm") {
+    @include mq('sm') {
       margin-left: 10px;
       font-size: rem(12px);
+    }
+
+    & > a {
+      color: $system-color-text;
+      display: inline-block;
+      border-bottom: 1px dashed $system-color-text;
     }
   }
 
@@ -517,7 +523,7 @@
       animation: mainvisual-animation 4s linear;
     }
 
-    @include mq("sm") {
+    @include mq('sm') {
       padding-bottom: 100%;
       &.is-animate {
         animation: mainvisual-animation 2s linear;
@@ -531,7 +537,7 @@
     & > dl {
       @include baseText;
       display: flex;
-      @include mq("sm") {
+      @include mq('sm') {
         display: block;
         margin: 30px 0;
       }
@@ -541,7 +547,7 @@
         display: block;
         padding: 15px 0;
 
-        @include mq("sm") {
+        @include mq('sm') {
           padding: 0;
         }
 
@@ -575,7 +581,7 @@ h2 + .Article__defList,
 h2 + .Article__tableWrapper {
   margin-top: -30px;
 
-  @include mq("sm") {
+  @include mq('sm') {
     margin-top: -10px;
   }
 }
@@ -584,7 +590,7 @@ h2 + .Article__tableWrapper {
   margin: 60px 0;
   display: flex;
 
-  @include mq("sm") {
+  @include mq('sm') {
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
@@ -600,7 +606,7 @@ h2 + .Article__tableWrapper {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include mq("sm") {
+    @include mq('sm') {
       width: 120px;
       height: 120px;
       margin-top: 0;
@@ -643,7 +649,7 @@ h2 + .Article__tableWrapper {
   &__job {
     display: inline-block;
     &::before {
-      content: " ／";
+      content: ' ／';
     }
   }
 
@@ -667,7 +673,7 @@ h2 + .Article__tableWrapper {
 
     &::after {
       display: inline-block;
-      content: "／";
+      content: '／';
       margin-left: 10px;
     }
 
@@ -691,16 +697,16 @@ h2 + .Article__tableWrapper {
     }
 
     &--facebook > a {
-      background-image: url("../images/standalone/common/ico_facebook.svg");
+      background-image: url('../images/standalone/common/ico_facebook.svg');
     }
     &--twitter > a {
-      background-image: url("../images/standalone/common/ico_twitter.svg");
+      background-image: url('../images/standalone/common/ico_twitter.svg');
     }
     &--instagram > a {
-      background-image: url("../images/standalone/common/ico_instagram.svg");
+      background-image: url('../images/standalone/common/ico_instagram.svg');
     }
     &--web > a {
-      background-image: url("../images/standalone/common/ico_web.svg");
+      background-image: url('../images/standalone/common/ico_web.svg');
     }
   }
 }
@@ -712,7 +718,7 @@ h2 + .Article__tableWrapper {
   flex-flow: column nowrap;
   align-items: center;
 
-  @include mq("sm") {
+  @include mq('sm') {
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
@@ -727,7 +733,7 @@ h2 + .Article__tableWrapper {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include mq("sm") {
+    @include mq('sm') {
       width: 150px;
       height: 150px;
     }
@@ -739,7 +745,7 @@ h2 + .Article__tableWrapper {
     font-size: rem(50px);
     color: $system-color-text;
 
-    @include mq("sm") {
+    @include mq('sm') {
       font-size: rem(35px);
     }
   }
@@ -758,7 +764,7 @@ h2 + .Article__tableWrapper {
   &__job {
     display: inline-block;
     &::before {
-      content: " ／";
+      content: ' ／';
     }
   }
 
@@ -769,7 +775,7 @@ h2 + .Article__tableWrapper {
     letter-spacing: 0.1em;
     line-height: (30/18);
 
-    @include mq("sm") {
+    @include mq('sm') {
       margin: 30px 0;
     }
   }
@@ -779,13 +785,13 @@ h2 + .Article__tableWrapper {
     margin-right: 15px;
     margin-bottom: 15px;
 
-    @include mq("sm") {
+    @include mq('sm') {
       margin-bottom: 10px;
     }
 
     &::after {
       display: inline-block;
-      content: "／";
+      content: '／';
       margin-left: 10px;
     }
 
@@ -809,16 +815,16 @@ h2 + .Article__tableWrapper {
     }
 
     &--facebook > a {
-      background-image: url("../images/standalone/common/ico_facebook.svg");
+      background-image: url('../images/standalone/common/ico_facebook.svg');
     }
     &--twitter > a {
-      background-image: url("../images/standalone/common/ico_twitter.svg");
+      background-image: url('../images/standalone/common/ico_twitter.svg');
     }
     &--instagram > a {
-      background-image: url("../images/standalone/common/ico_instagram.svg");
+      background-image: url('../images/standalone/common/ico_instagram.svg');
     }
     &--web > a {
-      background-image: url("../images/standalone/common/ico_web.svg");
+      background-image: url('../images/standalone/common/ico_web.svg');
     }
   }
 }
@@ -829,7 +835,7 @@ h2 + .Article__tableWrapper {
     margin-left: auto;
     margin-right: auto;
 
-    @include mq("sm") {
+    @include mq('sm') {
       margin: 20px;
       width: auto;
     }
