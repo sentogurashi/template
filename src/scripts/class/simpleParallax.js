@@ -19,10 +19,10 @@ export default class SimpleParallax {
     return this.isPortrait;
   }
 
-  addElement (selector, fliction = 0.4, isNoVerticalOffset = false) {
+  addElement (selector, friction = 0.4, isNoVerticalOffset = false) {
     this.elements.push({
       selector: selector,
-      fliction: fliction,
+      friction: friction,
       isNoVerticalOffset: isNoVerticalOffset
     });
   }
@@ -35,10 +35,10 @@ export default class SimpleParallax {
       this.scrollChecker.add([{
         selector: element.selector,
         func: (obj) => {
-          const fliction = element.fliction
+          const friction = element.friction
           const verticalOffset = (this.isPortrait || element.isNoVerticalOffset) ? 0 : (obj.height * this.originalAspect / 2);
           obj.$elem.css({
-            backgroundPosition: `center ${((this.scrollChecker.scrollPositionTop - obj.positionTop) - verticalOffset) * fliction}px`
+            backgroundPosition: `center ${((this.scrollChecker.scrollPositionTop - obj.positionTop) - verticalOffset) * friction}px`
       //      filter: `blur(${this.scrollChecker.scrollPositionTop * 0.01}px)`
           });
         }
