@@ -81,7 +81,7 @@
     "events": "^1.1.1",
     "iscroll": "^5.2.0",
     "jquery": "^3.2.1",
-    "lodash.template": "^4.4.0",
+    "lodash.template": "^4.5.0",
     "qs": "^6.5.1"
   }
 }
